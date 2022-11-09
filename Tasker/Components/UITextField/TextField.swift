@@ -13,17 +13,20 @@ final class TextField: UITextField {
         case password
         case name
         case number
+        case email
     }
     
     private var textPadding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 24)
     private var isPasswordTF = false
+    private var needNumberIcon = true
 
-    init(type: SelfType, placeholder: String = "") {
+    init(type: SelfType, placeholder: String = "", alignment: NSTextAlignment = .left, icon: Bool = true) {
         super.init(frame: .zero)
         
         let color = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
         
         self.placeholder = placeholder
+        self.textAlignment = alignment
         
         self.backgroundColor = UIColor.color(light: .white, dark: .clear)
         self.textColor = color
@@ -44,16 +47,38 @@ final class TextField: UITextField {
             self.isSecureTextEntry = true
             isPasswordTF = true
             
-            setTextFieldIcon(icon: UIImage(named: "password")?.withTintColor(color, renderingMode: .alwaysOriginal))
-            setShowPasswordButton(icon: UIImage(named: "eyes")?.withTintColor(color, renderingMode: .alwaysOriginal))
+            let passwordIcon = UIImage(named: "password")?.withTintColor(color, renderingMode: .alwaysOriginal)
+            let eyesIcon = UIImage(named: "eyes")?.withTintColor(color, renderingMode: .alwaysOriginal)
+            
+            setTextFieldIcon(icon: passwordIcon)
+            setShowPasswordButton(icon: eyesIcon)
+            
         case .name:
             self.textContentType = .name
             
-            setTextFieldIcon(icon: UIImage(named: "user")?.withTintColor(color, renderingMode: .alwaysOriginal))
+            let nameIcon = UIImage(named: "user")?.withTintColor(color, renderingMode: .alwaysOriginal)
+            
+            setTextFieldIcon(icon: nameIcon)
+            
         case .number:
             self.textContentType = .telephoneNumber
+            self.keyboardType = .numberPad
             
-            setTextFieldIcon(icon: UIImage(named: "phone")?.withTintColor(color, renderingMode: .alwaysOriginal))
+            let phoneIcon = UIImage(named: "phone")?.withTintColor(color, renderingMode: .alwaysOriginal)
+            
+            if icon {
+                setTextFieldIcon(icon: phoneIcon)
+            } else {
+                needNumberIcon = false
+            }
+            
+        case .email:
+            self.textContentType = .emailAddress
+            self.keyboardType = .emailAddress
+            
+            let mailIcon = UIImage(named: "mail")?.withTintColor(color, renderingMode: .alwaysOriginal)
+            
+            setTextFieldIcon(icon: mailIcon)
         }
     }
 
@@ -66,6 +91,10 @@ final class TextField: UITextField {
             textPadding.right = 48
         }
         
+        if !needNumberIcon {
+            textPadding.right = 0
+        }
+        
         let rect = super.textRect(forBounds: bounds)
         return rect.inset(by: textPadding)
     }
@@ -73,6 +102,10 @@ final class TextField: UITextField {
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         if isPasswordTF {
             textPadding.right = 48
+        }
+        
+        if !needNumberIcon {
+            textPadding.right = 0
         }
         
         let rect = super.editingRect(forBounds: bounds)

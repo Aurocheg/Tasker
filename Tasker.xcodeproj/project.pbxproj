@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272843291C08490032D139 /* ChoosePlanPresenter.swift */; };
+		DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272845291C08730032D139 /* ChoosePlanViewController.swift */; };
+		DE272848291C0A170032D139 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272847291C0A170032D139 /* Plan.swift */; };
+		DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272849291C0A270032D139 /* PlansCollectionViewCell.swift */; };
+		DE27284D291C177B0032D139 /* premium.json in Resources */ = {isa = PBXBuildFile; fileRef = DE27284B291C177B0032D139 /* premium.json */; };
+		DE27284E291C177B0032D139 /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = DE27284C291C177B0032D139 /* party.json */; };
 		DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F56552917AFA70036DDC4 /* TextField.swift */; };
 		DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */; };
 		DE5D23F62917B78100F3ED18 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23F52917B78100F3ED18 /* SignInPresenter.swift */; };
@@ -34,9 +40,21 @@
 		DEC71B6A291BC22D00588D8B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B69291BC22D00588D8B /* SignUpViewController.swift */; };
 		DEC71B6F291BC56800588D8B /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B6E291BC56800588D8B /* ForgotPasswordPresenter.swift */; };
 		DEC71B72291BC59300588D8B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B71291BC59300588D8B /* ForgotPasswordViewController.swift */; };
+		DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B75291BCFF900588D8B /* OTPPresenter.swift */; };
+		DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B78291BD02E00588D8B /* OTPViewController.swift */; };
+		DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */; };
+		DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */; };
+		DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */; };
+		DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE272843291C08490032D139 /* ChoosePlanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanPresenter.swift; sourceTree = "<group>"; };
+		DE272845291C08730032D139 /* ChoosePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanViewController.swift; sourceTree = "<group>"; };
+		DE272847291C0A170032D139 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		DE272849291C0A270032D139 /* PlansCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE27284B291C177B0032D139 /* premium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = premium.json; sourceTree = "<group>"; };
+		DE27284C291C177B0032D139 /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		DE3F56552917AFA70036DDC4 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		DE5D23F52917B78100F3ED18 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
@@ -64,6 +82,12 @@
 		DEC71B69291BC22D00588D8B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DEC71B6E291BC56800588D8B /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		DEC71B71291BC59300588D8B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		DEC71B75291BCFF900588D8B /* OTPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPresenter.swift; sourceTree = "<group>"; };
+		DEC71B78291BD02E00588D8B /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
+		DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspacePresenter.swift; sourceTree = "<group>"; };
+		DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +103,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE27283E291C08220032D139 /* ChoosePlan */ = {
+			isa = PBXGroup;
+			children = (
+				DE272841291C08390032D139 /* Model */,
+				DE272840291C08360032D139 /* View */,
+				DE27283F291C08320032D139 /* Presenter */,
+			);
+			path = ChoosePlan;
+			sourceTree = "<group>";
+		};
+		DE27283F291C08320032D139 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DE272843291C08490032D139 /* ChoosePlanPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DE272840291C08360032D139 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE272845291C08730032D139 /* ChoosePlanViewController.swift */,
+				DE272849291C0A270032D139 /* PlansCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE272841291C08390032D139 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE272847291C0A170032D139 /* Plan.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE27284F291C18550032D139 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				DE27284C291C177B0032D139 /* party.json */,
+				DE27284B291C177B0032D139 /* premium.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		DE3F56512917AF670036DDC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE27284F291C18550032D139 /* Lottie */,
 				DE6D3EDB2916B6470095AC5B /* Assets.xcassets */,
 				DE6D3EDD2916B6470095AC5B /* LaunchScreen.storyboard */,
 			);
@@ -123,9 +192,13 @@
 		DE5D23F02917B74C00F3ED18 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B6C291BC55800588D8B /* ForgotPassword */,
-				DE5D23F12917B75600F3ED18 /* SignIn */,
 				DEC71B5E291BC01B00588D8B /* SignUp */,
+				DE5D23F12917B75600F3ED18 /* SignIn */,
+				DEC71B6C291BC55800588D8B /* ForgotPassword */,
+				DEC71B73291BCFE800588D8B /* OTP */,
+				DEC71B7C291BDBA600588D8B /* ResetPassword */,
+				DEC71B85291BE0D300588D8B /* CreateWorkspace */,
+				DE27283E291C08220032D139 /* ChoosePlan */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -320,6 +393,105 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DEC71B73291BCFE800588D8B /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B7A291BD04D00588D8B /* Model */,
+				DEC71B77291BD02500588D8B /* View */,
+				DEC71B74291BCFEB00588D8B /* Presenter */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		DEC71B74291BCFEB00588D8B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B75291BCFF900588D8B /* OTPPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DEC71B77291BD02500588D8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B78291BD02E00588D8B /* OTPViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEC71B7A291BD04D00588D8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEC71B7C291BDBA600588D8B /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B7F291BDBB900588D8B /* Model */,
+				DEC71B7E291BDBB700588D8B /* View */,
+				DEC71B7D291BDBB200588D8B /* Presenter */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		DEC71B7D291BDBB200588D8B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DEC71B7E291BDBB700588D8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEC71B7F291BDBB900588D8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEC71B85291BE0D300588D8B /* CreateWorkspace */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B88291BE0E800588D8B /* Model */,
+				DEC71B87291BE0E500588D8B /* View */,
+				DEC71B86291BE0DD00588D8B /* Presenter */,
+			);
+			path = CreateWorkspace;
+			sourceTree = "<group>";
+		};
+		DEC71B86291BE0DD00588D8B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DEC71B87291BE0E500588D8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEC71B88291BE0E800588D8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +560,8 @@
 			files = (
 				DE6D3EDF2916B6470095AC5B /* LaunchScreen.storyboard in Resources */,
 				DE6D3EDC2916B6470095AC5B /* Assets.xcassets in Resources */,
+				DE27284E291C177B0032D139 /* party.json in Resources */,
+				DE27284D291C177B0032D139 /* premium.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,24 +575,34 @@
 				DEA3779A2917FD280035085C /* TextLabel.swift in Sources */,
 				DEC71B72291BC59300588D8B /* ForgotPasswordViewController.swift in Sources */,
 				DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */,
+				DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */,
+				DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */,
+				DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */,
 				DE5D24032917BB8400F3ED18 /* Persist.swift in Sources */,
 				DE5D23FF2917BB2B00F3ED18 /* Theme.swift in Sources */,
 				DE5D23FA2917B8BC00F3ED18 /* SignInViewController.swift in Sources */,
 				DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */,
 				DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */,
+				DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */,
 				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
+				DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */,
 				DEC71B64291BC15A00588D8B /* StackView.swift in Sources */,
 				DEA377A1291831650035085C /* UILabel + Extension.swift in Sources */,
 				DE6D3ED32916B6470095AC5B /* AppDelegate.swift in Sources */,
+				DE272848291C0A170032D139 /* Plan.swift in Sources */,
 				DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */,
 				DEC71B6F291BC56800588D8B /* ForgotPasswordPresenter.swift in Sources */,
 				DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */,
+				DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */,
 				DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */,
+				DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */,
 				DE5D23F82917B80000F3ED18 /* Router.swift in Sources */,
 				DEC71B6A291BC22D00588D8B /* SignUpViewController.swift in Sources */,
+				DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */,
 				DE5D24092917BF7200F3ED18 /* MainButton.swift in Sources */,
 				DEA377982917E1210035085C /* TitleLabel.swift in Sources */,
 				DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */,
+				DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */,
 				DEC71B67291BC20700588D8B /* SignUpPresenter.swift in Sources */,
 				DE5D23F62917B78100F3ED18 /* SignInPresenter.swift in Sources */,
 			);

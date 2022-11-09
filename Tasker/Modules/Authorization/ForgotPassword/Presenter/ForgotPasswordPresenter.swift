@@ -13,6 +13,7 @@ protocol ForgotPasswordViewProtocol: AnyObject {
 
 protocol ForgotPasswordViewPresenterProtocol: AnyObject {
     init(view: ForgotPasswordViewProtocol, router: RouterProtocol)
+    func sendButtonTapped()
 }
 
 final class ForgotPasswordPresenter: ForgotPasswordViewPresenterProtocol {
@@ -22,6 +23,10 @@ final class ForgotPasswordPresenter: ForgotPasswordViewPresenterProtocol {
     required init(view: ForgotPasswordViewProtocol, router: RouterProtocol) {
         self.view = view
         self.router = router
+    }
+    
+    func sendButtonTapped() {
+        router?.showOTP()
     }
 }
 

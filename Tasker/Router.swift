@@ -16,6 +16,10 @@ protocol RouterProtocol: RouterMainProtocol {
     func initialViewController()
     func showSignUp()
     func showForgotPassword()
+    func showOTP()
+    func showResetPassword()
+    func showCreateWorkspace()
+    func showChoosePlan()
 }
 
 class Router: RouterProtocol {
@@ -45,6 +49,34 @@ class Router: RouterProtocol {
         if let navigationController = navigationController {
             guard let forgotPasswordViewController = assemblyBuilder?.createForgotPasswordModule(router: self) else { return }
             navigationController.pushViewController(forgotPasswordViewController, animated: true)
+        }
+    }
+    
+    func showOTP() {
+        if let navigationController = navigationController {
+            guard let OTPViewController = assemblyBuilder?.createOTPModule(router: self) else { return }
+            navigationController.pushViewController(OTPViewController, animated: true)
+        }
+    }
+    
+    func showResetPassword() {
+        if let navigationController = navigationController {
+            guard let resetPasswordViewController = assemblyBuilder?.createResetPasswordModule(router: self) else { return }
+            navigationController.pushViewController(resetPasswordViewController, animated: true)
+        }
+    }
+    
+    func showCreateWorkspace() {
+        if let navigationController = navigationController {
+            guard let createWorkspaceViewController = assemblyBuilder?.createWorkspaceModule(router: self) else { return }
+            navigationController.pushViewController(createWorkspaceViewController, animated: true)
+        }
+    }
+    
+    func showChoosePlan() {
+        if let navigationController = navigationController {
+            guard let choosePlanViewController = assemblyBuilder?.createChoosePlanModule(router: self) else { return }
+            navigationController.pushViewController(choosePlanViewController, animated: true)
         }
     }
 }

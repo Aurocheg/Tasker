@@ -73,7 +73,7 @@ final class ForgotPasswordViewController: UIViewController {
     
     // MARK: - @objc
     @objc func sendButtonTapped() {
-
+        presenter.sendButtonTapped()
     }
     
 }

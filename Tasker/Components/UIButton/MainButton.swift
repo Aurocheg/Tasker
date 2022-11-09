@@ -27,7 +27,7 @@ final class MainButton: UIButton {
         self.layer.cornerRadius = 16
 
         if let icon = UIImage(named: "right") {
-            arrowIcon = icon
+            arrowIcon = icon.withTintColor(.white, renderingMode: .alwaysOriginal)
         }
         
         switch type {
@@ -35,8 +35,11 @@ final class MainButton: UIButton {
             self.setImage(UIImage(), for: .normal)
         case .withLeftArrow:
             self.setImage(arrowIcon, for: .normal)
+            self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
         case .withRightArrow:
             self.setImage(arrowIcon, for: .normal)
+            self.semanticContentAttribute = .forceRightToLeft
+            self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
         }
     }
     
