@@ -8,6 +8,9 @@
 import UIKit
 
 protocol AssemblyBuilderProtocol {
+    // MARK: - Onboarding
+    func createOnboardingModule(router: RouterProtocol) -> UIPageViewController
+    
     // MARK: - Authorization
     func createSignUpModule(router: RouterProtocol) -> UIViewController
     func createSignInModule(router: RouterProtocol) -> UIViewController
@@ -16,9 +19,24 @@ protocol AssemblyBuilderProtocol {
     func createResetPasswordModule(router: RouterProtocol) -> UIViewController
     func createWorkspaceModule(router: RouterProtocol) -> UIViewController
     func createChoosePlanModule(router: RouterProtocol) -> UIViewController
+    
+    // MARK: - Main
+    func createTabBarModule(router: RouterProtocol) -> UITabBarController
+    func createHomeModule(router: RouterProtocol) -> UIViewController
+    func createChatModule(router: RouterProtocol) -> UIViewController
+    func createNotificationModule(router: RouterProtocol) -> UIViewController
+    func createSettingsModule(router: RouterProtocol) -> UIViewController
 }
 
 final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
+    // MARK: - Onboarding
+    func createOnboardingModule(router: RouterProtocol) -> UIPageViewController {
+        let view = OnboardingViewController()
+        let presenter = OnboardingPresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
     // MARK: - Authorization
     func createSignUpModule(router: RouterProtocol) -> UIViewController {
         let view = SignUpViewController()
@@ -68,4 +86,46 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
         view.presenter = presenter
         return view
     }
+    
+    // MARK: - Main
+    func createTabBarModule(router: RouterProtocol) -> UITabBarController {
+        let tabBarController = TabBarController()
+        
+        let homeModule = createHomeModule(router: router)
+        let chatModule = createChatModule(router: router)
+        let notificationModule = createNotificationModule(router: router)
+        let settingsModule = createSettingsModule(router: router)
+        
+        tabBarController.viewControllers = [homeModule, chatModule, notificationModule, settingsModule]
+    }
+    
+    func createHomeModule(router: RouterProtocol) -> UIViewController {
+        let view = HomeViewController()
+        view.tabBarItem = UITabBarItem()
+        let presenter = HomePresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createChatModule(router: RouterProtocol) -> UIViewController {
+        let view = ChatViewController()
+        let presenter = ChatPresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createNotificationModule(router: RouterProtocol) -> UIViewController {
+        let view = NotificationViewController()
+        let presenter = NotificationPresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createSettingsModule(router: RouterProtocol) -> UIViewController {
+        let view = SettingsViewController()
+        let presenter = SettingsPresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
 }

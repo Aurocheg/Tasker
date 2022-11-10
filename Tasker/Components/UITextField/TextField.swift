@@ -19,9 +19,11 @@ final class TextField: UITextField {
     private var textPadding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 24)
     private var isPasswordTF = false
     private var needNumberIcon = true
+    private var view: UIView?
 
-    init(type: SelfType, placeholder: String = "", alignment: NSTextAlignment = .left, icon: Bool = true) {
+    init(type: SelfType, placeholder: String = "", alignment: NSTextAlignment = .left, icon: Bool = true, view: UIView) {
         super.init(frame: .zero)
+        self.view = view
         
         let color = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
         
@@ -40,6 +42,7 @@ final class TextField: UITextField {
         self.layer.shadowRadius = 8
         self.layer.shadowOpacity = 1
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.delegate = self
                 
         switch type {
         case .password:
@@ -141,5 +144,20 @@ final class TextField: UITextField {
             make.right.equalTo(self).offset(-24)
             make.width.height.equalTo(24)
         }
+    }
+}
+
+extension TextField: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.Pallette.buttonBackground.cgColor
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view?.endEditing(true)
+        return false
     }
 }

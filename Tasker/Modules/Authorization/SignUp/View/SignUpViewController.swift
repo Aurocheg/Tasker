@@ -17,11 +17,11 @@ final class SignUpViewController: UIViewController {
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
     // MARK: - Init UI Elements
-    private lazy var mainTitleLabel = TitleLabel(text: "Sign In")
+    private lazy var mainTitleLabel = TitleLabel(text: "Sign Up")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
-    private lazy var nameTF = TextField(type: .name, placeholder: "Name")
-    private lazy var passwordTF = TextField(type: .password, placeholder: "Password")
-    private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password")
+    private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: self.view)
+    private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: self.view)
+    private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password", view: self.view)
     private lazy var signUpButton = MainButton(text: "Sign Up", type: .withoutArrow)
     private lazy var signUpWithLabel = TextLabel(text: "Or sign up with", size: 16)
     private lazy var socialStackView = StackView(spacing: 16)

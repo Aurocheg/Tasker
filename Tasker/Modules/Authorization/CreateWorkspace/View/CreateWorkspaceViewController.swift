@@ -14,11 +14,11 @@ final class CreateWorkspaceViewController: UIViewController {
     
     // MARK: - Init UI Elements
     private lazy var nameLabel = TitleLabel(text: "Name", size: 16)
-    private lazy var nameTF = TextField(type: .name, placeholder: "Enter name of workspace")
+    private lazy var nameTF = TextField(type: .name, placeholder: "Enter name of workspace", view: self.view)
     private lazy var numberOfMemberLabel = TitleLabel(text: "Number of Member", size: 16)
-    private lazy var numberOfMemberTF = TextField(type: .name, placeholder: "Enter number of member")
+    private lazy var numberOfMemberTF = TextField(type: .name, placeholder: "Enter number of member", view: self.view)
     private lazy var emailLabel = TitleLabel(text: "Email", size: 16)
-    private lazy var emailTF = TextField(type: .email, placeholder: "Enter your email")
+    private lazy var emailTF = TextField(type: .email, placeholder: "Enter your email", view: self.view)
     private lazy var createButton = MainButton(text: "Create", type: .withoutArrow)
     
     // MARK: - View Life Cycle

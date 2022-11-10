@@ -20,8 +20,8 @@ final class SignInViewController: UIViewController {
     // MARK: - Init UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Sign In")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
-    private lazy var nameTF = TextField(type: .name, placeholder: "Name")
-    private lazy var passwordTF = TextField(type: .password, placeholder: "Password")
+    private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: self.view)
+    private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: self.view)
     private lazy var forgotPasswordButton = SecondaryButton(text: "Forgot password ?")
     private lazy var signInButton = MainButton(text: "Sign In", type: .withoutArrow)
     private lazy var signInWithLabel = TextLabel(text: "Or sign in with", size: 16)

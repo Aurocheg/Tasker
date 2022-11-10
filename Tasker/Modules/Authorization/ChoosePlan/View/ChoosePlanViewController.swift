@@ -10,6 +10,9 @@ import Lottie
 
 final class ChoosePlanViewController: UIViewController {
     public var presenter: ChoosePlanViewPresenterProtocol!
+    
+    // MARK: - Variables
+    private let screenWidth = UIScreen.main.bounds.width
         
     // MARK: - Init UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Choose plans", size: 18)
@@ -18,7 +21,7 @@ final class ChoosePlanViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 16
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 156, height: 204)
+        layout.itemSize = CGSize(width: screenWidth * 0.41, height: 200)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
@@ -69,7 +72,7 @@ final class ChoosePlanViewController: UIViewController {
         }
         
         continueButton.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-5)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
             make.centerX.equalTo(self.view)
             make.width.equalTo(self.view).offset(-48)
             make.height.equalTo(48)

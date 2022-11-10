@@ -15,8 +15,8 @@ final class ResetPasswordViewController: UIViewController {
     // MARK: - Init UI Elements
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "resetPassword"))
     private lazy var mainTitleLabel = TitleLabel(text: "Reset new password")
-    private lazy var passwordTF = TextField(type: .password, placeholder: "Enter new password")
-    private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password")
+    private lazy var passwordTF = TextField(type: .password, placeholder: "Enter new password", view: self.view)
+    private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password", view: self.view)
     private lazy var saveButton = MainButton(text: "Save changes", type: .withoutArrow)
     
     // MARK: - View Life Cycle

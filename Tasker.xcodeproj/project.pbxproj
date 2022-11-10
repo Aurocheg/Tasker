@@ -46,6 +46,20 @@
 		DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */; };
 		DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */; };
 		DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */; };
+		DECD7BEA291CDC0000F55CFF /* UIBarButtonItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */; };
+		DECD7BEF291CDD9500F55CFF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BEE291CDD9500F55CFF /* OnboardingViewController.swift */; };
+		DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */; };
+		DECD7BF3291CDE1900F55CFF /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */; };
+		DECD7BF7291CF93400F55CFF /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF6291CF93400F55CFF /* Board.swift */; };
+		DECD7BFB291D222A00F55CFF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFA291D222A00F55CFF /* TabBarViewController.swift */; };
+		DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFF291D229600F55CFF /* HomePresenter.swift */; };
+		DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C01291D22B700F55CFF /* HomeViewController.swift */; };
+		DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C07291D232A00F55CFF /* ChatPresenter.swift */; };
+		DECD7C0A291D234F00F55CFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C09291D234F00F55CFF /* ChatViewController.swift */; };
+		DECD7C10291D239400F55CFF /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C0F291D239400F55CFF /* NotificationPresenter.swift */; };
+		DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */; };
+		DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C17291D243400F55CFF /* SettingsViewController.swift */; };
+		DECD7C1A291D257800F55CFF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C19291D257800F55CFF /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +102,20 @@
 		DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspacePresenter.swift; sourceTree = "<group>"; };
 		DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspaceViewController.swift; sourceTree = "<group>"; };
+		DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + Extension.swift"; sourceTree = "<group>"; };
+		DECD7BEE291CDD9500F55CFF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		DECD7BF6291CF93400F55CFF /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		DECD7BFA291D222A00F55CFF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DECD7BFF291D229600F55CFF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		DECD7C01291D22B700F55CFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DECD7C07291D232A00F55CFF /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		DECD7C09291D234F00F55CFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DECD7C0F291D239400F55CFF /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
+		DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		DECD7C17291D243400F55CFF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DECD7C19291D257800F55CFF /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +190,7 @@
 			children = (
 				DEC71B5D291BC01600588D8B /* Onboarding */,
 				DE5D23F02917B74C00F3ED18 /* Authorization */,
+				DECD7BF8291D220000F55CFF /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -173,6 +202,7 @@
 				DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */,
 				DEA377A0291831650035085C /* UILabel + Extension.swift */,
 				DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */,
+				DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +345,9 @@
 		DEC71B5D291BC01600588D8B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				DECD7BED291CDD8800F55CFF /* Model */,
+				DECD7BEC291CDD8600F55CFF /* View */,
+				DECD7BEB291CDD8000F55CFF /* Presenter */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -492,6 +525,175 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DECD7BEB291CDD8000F55CFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DECD7BEC291CDD8600F55CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7BEE291CDD9500F55CFF /* OnboardingViewController.swift */,
+				DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DECD7BED291CDD8800F55CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7BF6291CF93400F55CFF /* Board.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DECD7BF8291D220000F55CFF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7BF9291D220900F55CFF /* Home */,
+				DECD7C03291D22ED00F55CFF /* Chat */,
+				DECD7C0B291D237B00F55CFF /* Notification */,
+				DECD7C11291D23DE00F55CFF /* Settings */,
+				DECD7BFA291D222A00F55CFF /* TabBarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DECD7BF9291D220900F55CFF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7BFE291D228900F55CFF /* Model */,
+				DECD7BFD291D228500F55CFF /* View */,
+				DECD7BFC291D228000F55CFF /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DECD7BFC291D228000F55CFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7BFF291D229600F55CFF /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DECD7BFD291D228500F55CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C01291D22B700F55CFF /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DECD7BFE291D228900F55CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DECD7C03291D22ED00F55CFF /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C06291D231200F55CFF /* Model */,
+				DECD7C05291D230F00F55CFF /* View */,
+				DECD7C04291D230B00F55CFF /* Presenter */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		DECD7C04291D230B00F55CFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C07291D232A00F55CFF /* ChatPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DECD7C05291D230F00F55CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C09291D234F00F55CFF /* ChatViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DECD7C06291D231200F55CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DECD7C0B291D237B00F55CFF /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C0E291D238C00F55CFF /* Model */,
+				DECD7C0D291D238900F55CFF /* View */,
+				DECD7C0C291D238500F55CFF /* Presenter */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		DECD7C0C291D238500F55CFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C0F291D239400F55CFF /* NotificationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DECD7C0D291D238900F55CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C19291D257800F55CFF /* NotificationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DECD7C0E291D238C00F55CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DECD7C11291D23DE00F55CFF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C14291D23ED00F55CFF /* Model */,
+				DECD7C13291D23E900F55CFF /* View */,
+				DECD7C12291D23E400F55CFF /* Presenter */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DECD7C12291D23E400F55CFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DECD7C13291D23E900F55CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DECD7C17291D243400F55CFF /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DECD7C14291D23ED00F55CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -572,17 +774,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DECD7C1A291D257800F55CFF /* NotificationViewController.swift in Sources */,
 				DEA3779A2917FD280035085C /* TextLabel.swift in Sources */,
 				DEC71B72291BC59300588D8B /* ForgotPasswordViewController.swift in Sources */,
 				DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */,
+				DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */,
 				DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */,
 				DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */,
+				DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */,
 				DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */,
 				DE5D24032917BB8400F3ED18 /* Persist.swift in Sources */,
 				DE5D23FF2917BB2B00F3ED18 /* Theme.swift in Sources */,
 				DE5D23FA2917B8BC00F3ED18 /* SignInViewController.swift in Sources */,
+				DECD7BFB291D222A00F55CFF /* TabBarViewController.swift in Sources */,
 				DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */,
 				DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */,
+				DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */,
+				DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */,
 				DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */,
 				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
 				DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */,
@@ -593,6 +801,9 @@
 				DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */,
 				DEC71B6F291BC56800588D8B /* ForgotPasswordPresenter.swift in Sources */,
 				DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */,
+				DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */,
+				DECD7C10291D239400F55CFF /* NotificationPresenter.swift in Sources */,
+				DECD7BF3291CDE1900F55CFF /* BoardViewController.swift in Sources */,
 				DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */,
 				DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */,
 				DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */,
@@ -600,9 +811,14 @@
 				DEC71B6A291BC22D00588D8B /* SignUpViewController.swift in Sources */,
 				DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */,
 				DE5D24092917BF7200F3ED18 /* MainButton.swift in Sources */,
+				DECD7BEA291CDC0000F55CFF /* UIBarButtonItem + Extension.swift in Sources */,
+				DECD7BF7291CF93400F55CFF /* Board.swift in Sources */,
 				DEA377982917E1210035085C /* TitleLabel.swift in Sources */,
 				DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */,
+				DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */,
 				DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */,
+				DECD7C0A291D234F00F55CFF /* ChatViewController.swift in Sources */,
+				DECD7BEF291CDD9500F55CFF /* OnboardingViewController.swift in Sources */,
 				DEC71B67291BC20700588D8B /* SignUpPresenter.swift in Sources */,
 				DE5D23F62917B78100F3ED18 /* SignInPresenter.swift in Sources */,
 			);

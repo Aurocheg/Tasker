@@ -14,6 +14,7 @@ protocol RouterMainProtocol {
 
 protocol RouterProtocol: RouterMainProtocol {
     func initialViewController()
+    func showSignIn()
     func showSignUp()
     func showForgotPassword()
     func showOTP()
@@ -22,7 +23,7 @@ protocol RouterProtocol: RouterMainProtocol {
     func showChoosePlan()
 }
 
-class Router: RouterProtocol {
+final class Router: RouterProtocol {
     var navigationController: UINavigationController?
     var assemblyBuilder: AssemblyBuilderProtocol?
     
@@ -32,9 +33,22 @@ class Router: RouterProtocol {
     }
     
     func initialViewController() {
+        /*
+        if let navigationController = navigationController {
+            guard let onboardingViewController = assemblyBuilder?.createOnboardingModule(router: self) else { return }
+            navigationController.viewControllers = [onboardingViewController]
+        }
+         */
         if let navigationController = navigationController {
             guard let signInViewController = assemblyBuilder?.createSignInModule(router: self) else { return }
             navigationController.viewControllers = [signInViewController]
+        }
+    }
+    
+    func showSignIn() {
+        if let navigationController = navigationController {
+            guard let signInViewController = assemblyBuilder?.createSignInModule(router: self) else { return }
+            navigationController.pushViewController(signInViewController, animated: true)
         }
     }
     

@@ -16,7 +16,7 @@ final class ForgotPasswordViewController: UIViewController {
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "forgotPassword"))
     private lazy var mainTitleLabel = TitleLabel(text: "Forgot Password ?")
     private lazy var textLabel = TextLabel(text: "Enter your phone number then we will send you OTP sms to reset new password.")
-    private lazy var numberTF = TextField(type: .number, placeholder: "Enter your number")
+    private lazy var numberTF = TextField(type: .number, placeholder: "Enter your number", view: self.view)
     private lazy var sendButton = MainButton(text: "Send OTP", type: .withoutArrow)
     
     override func viewDidLoad() {
