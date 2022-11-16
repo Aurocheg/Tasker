@@ -8,16 +8,16 @@
 import UIKit
 
 final class OnboardingViewController: UIPageViewController {
-    public var presenter: OnboardingViewPresenterProtocol?
-    private var boards: [Board] {
-        presenter?.boards ?? [Board(image: "test", title: "test", text: "test")]
-    }
+    public var presenter: OnboardingViewPresenterProtocol!
+    
+    // MARK: - Variables
+    private let testBoard = Board(image: "test", title: "test", text: "test")
     
     // MARK: - Init UI Elements
     private lazy var arrayBoardViewController: [BoardViewController] = {
         var boardsVC = [BoardViewController]()
         
-        for board in boards {
+        for board in presenter?.boards ?? [testBoard] {
             boardsVC.append(BoardViewController(boardWith: board))
         }
     
@@ -67,7 +67,7 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewController = viewController as? BoardViewController else { return nil }
         if let index = arrayBoardViewController.index(of: viewController) {
-            if index < boards.count - 1 {
+            if index < (presenter.boards?.count ?? [testBoard].count) - 1  {
                 return arrayBoardViewController[index + 1]
             }
         }
@@ -79,7 +79,7 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
 // MARK: - UIPageViewControllerDataSource
 extension OnboardingViewController: UIPageViewControllerDataSource {
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        boards.count
+        presenter?.boards?.count ?? [testBoard].count
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {

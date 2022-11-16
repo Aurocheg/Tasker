@@ -15,6 +15,7 @@ protocol ChoosePlanViewPresenterProtocol: AnyObject {
     init(view: ChoosePlanViewProtocol, router: RouterProtocol)
     var plans: [Plan]? { get set }
     func getPlans()
+    func continueButtonTapped()
 }
 
 final class ChoosePlanPresenter: ChoosePlanViewPresenterProtocol {
@@ -31,6 +32,10 @@ final class ChoosePlanPresenter: ChoosePlanViewPresenterProtocol {
     
     func getPlans() {
         plans = Plan.getPlans()
+    }
+    
+    func continueButtonTapped() {
+        router?.showTabBar()
     }
 }
 

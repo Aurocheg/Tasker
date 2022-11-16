@@ -39,10 +39,7 @@ final class BoardViewController: UIViewController {
         edgesForExtendedLayout = []
         
         // MARK: - Setting Values
-        if let image = UIImage(named: boardWith.image) {
-            boardImageView.image = image
-        }
-        
+        boardImageView.image = UIImage(named: boardWith.title)
         boardTitleLabel.text = boardWith.title
         boardTextLabel.text = boardWith.text
         

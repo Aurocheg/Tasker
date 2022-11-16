@@ -13,11 +13,12 @@ protocol SignInViewProtocol: AnyObject {
 
 protocol SignInViewPresenterProtocol: AnyObject {
     init(view: SignInViewProtocol, router: RouterProtocol)
-    func signUpButtonTapped()
+    func signInButtonTapped()
     func forgotPasswordButtonTapped()
+    func signUpButtonTapped()
 }
 
-class SignInPresenter: SignInViewPresenterProtocol {
+final class SignInPresenter: SignInViewPresenterProtocol {
     weak var view: SignInViewProtocol?
     var router: RouterProtocol?
     
@@ -26,11 +27,15 @@ class SignInPresenter: SignInViewPresenterProtocol {
         self.router = router
     }
     
-    func signUpButtonTapped() {
-        router?.showSignUp()
+    func signInButtonTapped() {
+        router?.showTabBar()
     }
     
     func forgotPasswordButtonTapped() {
         router?.showForgotPassword()
+    }
+    
+    func signUpButtonTapped() {
+        router?.showSignUp()
     }
 }

@@ -11,6 +11,6 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        UITabBar.appearance().tintColor = UIColor.Pallette.buttonBackground
     }
 }

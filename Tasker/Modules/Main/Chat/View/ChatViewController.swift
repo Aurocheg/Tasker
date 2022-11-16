@@ -18,6 +18,8 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarItem.selectedImage = UIImage(named: "chatBold")
+                
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews

@@ -12,7 +12,7 @@ protocol SettingsViewProtocol: AnyObject {
 }
 
 protocol SettingsViewPresenterProtocol: AnyObject {
-    init(view: PresenterViewProtocol, router: RouterProtocol)
+    init(view: SettingsViewProtocol, router: RouterProtocol)
 }
 
 final class SettingsPresenter: SettingsViewPresenterProtocol {

@@ -13,6 +13,7 @@ protocol RouterMainProtocol {
 }
 
 protocol RouterProtocol: RouterMainProtocol {
+    // MARK: - Authorization
     func initialViewController()
     func showSignIn()
     func showSignUp()
@@ -21,6 +22,8 @@ protocol RouterProtocol: RouterMainProtocol {
     func showResetPassword()
     func showCreateWorkspace()
     func showChoosePlan()
+    // MARK: - Main
+    func showTabBar()
 }
 
 final class Router: RouterProtocol {
@@ -39,6 +42,8 @@ final class Router: RouterProtocol {
             navigationController.viewControllers = [onboardingViewController]
         }
          */
+         
+        
         if let navigationController = navigationController {
             guard let signInViewController = assemblyBuilder?.createSignInModule(router: self) else { return }
             navigationController.viewControllers = [signInViewController]
@@ -91,6 +96,14 @@ final class Router: RouterProtocol {
         if let navigationController = navigationController {
             guard let choosePlanViewController = assemblyBuilder?.createChoosePlanModule(router: self) else { return }
             navigationController.pushViewController(choosePlanViewController, animated: true)
+        }
+    }
+    
+    // MARK: - Main
+    func showTabBar() {
+        if let navigationController = navigationController {
+            guard let tabBarController = assemblyBuilder?.createTabBarModule(router: self) else { return }
+            navigationController.viewControllers = [tabBarController]
         }
     }
 }

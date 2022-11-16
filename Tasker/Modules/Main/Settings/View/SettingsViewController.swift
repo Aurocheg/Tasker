@@ -18,6 +18,8 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarItem.selectedImage = UIImage(named: "settingsBold")
+        
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews

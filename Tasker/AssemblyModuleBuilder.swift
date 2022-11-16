@@ -96,7 +96,14 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
         let notificationModule = createNotificationModule(router: router)
         let settingsModule = createSettingsModule(router: router)
         
+        homeModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "home"), tag: 0)
+        chatModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "chat"), tag: 1)
+        notificationModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "notification"), tag: 2)
+        settingsModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "settings"), tag: 3)
+        
         tabBarController.viewControllers = [homeModule, chatModule, notificationModule, settingsModule]
+                
+        return tabBarController
     }
     
     func createHomeModule(router: RouterProtocol) -> UIViewController {

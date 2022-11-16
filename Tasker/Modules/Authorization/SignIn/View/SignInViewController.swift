@@ -67,6 +67,7 @@ final class SignInViewController: UIViewController {
         signInWithLabel.drawLineOnBothSides(view: self.view)
         
         // MARK: - Targets
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
@@ -137,16 +138,17 @@ final class SignInViewController: UIViewController {
     
     // MARK: - @objc
     @objc func signInButtonTapped() {
-        
-    }
-    
-    @objc func signUpButtonTapped() {
-        presenter.signUpButtonTapped()
+        presenter.signInButtonTapped()
     }
     
     @objc func forgotPasswordButtonTapped() {
         presenter.forgotPasswordButtonTapped()
     }
+    
+    @objc func signUpButtonTapped() {
+        presenter.signUpButtonTapped()
+    }
+
 }
 
 extension SignInViewController: SignInViewProtocol {

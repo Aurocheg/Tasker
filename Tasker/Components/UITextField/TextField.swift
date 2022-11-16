@@ -46,7 +46,7 @@ final class TextField: UITextField {
                 
         switch type {
         case .password:
-            self.textContentType = .password
+            self.textContentType = .oneTimeCode
             self.isSecureTextEntry = true
             isPasswordTF = true
             
@@ -78,6 +78,8 @@ final class TextField: UITextField {
         case .email:
             self.textContentType = .emailAddress
             self.keyboardType = .emailAddress
+            self.autocorrectionType = .no
+            self.autocapitalizationType = .none
             
             let mailIcon = UIImage(named: "mail")?.withTintColor(color, renderingMode: .alwaysOriginal)
             

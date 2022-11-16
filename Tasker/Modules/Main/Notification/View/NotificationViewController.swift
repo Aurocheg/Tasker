@@ -18,6 +18,8 @@ final class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarItem.selectedImage = UIImage(named: "notificationBold")
+        
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews

@@ -81,7 +81,7 @@ final class ChoosePlanViewController: UIViewController {
     
     // MARK: - @objc
     @objc func continueButtonTapped() {
-        
+        presenter.continueButtonTapped()
     }
 }
 

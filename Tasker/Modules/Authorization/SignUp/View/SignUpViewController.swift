@@ -19,7 +19,7 @@ final class SignUpViewController: UIViewController {
     // MARK: - Init UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Sign Up")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
-    private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: self.view)
+    private lazy var emailTF = TextField(type: .email, placeholder: "Email", view: self.view)
     private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: self.view)
     private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password", view: self.view)
     private lazy var signUpButton = MainButton(text: "Sign Up", type: .withoutArrow)
@@ -46,7 +46,7 @@ final class SignUpViewController: UIViewController {
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
-        [mainTitleLabel, titleImageView, nameTF, passwordTF, confirmPasswordTF, signUpButton, signUpWithLabel, socialStackView, bottomStackView].forEach {view in
+        [mainTitleLabel, titleImageView, emailTF, passwordTF, confirmPasswordTF, signUpButton, signUpWithLabel, socialStackView, bottomStackView].forEach {view in
             self.view.addSubview(view)
         }
         
@@ -65,6 +65,11 @@ final class SignUpViewController: UIViewController {
         signUpWithLabel.drawLineOnBothSides(view: self.view)
         
         // MARK: - Targets
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        
+        [emailTF, passwordTF].forEach {textField in
+            textField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        }
     }
     
     // MARK: - Methods
@@ -80,7 +85,7 @@ final class SignUpViewController: UIViewController {
             make.width.height.equalTo(34)
         }
         
-        nameTF.snp.makeConstraints {make -> Void in
+        emailTF.snp.makeConstraints {make -> Void in
             make.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
             make.width.equalTo(self.view).offset(-48)
             make.height.equalTo(48)
@@ -88,7 +93,7 @@ final class SignUpViewController: UIViewController {
         }
         
         passwordTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(nameTF.snp.bottom).offset(16)
+            make.top.equalTo(emailTF.snp.bottom).offset(16)
             make.width.equalTo(self.view).offset(-48)
             make.height.equalTo(48)
             make.left.equalTo(self.view).offset(24)
@@ -132,7 +137,51 @@ final class SignUpViewController: UIViewController {
     }
     
     // MARK: - @objc
+    @objc func textFieldChanged(_ sender: UITextField) {
+        let value = sender.text?.trim()
+        switch sender {
+        case emailTF:
+            
+            presenter.emailValue = value
+            
+            if value?.isValidTextField(type: .email) ?? true {
+                emailTF.layer.borderColor = UIColor.white.cgColor
+            } else {
+                emailTF.layer.borderColor = UIColor.systemRed.cgColor
+            }
+            
+        case passwordTF:
+            
+            presenter.passwordValue = value
+            
+            if value?.isValidTextField(type: .password) ?? true {
+                passwordTF.layer.borderColor = UIColor.white.cgColor
+            } else {
+                passwordTF.layer.borderColor = UIColor.systemRed.cgColor
+            }
+            
+        default:
+            break
+        }
+    }
     
+    @objc func signUpButtonTapped() {
+        presenter.signUpButtonTapped {[weak self] success in
+            guard let self = self else { return }
+            var message = ""
+            
+            if success {
+                message = "User was successfully created."
+            } else {
+                message = "There was an error."
+            }
+            
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel)
+            alertController.addAction(action)
+            self.present(alertController, animated: true)
+        }
+    }
 }
 
 extension SignUpViewController: SignUpViewProtocol {
