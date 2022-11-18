@@ -11,6 +11,7 @@ final class OTPViewController: UIViewController {
     public var presenter: OTPViewPresenterProtocol!
     
     // MARK: - Variables
+    var otpText = String()
     
     // MARK: - Init UI Elements
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "OTP"))
@@ -39,6 +40,9 @@ final class OTPViewController: UIViewController {
         [firstTF, secondTF, thirdTF, fourthTF].forEach {textField in
             self.textFieldsStackView.addArrangedSubview(textField)
             textField.font = .systemFont(ofSize: 24, weight: .bold)
+            textField.textContentType = .oneTimeCode
+            
+            textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .touchUpInside)
         }
         
         [resendButton, resendTextLabel].forEach {element in
@@ -49,6 +53,8 @@ final class OTPViewController: UIViewController {
         setConstraints()
                 
         // MARK: - Targets
+        firstTF.becomeFirstResponder()
+        
         resendButton.addTarget(self, action: #selector(resendButtonTapped), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
@@ -100,12 +106,48 @@ final class OTPViewController: UIViewController {
     }
     
     // MARK: - @objc
+    @objc func textFieldDidChange(_ sender: UITextField) {
+        let text = sender.text
+        
+        if text?.count == 1 {
+            switch sender {
+                case firstTF: firstTF.becomeFirstResponder()
+                case secondTF: secondTF.becomeFirstResponder()
+                case thirdTF: thirdTF.becomeFirstResponder()
+                case fourthTF:
+                    fourthTF.resignFirstResponder()
+                    self.dismissKeyboard()
+                default: break
+            }
+        }
+        
+        if text?.count == 0 {
+            switch sender {
+                case firstTF: firstTF.becomeFirstResponder()
+                case secondTF: secondTF.becomeFirstResponder()
+                case thirdTF: thirdTF.becomeFirstResponder()
+                case fourthTF: fourthTF.becomeFirstResponder()
+                default: break
+            }
+        }
+
+    }
+    
     @objc func resendButtonTapped() {
         presenter.resendButtonTapped()
     }
     
     @objc func nextButtonTapped() {
         presenter.nextButtonTapped()
+    }
+    
+    // MARK: - Methods
+    func dismissKeyboard() {
+        for textField in [firstTF, secondTF, thirdTF, fourthTF] {
+            self.otpText += textField.text ?? ""
+        }
+        print(self.otpText)
+        self.view.endEditing(true)
     }
 }
 

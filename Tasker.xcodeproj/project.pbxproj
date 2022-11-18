@@ -33,6 +33,7 @@
 		DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D3ED42916B6470095AC5B /* SceneDelegate.swift */; };
 		DE6D3EDC2916B6470095AC5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6D3EDB2916B6470095AC5B /* Assets.xcassets */; };
 		DE6D3EDF2916B6470095AC5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6D3EDD2916B6470095AC5B /* LaunchScreen.storyboard */; };
+		DE9C7756292624860065414F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C7755292624860065414F /* TabBar.swift */; };
 		DEA377982917E1210035085C /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA377972917E1210035085C /* TitleLabel.swift */; };
 		DEA3779A2917FD280035085C /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA377992917FD280035085C /* TextLabel.swift */; };
 		DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3779E291811D70035085C /* SecondaryButton.swift */; };
@@ -92,6 +93,7 @@
 		DE6D3EDB2916B6470095AC5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6D3EDE2916B6470095AC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6D3EE02916B6470095AC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9C7755292624860065414F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DEA377972917E1210035085C /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		DEA377992917FD280035085C /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		DEA3779E291811D70035085C /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		DE3F56542917AF8C0036DDC4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DE9C7754292624770065414F /* TabBar */,
 				DEC71B62291BC15000588D8B /* UIStackView */,
 				DEC71B5F291BC0C500588D8B /* UIImageView */,
 				DEA3779D2917FF100035085C /* UIButton */,
@@ -343,6 +346,14 @@
 				DE6D3EE02916B6470095AC5B /* Info.plist */,
 			);
 			path = Tasker;
+			sourceTree = "<group>";
+		};
+		DE9C7754292624770065414F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C7755292624860065414F /* TabBar.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		DEA3779B2917FEF70035085C /* UILabel */ = {
@@ -826,6 +837,7 @@
 				DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */,
 				DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */,
 				DE55093B2922ACFA0081A68B /* FirebaseAuthManager.swift in Sources */,
+				DE9C7756292624860065414F /* TabBar.swift in Sources */,
 				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
 				DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */,
 				DEC71B64291BC15A00588D8B /* StackView.swift in Sources */,

@@ -17,6 +17,20 @@ final class PlansCollectionViewCell: UICollectionViewCell {
     }()
     public lazy var titleLabel = TitleLabel(text: "", size: 16)
     public lazy var textLabel = TextLabel()
+    public lazy var doneCircleView: UIView = {
+        let view = UIView()
+        let color = UIColor(red: 0.28, green: 0.76, blue: 0.448, alpha: 1)
+        view.layer.cornerRadius = 16
+        view.layer.borderColor = color.cgColor
+        view.backgroundColor = color
+        return view
+    }()
+    public lazy var doneCircleImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.image = UIImage(named: "checkCircle")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        return imageView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,9 +47,11 @@ final class PlansCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
         
         // MARK: - Adding Subviews
-        [emojiAnimationView, titleLabel, textLabel].forEach {element in
+        [emojiAnimationView, titleLabel, textLabel, doneCircleView].forEach {element in
             self.addSubview(element)
         }
+        doneCircleView.addSubview(doneCircleImageView)
+        doneCircleView.isHidden = true
         
         setConstraints()
     }
@@ -60,6 +76,17 @@ final class PlansCollectionViewCell: UICollectionViewCell {
             make.centerX.equalTo(self)
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.width.equalTo(self).multipliedBy(0.576)
+        }
+        
+        doneCircleView.snp.makeConstraints {make -> Void in
+            make.right.equalTo(self.snp.right).offset(-8)
+            make.top.equalTo(self).offset(8)
+            make.width.height.equalTo(32)
+        }
+        
+        doneCircleImageView.snp.makeConstraints {make -> Void in
+            make.width.height.equalTo(24)
+            make.centerX.centerY.equalTo(doneCircleView)
         }
     }
 }

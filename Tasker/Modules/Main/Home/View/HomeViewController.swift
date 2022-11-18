@@ -52,7 +52,7 @@ final class HomeViewController: UIViewController {
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
-        [mainTitleLabel, titleImageView, plusButton].forEach {element in
+        [mainTitleLabel, titleImageView, plusButton, searchBar].forEach {element in
             self.view.addSubview(element)
         }
         
@@ -71,7 +71,7 @@ final class HomeViewController: UIViewController {
         
         titleImageView.snp.makeConstraints {make -> Void in
             make.left.equalTo(mainTitleLabel.snp.right).offset(11)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(5)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(3)
             make.width.height.equalTo(24)
         }
         
@@ -79,6 +79,13 @@ final class HomeViewController: UIViewController {
             make.right.equalTo(self.view.snp.right).offset(-24)
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(-5)
             make.width.height.equalTo(44)
+        }
+        
+        searchBar.snp.makeConstraints {make -> Void in
+            make.centerX.equalTo(self.view)
+            make.top.equalTo(plusButton.snp.bottom).offset(24)
+            make.width.equalTo(self.view).offset(-48)
+            make.height.equalTo(48)
         }
     }
     

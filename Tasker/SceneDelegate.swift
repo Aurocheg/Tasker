@@ -29,10 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         let navigationController = UINavigationController()
-        let backIcon = UIImage(named: "backward")
-        navigationController.navigationBar.backIndicatorImage = backIcon
-        navigationController.navigationBar.backIndicatorTransitionMaskImage = backIcon
-        navigationController.navigationItem.leftItemsSupplementBackButton = true
+        let darkColor = UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1)
+        navigationController.navigationBar.tintColor = UIColor.color(light: darkColor, dark: .white)
         
         let assemblyBuilder = AssemblyModuleBuilder()
         let router = Router(navigationController: navigationController, assemblyBuilder: assemblyBuilder)

@@ -108,7 +108,6 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     
     func createHomeModule(router: RouterProtocol) -> UIViewController {
         let view = HomeViewController()
-        view.tabBarItem = UITabBarItem()
         let presenter = HomePresenter(view: view, router: router)
         view.presenter = presenter
         return view

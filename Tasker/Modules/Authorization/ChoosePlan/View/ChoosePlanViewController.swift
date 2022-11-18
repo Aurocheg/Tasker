@@ -94,7 +94,37 @@ extension ChoosePlanViewController: ChoosePlanViewProtocol {
 
 // MARK: - UICollectionViewDelegate
 extension ChoosePlanViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PlansCollectionViewCell else { return }
+        
+        cell.backgroundColor = UIColor.Pallette.buttonBackground
+        cell.layer.borderColor = UIColor.clear.cgColor
+        cell.doneCircleView.isHidden = false
+        
+        if indexPath.row == 1 {
+            cell.titleLabel.textColor = UIColor(red: 1, green: 0.541, blue: 0, alpha: 1)
+        } else {
+            cell.titleLabel.textColor = .white
+        }
+        
+        cell.textLabel.textColor = .white
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PlansCollectionViewCell else { return }
+        
+        cell.doneCircleView.isHidden = true
+        cell.backgroundColor = UIColor.color(light: .white, dark: .clear)
+        cell.layer.borderColor = UIColor.white.cgColor
+        
+        if indexPath.row == 1 {
+            cell.titleLabel.textColor = UIColor(red: 1, green: 0.541, blue: 0, alpha: 1)
+        } else {
+            cell.titleLabel.textColor = UIColor.Pallette.titleColor
+        }
+        
+        cell.textLabel.textColor = UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -112,6 +142,10 @@ extension ChoosePlanViewController: UICollectionViewDataSource {
         cell.emojiAnimationView.play()
         cell.titleLabel.text = plan.title
         cell.textLabel.text = plan.text
+        
+        if indexPath.row == 1 {
+            cell.titleLabel.textColor = UIColor(red: 1, green: 0.541, blue: 0, alpha: 1)
+        }
         
         return cell
     }

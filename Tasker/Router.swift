@@ -35,15 +35,15 @@ final class Router: RouterProtocol {
         self.assemblyBuilder = assemblyBuilder
     }
     
-    func initialViewController() {
-        /*
+    // MARK: - Methods
+    @objc func popLast() {
         if let navigationController = navigationController {
-            guard let onboardingViewController = assemblyBuilder?.createOnboardingModule(router: self) else { return }
-            navigationController.viewControllers = [onboardingViewController]
+            navigationController.popViewController(animated: true)
         }
-         */
-         
-        
+    }
+    
+    // MARK: - Authorization
+    func initialViewController() {
         if let navigationController = navigationController {
             guard let signInViewController = assemblyBuilder?.createSignInModule(router: self) else { return }
             navigationController.viewControllers = [signInViewController]
@@ -59,43 +59,49 @@ final class Router: RouterProtocol {
     
     func showSignUp() {
         if let navigationController = navigationController {
-            guard let signUpViewController = assemblyBuilder?.createSignUpModule(router: self) else { return }
-            navigationController.pushViewController(signUpViewController, animated: true)
+            guard let view = assemblyBuilder?.createSignUpModule(router: self) else { return }
+            view.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backward"), style: .plain, target: self, action: #selector(popLast))
+            navigationController.pushViewController(view, animated: true)
         }
     }
     
     func showForgotPassword() {
         if let navigationController = navigationController {
-            guard let forgotPasswordViewController = assemblyBuilder?.createForgotPasswordModule(router: self) else { return }
-            navigationController.pushViewController(forgotPasswordViewController, animated: true)
+            guard let view = assemblyBuilder?.createForgotPasswordModule(router: self) else { return }
+            view.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backward"), style: .plain, target: self, action: #selector(popLast))
+            navigationController.pushViewController(view, animated: true)
         }
     }
     
     func showOTP() {
         if let navigationController = navigationController {
-            guard let OTPViewController = assemblyBuilder?.createOTPModule(router: self) else { return }
-            navigationController.pushViewController(OTPViewController, animated: true)
+            guard let view = assemblyBuilder?.createOTPModule(router: self) else { return }
+            view.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backward"), style: .plain, target: self, action: #selector(popLast))
+            navigationController.pushViewController(view, animated: true)
         }
     }
     
     func showResetPassword() {
         if let navigationController = navigationController {
-            guard let resetPasswordViewController = assemblyBuilder?.createResetPasswordModule(router: self) else { return }
-            navigationController.pushViewController(resetPasswordViewController, animated: true)
+            guard let view = assemblyBuilder?.createResetPasswordModule(router: self) else { return }
+            view.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backward"), style: .plain, target: self, action: #selector(popLast))
+            navigationController.pushViewController(view, animated: true)
         }
     }
     
     func showCreateWorkspace() {
         if let navigationController = navigationController {
-            guard let createWorkspaceViewController = assemblyBuilder?.createWorkspaceModule(router: self) else { return }
-            navigationController.pushViewController(createWorkspaceViewController, animated: true)
+            guard let view = assemblyBuilder?.createWorkspaceModule(router: self) else { return }
+            view.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backward"), style: .plain, target: self, action: #selector(popLast))
+            navigationController.pushViewController(view, animated: true)
         }
     }
     
     func showChoosePlan() {
         if let navigationController = navigationController {
-            guard let choosePlanViewController = assemblyBuilder?.createChoosePlanModule(router: self) else { return }
-            navigationController.pushViewController(choosePlanViewController, animated: true)
+            guard let view = assemblyBuilder?.createChoosePlanModule(router: self) else { return }
+            view.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backward"), style: .plain, target: self, action: #selector(popLast))
+            navigationController.pushViewController(view, animated: true)
         }
     }
     
