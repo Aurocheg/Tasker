@@ -8,20 +8,14 @@
 import UIKit
 
 final class SecondaryButton: UIButton {
-    // MARK: - Enum
-    
     enum SelfType {
         case withBackground
         case withoutBackground
     }
     
-    // MARK: - Init Methods
-    
     init(text: String = "", type: SelfType = .withoutBackground, image: UIImage? = nil, radius: CGFloat = 8, textColor: UIColor? = nil) {
         super.init(frame: .zero)
-                
-        // MARK: - Title Customization
-        
+                        
         self.setTitle(text, for: .normal)
 
         if let color = textColor {
@@ -31,15 +25,11 @@ final class SecondaryButton: UIButton {
         }
         
         self.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-        
-        // MARK: - Image
-        
+                
         if let image = image {
             self.setImage(image, for: .normal)
         }
-        
-        // MARK: - Button Type
-        
+                
         switch type {
         case .withBackground:
             let color = UIColor(red: 0.937, green: 0.945, blue: 0.953, alpha: 1)

@@ -11,7 +11,8 @@ final class OTPViewController: UIViewController {
     public var presenter: OTPViewPresenterProtocol!
     
     // MARK: - Properties
-    var otpText = String()
+    private var otpText = String()
+    private var textFieldsArray = [TextField]()
     
     // MARK: - Init UI Elements
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "OTP"))
@@ -28,70 +29,53 @@ final class OTPViewController: UIViewController {
     private lazy var nextButton = MainButton(text: "Next", type: .withRightArrow)
     
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.Pallette.background
-        
-        // MARK: - Adding Subviews
-        
-        [titleImageView, mainTitleLabel, textLabel, textFieldsStackView, resendStackView, nextButton].forEach {view in
-            self.view.addSubview(view)
-        }
-        
-        [firstTF, secondTF, thirdTF, fourthTF].forEach {textField in
-            self.textFieldsStackView.addArrangedSubview(textField)
-            textField.font = .systemFont(ofSize: 24, weight: .bold)
-            textField.textContentType = .oneTimeCode
-            
-            textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .touchUpInside)
-        }
-        
-        [resendButton, resendTextLabel].forEach {element in
-            self.resendStackView.addArrangedSubview(element)
-        }
-        
-        // MARK: - Setting Constraints
-        
-        setConstraints()
                 
-        // MARK: - Targets
+        [firstTF, secondTF, thirdTF, fourthTF].forEach {textField in
+            textFieldsArray.append(textField)
+        }
         
-        firstTF.becomeFirstResponder()
-        
-        resendButton.addTarget(self, action: #selector(resendButtonTapped), for: .touchUpInside)
-        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
+    private func setupHierarchy() {
+        view.addSubviews(titleImageView, mainTitleLabel, textLabel, textFieldsStackView, resendStackView, nextButton)
+        
+        textFieldsStackView.addArrangedSubviews(textFieldsArray)
+        resendStackView.addArrangedSubviews([resendButton, resendTextLabel])
+    }
     
-    private func setConstraints() {
+    private func setupLayout() {
         titleImageView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
-            make.centerX.equalTo(self.view)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
+            make.centerX.equalTo(view)
             make.width.equalTo(121)
             make.height.equalTo(112)
         }
         
         mainTitleLabel.snp.makeConstraints {make -> Void in
             make.top.equalTo(titleImageView.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
         }
         
         textLabel.snp.makeConstraints {make -> Void in
             make.top.equalTo(mainTitleLabel.snp.bottom).offset(15)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-78)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-78)
         }
         
         textFieldsStackView.snp.makeConstraints {make -> Void in
             make.top.equalTo(textLabel.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-48)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-48)
         }
         
-        [firstTF, secondTF, thirdTF, fourthTF].forEach {textField in
+        textFieldsArray.forEach {textField in
             textField.snp.makeConstraints {make -> Void in
                 make.width.equalTo(textFieldsStackView).multipliedBy(0.213)
                 make.height.equalTo(70)
@@ -100,19 +84,37 @@ final class OTPViewController: UIViewController {
         
         resendStackView.snp.makeConstraints {make -> Void in
             make.top.equalTo(textFieldsStackView.snp.bottom).offset(16)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
         }
         
         nextButton.snp.makeConstraints {make -> Void in
             make.top.equalTo(resendStackView.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-48)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
     }
     
-    // MARK: - @objc
+    private func setupProperties() {
+        view.backgroundColor = UIColor.Pallette.background
+        
+        textFieldsArray.forEach {textField in
+            textField.font = .systemFont(ofSize: 24, weight: .bold)
+            textField.textContentType = .oneTimeCode
+        }
+        firstTF.becomeFirstResponder()
+    }
     
+    private func setupTargets() {
+        textFieldsArray.forEach {textField in
+            textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .touchUpInside)
+        }
+        
+        resendButton.addTarget(self, action: #selector(resendButtonTapped), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - @objc
     @objc func textFieldDidChange(_ sender: UITextField) {
         let text = sender.text
         
@@ -123,7 +125,7 @@ final class OTPViewController: UIViewController {
                 case thirdTF: thirdTF.becomeFirstResponder()
                 case fourthTF:
                     fourthTF.resignFirstResponder()
-                    self.dismissKeyboard()
+                    dismissKeyboard()
                 default: break
             }
         }
@@ -149,13 +151,12 @@ final class OTPViewController: UIViewController {
     }
     
     // MARK: - Methods
-    
     private func dismissKeyboard() {
-        for textField in [firstTF, secondTF, thirdTF, fourthTF] {
-            self.otpText += textField.text ?? ""
+        for textField in textFieldsArray {
+            otpText += textField.text ?? ""
         }
-        print(self.otpText)
-        self.view.endEditing(true)
+        print(otpText)
+        view.endEditing(true)
     }
 }
 

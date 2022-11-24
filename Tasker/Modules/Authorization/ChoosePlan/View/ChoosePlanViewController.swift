@@ -15,7 +15,6 @@ final class ChoosePlanViewController: UIViewController {
     private let screenWidth = UIScreen.main.bounds.width
         
     // MARK: - Init UI Elements
-    
     private lazy var mainTitleLabel = TitleLabel(text: "Choose plans", size: 18)
     private lazy var textLabel = TextLabel(text: "Unlock all features with premium plan")
     private lazy var plansCollectionView: UICollectionView = {
@@ -35,34 +34,24 @@ final class ChoosePlanViewController: UIViewController {
     private lazy var continueButton = MainButton(text: "Continue", type: .withRightArrow)
 
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choose plans"
-        view.backgroundColor = UIColor.Pallette.background
         
-        // MARK: - Adding Subviews
-        
-        [mainTitleLabel, textLabel, plansCollectionView, continueButton].forEach {view in
-            self.view.addSubview(view)
-        }
-        
-        // MARK: - Setting Constraints
-        
-        setConstraints()
-        
-        // MARK: - Targets
-        
-        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
-        plansCollectionView.register(PlansCollectionViewCell.self, forCellWithReuseIdentifier: "plansCollectionViewCell")
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
+    private func setupHierarchy() {
+        view.addSubviews(mainTitleLabel, textLabel, plansCollectionView, continueButton)
+    }
     
-    private func setConstraints() {
+    private func setupLayout() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.left.equalTo(self.view).offset(24)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
+            make.left.equalTo(view).offset(24)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
         }
         
         textLabel.snp.makeConstraints {make -> Void in
@@ -72,21 +61,30 @@ final class ChoosePlanViewController: UIViewController {
         
         plansCollectionView.snp.makeConstraints {make -> Void in
             make.top.equalTo(textLabel.snp.bottom).offset(32)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-48)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(204)
         }
         
         continueButton.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-48)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
     }
     
-    // MARK: - @objc
+    private func setupProperties() {
+        title = "Choose plans"
+        view.backgroundColor = UIColor.Pallette.background
+    }
     
+    private func setupTargets() {
+        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+        plansCollectionView.register(PlansCollectionViewCell.self, forCellWithReuseIdentifier: "plansCollectionViewCell")
+    }
+    
+    // MARK: - @objc
     @objc func continueButtonTapped() {
         presenter.continueButtonTapped()
     }

@@ -35,32 +35,21 @@ final class PlansCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.color(light: .white, dark: .clear)
-        
-        self.layer.borderColor = UIColor.white.cgColor
-        self.layer.borderWidth = 1
-        self.layer.cornerRadius = 16
-        
-        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
-        self.layer.shadowRadius = 8
-        self.layer.shadowOpacity = 1
-        self.layer.shadowOffset = CGSize(width: 0, height: 1)
-        
-        // MARK: - Adding Subviews
-        [emojiAnimationView, titleLabel, textLabel, doneCircleView].forEach {element in
-            self.addSubview(element)
-        }
-        doneCircleView.addSubview(doneCircleImageView)
-        doneCircleView.isHidden = true
-        
-        setConstraints()
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setConstraints() {
+    private func setupHierarchy() {
+        addSubviews(emojiAnimationView, titleLabel, textLabel, doneCircleView)
+        doneCircleView.addSubview(doneCircleImageView)
+    }
+    
+    private func setupLayout() {
         emojiAnimationView.snp.makeConstraints {make -> Void in
             make.centerX.equalTo(self)
             make.top.equalTo(self).offset(32)
@@ -88,5 +77,20 @@ final class PlansCollectionViewCell: UICollectionViewCell {
             make.width.height.equalTo(24)
             make.centerX.centerY.equalTo(doneCircleView)
         }
+    }
+    
+    private func setupProperties() {
+        backgroundColor = UIColor.color(light: .white, dark: .clear)
+        
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 16
+        
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
+        layer.shadowRadius = 8
+        layer.shadowOpacity = 1
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        
+        doneCircleView.isHidden = true
     }
 }

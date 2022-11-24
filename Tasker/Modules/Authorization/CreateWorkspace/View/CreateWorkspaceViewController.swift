@@ -9,60 +9,48 @@ import UIKit
 
 final class CreateWorkspaceViewController: UIViewController {
     public var presenter: CreateWorkspaceViewPresenterProtocol!
-    
-    // MARK: - Properties
-    
+        
     // MARK: - Init UI Elements
-    
     private lazy var nameLabel = TitleLabel(text: "Name", size: 16)
-    private lazy var nameTF = TextField(type: .name, placeholder: "Enter name of workspace", view: self.view)
+    private lazy var nameTF = TextField(type: .name, placeholder: "Enter name of workspace", view: view)
     private lazy var numberOfMemberLabel = TitleLabel(text: "Number of Member", size: 16)
-    private lazy var numberOfMemberTF = TextField(type: .name, placeholder: "Enter number of member", view: self.view)
+    private lazy var numberOfMemberTF = TextField(type: .name, placeholder: "Enter number of member", view: view)
     private lazy var emailLabel = TitleLabel(text: "Email", size: 16)
-    private lazy var emailTF = TextField(type: .email, placeholder: "Enter your email", view: self.view)
+    private lazy var emailTF = TextField(type: .email, placeholder: "Enter your email", view: view)
     private lazy var createButton = MainButton(text: "Create", type: .withoutArrow)
     
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Create workspace"
-        view.backgroundColor = UIColor.Pallette.background
-        
-        // MARK: - Adding Subviews
-        
-        [nameLabel, nameTF, numberOfMemberLabel, numberOfMemberTF, emailLabel, emailTF, createButton].forEach {view in
-            self.view.addSubview(view)
-        }
-        
-        // MARK: - Setting Constraints
-        
-        setConstraints()
-        
-        // MARK: - Targets
-        
-        createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
+                
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
+    private func setupHierarchy() {
+        view.addSubviews(nameLabel, nameTF, numberOfMemberLabel, numberOfMemberTF, emailLabel, emailTF, createButton)
+    }
     
-    private func setConstraints() {
+    private func setupLayout() {
         [nameLabel, numberOfMemberLabel, emailLabel].forEach {label in
             label.snp.makeConstraints {make -> Void in
-                make.left.equalTo(self.view).offset(24)
+                make.left.equalTo(view).offset(24)
             }
         }
         
         [nameTF, numberOfMemberTF, emailTF].forEach {textField in
             textField.snp.makeConstraints {make -> Void in
-                make.centerX.equalTo(self.view)
-                make.width.equalTo(self.view).offset(-48)
+                make.centerX.equalTo(view)
+                make.width.equalTo(view).offset(-48)
                 make.height.equalTo(48)
             }
         }
         
         nameLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
         }
         
         nameTF.snp.makeConstraints {make -> Void in
@@ -87,14 +75,22 @@ final class CreateWorkspaceViewController: UIViewController {
         
         createButton.snp.makeConstraints {make -> Void in
             make.top.equalTo(emailTF.snp.bottom).offset(32)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-48)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
     }
     
-    // MARK: - @objc
+    private func setupProperties() {
+        title = "Create workspace"
+        view.backgroundColor = UIColor.Pallette.background
+    }
     
+    private func setupTargets() {
+        createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - @objc
     @objc func createButtonTapped() {
         presenter.createButtonTapped()
     }
@@ -102,7 +98,6 @@ final class CreateWorkspaceViewController: UIViewController {
 }
 
 // MARK: - CreateWorkspaceViewProtocol
-
 extension CreateWorkspaceViewController: CreateWorkspaceViewProtocol {
     func test() {
         print("hello")

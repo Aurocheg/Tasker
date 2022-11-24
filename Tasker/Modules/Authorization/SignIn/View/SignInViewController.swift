@@ -12,14 +12,12 @@ final class SignInViewController: UIViewController {
     public var presenter: SignInViewPresenterProtocol!
     
     // MARK: - Properties
-    
     private let facebookImage = UIImage(named: "facebook")
     private let instagramImage = UIImage(named: "instagram")
     private let gmailImage = UIImage(named: "gmail")
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
     // MARK: - Init UI Elements
-    
     private lazy var mainTitleLabel = TitleLabel(text: "Sign In")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
     private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: self.view)
@@ -44,91 +42,71 @@ final class SignInViewController: UIViewController {
     }()
         
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.Pallette.background
-        
-        // MARK: - Adding Subviews
-        
-        [mainTitleLabel, titleImageView, nameTF, passwordTF, forgotPasswordButton, signInButton, signInWithLabel, socialStackView, bottomStackView].forEach {view in
-            self.view.addSubview(view)
-        }
-        
-        [facebookButton, instagramButton, gmailButton].forEach {button in
-            socialStackView.addArrangedSubview(button)
-        }
-        
-        [accountLabel, signUpButton].forEach {view in
-            bottomStackView.addArrangedSubview(view)
-        }
-        
-        // MARK: - Setting Constraints
-        
-        setConstraints()
-        
-        // MARK: - Additional UI Improvements
-        
-        signInWithLabel.drawLineOnBothSides(view: self.view)
-        
-        // MARK: - Targets
-        
-        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
-        forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
-        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+                        
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
+    private func setupHierarchy() {
+        view.addSubviews(mainTitleLabel, titleImageView, nameTF, passwordTF, forgotPasswordButton, signInButton, signInWithLabel, socialStackView, bottomStackView)
+        
+        socialStackView.addArrangedSubviews([facebookButton, instagramButton, gmailButton])
+        bottomStackView.addArrangedSubviews([accountLabel, signUpButton])
+    }
     
-    private func setConstraints() {
+    private func setupLayout() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(self.view)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(35)
+            make.centerX.equalTo(view)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(35)
         }
         
         titleImageView.snp.makeConstraints {make -> Void in
-            make.right.equalTo(self.mainTitleLabel).offset(45)
-            make.bottom.equalTo(self.mainTitleLabel)
+            make.right.equalTo(mainTitleLabel).offset(45)
+            make.bottom.equalTo(mainTitleLabel)
             make.width.height.equalTo(34)
         }
         
         nameTF.snp.makeConstraints {make -> Void in
             make.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
-            make.width.equalTo(self.view).offset(-48)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
-            make.left.equalTo(self.view).offset(24)
+            make.left.equalTo(view).offset(24)
         }
         
         passwordTF.snp.makeConstraints {make -> Void in
             make.top.equalTo(nameTF.snp.bottom).offset(16)
-            make.width.equalTo(self.view).offset(-48)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
-            make.left.equalTo(self.view).offset(24)
+            make.left.equalTo(view).offset(24)
         }
         
         forgotPasswordButton.snp.makeConstraints {make -> Void in
             make.top.equalTo(passwordTF.snp.bottom).offset(16)
-            make.right.equalTo(self.view).offset(-24)
+            make.right.equalTo(view).offset(-24)
             make.width.equalTo(143)
             make.height.equalTo(24)
         }
         
         signInButton.snp.makeConstraints {make -> Void in
             make.top.equalTo(forgotPasswordButton.snp.bottom).offset(24)
-            make.left.equalTo(self.view).offset(24)
-            make.width.equalTo(self.view).offset(-48)
+            make.left.equalTo(view).offset(24)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
         
         signInWithLabel.snp.makeConstraints {make -> Void in
             make.top.equalTo(signInButton.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
         }
         
         socialStackView.snp.makeConstraints {make -> Void in
             make.top.equalTo(signInWithLabel.snp.bottom).offset(16)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
             make.height.equalTo(48)
         }
         
@@ -139,9 +117,20 @@ final class SignInViewController: UIViewController {
         }
         
         bottomStackView.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-16)
-            make.centerX.equalTo(self.view)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+            make.centerX.equalTo(view)
         }
+    }
+    
+    private func setupProperties() {
+        view.backgroundColor = UIColor.Pallette.background
+        signInWithLabel.drawLineOnBothSides(view: view)
+    }
+    
+    private func setupTargets() {
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - @objc

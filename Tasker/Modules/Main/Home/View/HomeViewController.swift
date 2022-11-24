@@ -11,12 +11,10 @@ final class HomeViewController: UIViewController {
     public var presenter: HomeViewPresenterProtocol!
     
     // MARK: - Properties
-    
     private let titleImage = UIImage(named: "dashboard")?.withTintColor(UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white), renderingMode: .alwaysOriginal)
     private let plusImage = UIImage(named: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
     
     // MARK: - Init UI Elements
-    
     private lazy var mainTitleLabel = TitleLabel(text: "Dashboard")
     private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var plusButton: SecondaryButton = {
@@ -29,64 +27,61 @@ final class HomeViewController: UIViewController {
         
         return button
     }()
-    private lazy var searchTF = TextField(type: .search, placeholder: "Search", view: self.view)
+    private lazy var searchTF = TextField(type: .search, placeholder: "Search", view: view)
     
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarItem.selectedImage = UIImage(named: "homeBold")
-                
-        view.backgroundColor = UIColor.Pallette.background
-        
-        // MARK: - Adding Subviews
-        
-        [mainTitleLabel, titleImageView, plusButton, searchTF].forEach {element in
-            self.view.addSubview(element)
-        }
-        
-        // MARK: - Setting Constraints
-        
-        setConstraints()
-        
-        // MARK: - Targets
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
+    private func setupHierarchy() {
+        view.addSubviews(mainTitleLabel, titleImageView, plusButton, searchTF)
+    }
     
-    private func setConstraints() {
+    private func setupLayout() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
             make.left.equalTo(24)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
         
         titleImageView.snp.makeConstraints {make -> Void in
             make.left.equalTo(mainTitleLabel.snp.right).offset(11)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(3)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(3)
             make.width.height.equalTo(24)
         }
         
         plusButton.snp.makeConstraints {make -> Void in
-            make.right.equalTo(self.view.snp.right).offset(-24)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(-5)
+            make.right.equalTo(view.snp.right).offset(-24)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-5)
             make.width.height.equalTo(44)
         }
         
         searchTF.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
             make.top.equalTo(plusButton.snp.bottom).offset(24)
-            make.width.equalTo(self.view).offset(-48)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
     }
     
-    // MARK: - @objc
+    private func setupProperties() {
+        view.backgroundColor = UIColor.Pallette.background
+    }
     
+    private func setupTargets() {
+        
+    }
+    
+    // MARK: - @objc
 }
 
 // MARK: - HomeViewProtocol
-
 extension HomeViewController: HomeViewProtocol {
     func test() {
         print("hello")

@@ -23,10 +23,13 @@ final class TabBar: UIStackView {
     private let notificationItem = TabItemView(with: .notification, index: 2)
     private let settingsItem = TabItemView(with: .settings, index: 3)
     
+    // MARK: - RxSwift
+    
     private let itemTappedSubject = PublishSubject<Int>()
     private let disposeBag = DisposeBag()
     
-    // MARK: - Init Methods
+    
+    // MARK: - Init
     
     init() {
         super.init(frame: .zero)
@@ -40,6 +43,9 @@ final class TabBar: UIStackView {
         selectItem(index: 0)
     }
     
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Methods
     
@@ -105,10 +111,5 @@ final class TabBar: UIStackView {
                 }
             }
             .disposed(by: disposeBag)
-        }
-
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -9,11 +9,8 @@ import UIKit
 
 final class ResetPasswordViewController: UIViewController {
     public var presenter: ResetPasswordViewPresenterProtocol!
-    
-    // MARK: - Properties
-    
+        
     // MARK: - Init UI Elements
-    
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "resetPassword"))
     private lazy var mainTitleLabel = TitleLabel(text: "Reset new password")
     private lazy var passwordTF = TextField(type: .password, placeholder: "Enter new password", view: self.view)
@@ -21,40 +18,31 @@ final class ResetPasswordViewController: UIViewController {
     private lazy var saveButton = MainButton(text: "Save changes", type: .withoutArrow)
     
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.Pallette.background
-        
-        // MARK: - Adding Subviews
-        
-        [titleImageView, mainTitleLabel, passwordTF, confirmPasswordTF, saveButton].forEach {view in
-            self.view.addSubview(view)
-        }
-    
-        // MARK: - Setting Constraints
-        
-        setConstraints()
-        
-        // MARK: - Targets
-        
-        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+                
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
+    private func setupHierarchy() {
+        view.addSubviews(titleImageView, mainTitleLabel, passwordTF, confirmPasswordTF, saveButton)
+    }
     
-    private func setConstraints() {
+    private func setupLayout() {
         titleImageView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
-            make.centerX.equalTo(self.view)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
+            make.centerX.equalTo(view)
             make.width.equalTo(121)
             make.height.equalTo(112)
         }
         
         mainTitleLabel.snp.makeConstraints {make -> Void in
             make.top.equalTo(titleImageView.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
         }
         
         passwordTF.snp.makeConstraints {make -> Void in
@@ -67,22 +55,29 @@ final class ResetPasswordViewController: UIViewController {
         
         [passwordTF, confirmPasswordTF].forEach {textField in
             textField.snp.makeConstraints {make -> Void in
-                make.centerX.equalTo(self.view)
-                make.width.equalTo(self.view).offset(-48)
+                make.centerX.equalTo(view)
+                make.width.equalTo(view).offset(-48)
                 make.height.equalTo(48)
             }
         }
         
         saveButton.snp.makeConstraints {make -> Void in
             make.top.equalTo(confirmPasswordTF.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.view).offset(-48)
+            make.centerX.equalTo(view)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
     }
     
-    // MARK: - @objc
+    private func setupProperties() {
+        view.backgroundColor = UIColor.Pallette.background
+    }
     
+    private func setupTargets() {
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - @objc
     @objc func saveButtonTapped() {
         presenter.saveButtonTapped()
     }

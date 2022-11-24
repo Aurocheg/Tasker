@@ -10,15 +10,13 @@ import UIKit
 final class SignUpViewController: UIViewController {
     public var presenter: SignUpViewPresenterProtocol!
     
-    // MARK: - Variables
-    
+    // MARK: - Properties
     private let facebookImage = UIImage(named: "facebook")
     private let instagramImage = UIImage(named: "instagram")
     private let gmailImage = UIImage(named: "gmail")
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
     // MARK: - Init UI Elements
-    
     private lazy var mainTitleLabel = TitleLabel(text: "Sign Up")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
     private lazy var emailTF = TextField(type: .email, placeholder: "Email", view: self.view)
@@ -43,91 +41,71 @@ final class SignUpViewController: UIViewController {
     }()
     
     // MARK: - View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        view.backgroundColor = UIColor.Pallette.background
-                
-        // MARK: - Adding Subviews
-        
-        [mainTitleLabel, titleImageView, emailTF, passwordTF, confirmPasswordTF, signUpButton, signUpWithLabel, socialStackView, bottomStackView].forEach {view in
-            self.view.addSubview(view)
-        }
-        
-        [facebookButton, instagramButton, gmailButton].forEach {button in
-            self.socialStackView.addArrangedSubview(button)
-        }
-        
-        [accountLabel, signInButton].forEach {element in
-            self.bottomStackView.addArrangedSubview(element)
-        }
-        
-        // MARK: - Setting Constraints
-        
-        setConstraints()
-        
-        // MARK: - Additional UI Improvements
-        
-        signUpWithLabel.drawLineOnBothSides(view: self.view)
-        
-        // MARK: - Targets
-        
-        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        [emailTF, passwordTF].forEach {textField in
-            textField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        }
+                                
+        setupHierarchy()
+        setupLayout()
+        setupProperties()
+        setupTargets()
     }
     
     // MARK: - Methods
-    private func setConstraints() {
+    private func setupHierarchy() {
+        view.addSubviews(mainTitleLabel, titleImageView, emailTF, passwordTF, confirmPasswordTF, signUpButton, signUpWithLabel, socialStackView, bottomStackView)
+        
+        socialStackView.addArrangedSubviews([facebookButton, instagramButton, gmailButton])
+        bottomStackView.addArrangedSubviews([accountLabel, signInButton])
+    }
+    
+    private func setupLayout() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(self.view)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(35)
+            make.centerX.equalTo(view)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(35)
         }
         
         titleImageView.snp.makeConstraints {make -> Void in
-            make.right.equalTo(self.mainTitleLabel).offset(45)
-            make.bottom.equalTo(self.mainTitleLabel)
+            make.right.equalTo(mainTitleLabel).offset(45)
+            make.bottom.equalTo(mainTitleLabel)
             make.width.height.equalTo(34)
         }
         
         emailTF.snp.makeConstraints {make -> Void in
             make.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
-            make.width.equalTo(self.view).offset(-48)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
-            make.left.equalTo(self.view).offset(24)
+            make.left.equalTo(view).offset(24)
         }
         
         passwordTF.snp.makeConstraints {make -> Void in
             make.top.equalTo(emailTF.snp.bottom).offset(16)
-            make.width.equalTo(self.view).offset(-48)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
-            make.left.equalTo(self.view).offset(24)
+            make.left.equalTo(view).offset(24)
         }
         
         confirmPasswordTF.snp.makeConstraints {make -> Void in
             make.top.equalTo(passwordTF.snp.bottom).offset(16)
-            make.width.equalTo(self.view).offset(-48)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
-            make.left.equalTo(self.view).offset(24)
+            make.left.equalTo(view).offset(24)
         }
         
         signUpButton.snp.makeConstraints {make -> Void in
             make.top.equalTo(confirmPasswordTF.snp.bottom).offset(24)
-            make.left.equalTo(self.view).offset(24)
-            make.width.equalTo(self.view).offset(-48)
+            make.left.equalTo(view).offset(24)
+            make.width.equalTo(view).offset(-48)
             make.height.equalTo(48)
         }
         
         signUpWithLabel.snp.makeConstraints {make -> Void in
             make.top.equalTo(signUpButton.snp.bottom).offset(24)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
         }
         
         socialStackView.snp.makeConstraints {make -> Void in
             make.top.equalTo(signUpWithLabel.snp.bottom).offset(16)
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
             make.height.equalTo(48)
         }
         
@@ -138,36 +116,42 @@ final class SignUpViewController: UIViewController {
         }
         
         bottomStackView.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-16)
-            make.centerX.equalTo(self.view)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+            make.centerX.equalTo(view)
+        }
+    }
+    
+    private func setupProperties() {
+        view.backgroundColor = UIColor.Pallette.background
+        signUpWithLabel.drawLineOnBothSides(view: view)
+    }
+    
+    private func setupTargets() {
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        [emailTF, passwordTF].forEach {textField in
+            textField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        }
+    }
+    
+    private func applyValidation(value: String, type: TextFieldType) {
+        if value.isValidTextField(type: type) {
+            emailTF.layer.borderColor = UIColor.white.cgColor
+        } else {
+            emailTF.layer.borderColor = UIColor.systemRed.cgColor
         }
     }
     
     // MARK: - @objc
-    
     @objc func textFieldChanged(_ sender: UITextField) {
         let value = sender.text?.trim()
         switch sender {
         case emailTF:
-            
             presenter.emailValue = value
-            
-            if value?.isValidTextField(type: .email) ?? true {
-                emailTF.layer.borderColor = UIColor.white.cgColor
-            } else {
-                emailTF.layer.borderColor = UIColor.systemRed.cgColor
-            }
+            applyValidation(value: value ?? "", type: .email)
             
         case passwordTF:
-            
             presenter.passwordValue = value
-            
-            if value?.isValidTextField(type: .password) ?? true {
-                passwordTF.layer.borderColor = UIColor.white.cgColor
-            } else {
-                passwordTF.layer.borderColor = UIColor.systemRed.cgColor
-            }
-            
+            applyValidation(value: value ?? "", type: .password)
         default:
             break
         }
@@ -193,7 +177,6 @@ final class SignUpViewController: UIViewController {
 }
 
 // MARK: - SignUpViewProtocol
-
 extension SignUpViewController: SignUpViewProtocol {
     func test() {
         print("hello")
