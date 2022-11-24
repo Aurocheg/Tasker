@@ -12,13 +12,13 @@ final class TextLabel: UILabel {
         super.init(frame: .zero)
         
         self.text = text
-        self.textAlignment = alignment
-        self.textColor = UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1)
+        textAlignment = alignment
+        textColor = UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1)
         
-        self.numberOfLines = 0
-        self.lineBreakMode = .byWordWrapping
+        numberOfLines = 0
+        lineBreakMode = .byWordWrapping
         
-        self.font = .systemFont(ofSize: size, weight: .medium)
+        font = .systemFont(ofSize: size, weight: .medium)
     }
     
     required init?(coder: NSCoder) {

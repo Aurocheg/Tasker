@@ -59,65 +59,65 @@ final class SignUpViewController: UIViewController {
     }
     
     private func setupLayout() {
-        mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(view)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(35)
+        mainTitleLabel.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(35)
         }
         
-        titleImageView.snp.makeConstraints {make -> Void in
-            make.right.equalTo(mainTitleLabel).offset(45)
-            make.bottom.equalTo(mainTitleLabel)
-            make.width.height.equalTo(34)
+        titleImageView.snp.makeConstraints {
+            $0.right.equalTo(mainTitleLabel).offset(45)
+            $0.bottom.equalTo(mainTitleLabel)
+            $0.width.height.equalTo(34)
         }
         
-        emailTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
-            make.left.equalTo(view).offset(24)
+        emailTF.snp.makeConstraints {
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
+            $0.left.equalTo(view).offset(24)
         }
         
-        passwordTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(emailTF.snp.bottom).offset(16)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
-            make.left.equalTo(view).offset(24)
+        passwordTF.snp.makeConstraints {
+            $0.top.equalTo(emailTF.snp.bottom).offset(16)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
+            $0.left.equalTo(view).offset(24)
         }
         
-        confirmPasswordTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(passwordTF.snp.bottom).offset(16)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
-            make.left.equalTo(view).offset(24)
+        confirmPasswordTF.snp.makeConstraints {
+            $0.top.equalTo(passwordTF.snp.bottom).offset(16)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
+            $0.left.equalTo(view).offset(24)
         }
         
-        signUpButton.snp.makeConstraints {make -> Void in
-            make.top.equalTo(confirmPasswordTF.snp.bottom).offset(24)
-            make.left.equalTo(view).offset(24)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
+        signUpButton.snp.makeConstraints {
+            $0.top.equalTo(confirmPasswordTF.snp.bottom).offset(24)
+            $0.left.equalTo(view).offset(24)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
         }
         
-        signUpWithLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(signUpButton.snp.bottom).offset(24)
-            make.centerX.equalTo(view)
+        signUpWithLabel.snp.makeConstraints {
+            $0.top.equalTo(signUpButton.snp.bottom).offset(24)
+            $0.centerX.equalTo(view)
         }
         
-        socialStackView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(signUpWithLabel.snp.bottom).offset(16)
-            make.centerX.equalTo(view)
-            make.height.equalTo(48)
+        socialStackView.snp.makeConstraints {
+            $0.top.equalTo(signUpWithLabel.snp.bottom).offset(16)
+            $0.centerX.equalTo(view)
+            $0.height.equalTo(48)
         }
         
         [facebookButton, instagramButton, gmailButton].forEach {button in
-            button.snp.makeConstraints {make -> Void in
-                make.width.height.equalTo(48)
+            button.snp.makeConstraints {
+                $0.width.height.equalTo(48)
             }
         }
         
-        bottomStackView.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
-            make.centerX.equalTo(view)
+        bottomStackView.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+            $0.centerX.equalTo(view)
         }
     }
     

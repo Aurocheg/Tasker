@@ -52,6 +52,6 @@ extension TabItem {
         }
     }
     var name: String {
-        return self.rawValue.capitalized
+        return rawValue.capitalized
     }
 }

@@ -12,9 +12,9 @@ final class TitleLabel: UILabel {
         super.init(frame: .zero)
         
         self.text = text
-        self.textColor = UIColor.Pallette.titleColor
-        self.numberOfLines = 0
-        self.font = .systemFont(ofSize: size, weight: .bold)
+        textColor = UIColor.Pallette.titleColor
+        numberOfLines = 0
+        font = .systemFont(ofSize: size, weight: .bold)
     }
     
     required init?(coder: NSCoder) {

@@ -36,48 +36,48 @@ final class CreateWorkspaceViewController: UIViewController {
     
     private func setupLayout() {
         [nameLabel, numberOfMemberLabel, emailLabel].forEach {label in
-            label.snp.makeConstraints {make -> Void in
-                make.left.equalTo(view).offset(24)
+            label.snp.makeConstraints {
+                $0.left.equalTo(view).offset(24)
             }
         }
         
         [nameTF, numberOfMemberTF, emailTF].forEach {textField in
-            textField.snp.makeConstraints {make -> Void in
-                make.centerX.equalTo(view)
-                make.width.equalTo(view).offset(-48)
-                make.height.equalTo(48)
+            textField.snp.makeConstraints {
+                $0.centerX.equalTo(view)
+                $0.width.equalTo(view).offset(-48)
+                $0.height.equalTo(48)
             }
         }
         
-        nameLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
+        nameLabel.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
         }
         
-        nameTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(nameLabel.snp.bottom).offset(16)
+        nameTF.snp.makeConstraints {
+            $0.top.equalTo(nameLabel.snp.bottom).offset(16)
         }
         
-        numberOfMemberLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(nameTF.snp.bottom).offset(24)
+        numberOfMemberLabel.snp.makeConstraints {
+            $0.top.equalTo(nameTF.snp.bottom).offset(24)
         }
         
-        numberOfMemberTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(numberOfMemberLabel.snp.bottom).offset(16)
+        numberOfMemberTF.snp.makeConstraints {
+            $0.top.equalTo(numberOfMemberLabel.snp.bottom).offset(16)
         }
         
-        emailLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(numberOfMemberTF.snp.bottom).offset(24)
+        emailLabel.snp.makeConstraints {
+            $0.top.equalTo(numberOfMemberTF.snp.bottom).offset(24)
         }
         
-        emailTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(emailLabel.snp.bottom).offset(16)
+        emailTF.snp.makeConstraints {
+            $0.top.equalTo(emailLabel.snp.bottom).offset(16)
         }
         
-        createButton.snp.makeConstraints {make -> Void in
-            make.top.equalTo(emailTF.snp.bottom).offset(32)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
+        createButton.snp.makeConstraints {
+            $0.top.equalTo(emailTF.snp.bottom).offset(32)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
         }
     }
     

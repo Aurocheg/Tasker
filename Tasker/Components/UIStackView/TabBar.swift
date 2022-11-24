@@ -11,11 +11,10 @@ import RxCocoa
 import RxGesture
 
 final class TabBar: UIStackView {
+    // MARK: - Properties
     public var itemTapped: Observable<Int> {
         itemTappedSubject.asObservable()
     }
-    
-    // MARK: - Items
     
     private lazy var tabItemsView: [TabItemView] = [homeItem, chatItem, notificationItem, settingsItem]
     private let homeItem = TabItemView(with: .home, index: 0)
@@ -23,14 +22,11 @@ final class TabBar: UIStackView {
     private let notificationItem = TabItemView(with: .notification, index: 2)
     private let settingsItem = TabItemView(with: .settings, index: 3)
     
-    // MARK: - RxSwift
-    
     private let itemTappedSubject = PublishSubject<Int>()
     private let disposeBag = DisposeBag()
     
     
-    // MARK: - Init
-    
+    // MARK: - Init Method
     init() {
         super.init(frame: .zero)
         
@@ -48,7 +44,6 @@ final class TabBar: UIStackView {
     }
     
     // MARK: - Methods
-    
     private func setupHierarchy() {
         addArrangedSubviews([homeItem, chatItem, notificationItem, settingsItem])
     }

@@ -13,6 +13,7 @@ final class ChoosePlanViewController: UIViewController {
     
     // MARK: - Properties
     private let screenWidth = UIScreen.main.bounds.width
+    private let plansCollectionCellID = "plansCollectionViewCell"
         
     // MARK: - Init UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Choose plans", size: 18)
@@ -49,28 +50,28 @@ final class ChoosePlanViewController: UIViewController {
     }
     
     private func setupLayout() {
-        mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.left.equalTo(view).offset(24)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
+        mainTitleLabel.snp.makeConstraints {
+            $0.left.equalTo(view).offset(24)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
         }
         
-        textLabel.snp.makeConstraints {make -> Void in
-            make.left.equalTo(24)
-            make.top.equalTo(mainTitleLabel.snp.bottom).offset(8)
+        textLabel.snp.makeConstraints {
+            $0.left.equalTo(24)
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(8)
         }
         
-        plansCollectionView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(textLabel.snp.bottom).offset(32)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(204)
+        plansCollectionView.snp.makeConstraints {
+            $0.top.equalTo(textLabel.snp.bottom).offset(32)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(204)
         }
         
-        continueButton.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-10)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
+        continueButton.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
         }
     }
     
@@ -81,7 +82,7 @@ final class ChoosePlanViewController: UIViewController {
     
     private func setupTargets() {
         continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
-        plansCollectionView.register(PlansCollectionViewCell.self, forCellWithReuseIdentifier: "plansCollectionViewCell")
+        plansCollectionView.register(PlansCollectionViewCell.self, forCellWithReuseIdentifier: plansCollectionCellID)
     }
     
     // MARK: - @objc
@@ -98,7 +99,6 @@ extension ChoosePlanViewController: ChoosePlanViewProtocol {
 }
 
 // MARK: - UICollectionViewDelegate
-
 extension ChoosePlanViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PlansCollectionViewCell else { return }
@@ -134,14 +134,15 @@ extension ChoosePlanViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
-
 extension ChoosePlanViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         presenter.plans?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "plansCollectionViewCell", for: indexPath) as? PlansCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: plansCollectionCellID, for: indexPath) as? PlansCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         let plan = presenter.plans?[indexPath.row] ?? Plan(emojiName: "error", title: "error", text: "error")
         let emojiPath = Bundle.main.path(forResource: plan.emojiName, ofType: "json")!
         

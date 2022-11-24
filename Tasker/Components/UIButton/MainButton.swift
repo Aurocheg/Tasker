@@ -17,12 +17,12 @@ final class MainButton: UIButton {
     init(text: String, type: SelfType) {
         super.init(frame: .zero)
                 
-        self.setTitle(text, for: .normal)
-        self.titleLabel?.textColor = .white
-        self.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+        setTitle(text, for: .normal)
+        titleLabel?.textColor = .white
+        titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
                 
-        self.backgroundColor = UIColor.Pallette.buttonBackground
-        self.layer.cornerRadius = 16
+        backgroundColor = UIColor.Pallette.buttonBackground
+        layer.cornerRadius = 16
                 
         var arrowIcon: UIImage?
         if let icon = UIImage(named: "right") {
@@ -31,14 +31,14 @@ final class MainButton: UIButton {
         
         switch type {
         case .withoutArrow:
-            self.setImage(UIImage(), for: .normal)
+            setImage(UIImage(), for: .normal)
         case .withLeftArrow:
-            self.setImage(arrowIcon, for: .normal)
-            self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
+            setImage(arrowIcon, for: .normal)
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
         case .withRightArrow:
-            self.setImage(arrowIcon, for: .normal)
-            self.semanticContentAttribute = .forceRightToLeft
-            self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+            setImage(arrowIcon, for: .normal)
+            semanticContentAttribute = .forceRightToLeft
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
         }
     }
     

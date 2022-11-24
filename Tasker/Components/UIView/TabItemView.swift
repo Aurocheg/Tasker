@@ -9,8 +9,16 @@ import UIKit
 import SnapKit
 
 final class TabItemView: UIView {
-    // MARK: - UI
+    // MARK: - Properties
+    public let index: Int
+    public var isSelected = false {
+        didSet {
+            animateItems()
+        }
+    }
+    private let item: TabItem
     
+    // MARK: - Init UI Elements
     private let containerView = UIView()
     private let iconImageView = UIImageView()
     private lazy var circleView: UIView = {
@@ -21,18 +29,7 @@ final class TabItemView: UIView {
         return view
     }()
     
-    // MARK: - Properties
-    
-    public let index: Int
-    public var isSelected = false {
-        didSet {
-            animateItems()
-        }
-    }
-    private let item: TabItem
-    
     // MARK: - Init Methods
-    
     init(with item: TabItem, index: Int) {
         self.item = item
         self.index = index
@@ -83,19 +80,19 @@ final class TabItemView: UIView {
     private func animateItems() {
         UIView.animate(withDuration: 0.4) {[unowned self] in
             
-            if self.isSelected {
-                self.circleView.alpha = 1
-                self.iconImageView.transform = CGAffineTransform(translationX: 0, y: -10)
+            if isSelected {
+                circleView.alpha = 1
+                iconImageView.transform = CGAffineTransform(translationX: 0, y: -10)
             } else {
-                self.circleView.alpha = 0
-                self.iconImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+                circleView.alpha = 0
+                iconImageView.transform = CGAffineTransform(translationX: 0, y: 0)
             }
             
         }
         UIView.transition(with: iconImageView,
                           duration: 0.4,
                           options: .transitionCrossDissolve) { [unowned self] in
-            self.iconImageView.image = self.isSelected ? self.item.selectedIcon : self.item.icon
+            iconImageView.image = isSelected ? item.selectedIcon : item.icon
         }
     }
     

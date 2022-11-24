@@ -32,8 +32,8 @@ final class OTPViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        [firstTF, secondTF, thirdTF, fourthTF].forEach {textField in
-            textFieldsArray.append(textField)
+        [firstTF, secondTF, thirdTF, fourthTF].forEach {
+            textFieldsArray.append($0)
         }
         
         setupHierarchy()
@@ -51,63 +51,63 @@ final class OTPViewController: UIViewController {
     }
     
     private func setupLayout() {
-        titleImageView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
-            make.centerX.equalTo(view)
-            make.width.equalTo(121)
-            make.height.equalTo(112)
+        titleImageView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(121)
+            $0.height.equalTo(112)
         }
         
-        mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(titleImageView.snp.bottom).offset(24)
-            make.centerX.equalTo(view)
+        mainTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(titleImageView.snp.bottom).offset(24)
+            $0.centerX.equalTo(view)
         }
         
-        textLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(mainTitleLabel.snp.bottom).offset(15)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).offset(-78)
+        textLabel.snp.makeConstraints {
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(15)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(view).offset(-78)
         }
         
-        textFieldsStackView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(textLabel.snp.bottom).offset(24)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).offset(-48)
+        textFieldsStackView.snp.makeConstraints {
+            $0.top.equalTo(textLabel.snp.bottom).offset(24)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(view).offset(-48)
         }
         
         textFieldsArray.forEach {textField in
-            textField.snp.makeConstraints {make -> Void in
-                make.width.equalTo(textFieldsStackView).multipliedBy(0.213)
-                make.height.equalTo(70)
+            textField.snp.makeConstraints {
+                $0.width.equalTo(textFieldsStackView).multipliedBy(0.213)
+                $0.height.equalTo(70)
             }
         }
         
-        resendStackView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(textFieldsStackView.snp.bottom).offset(16)
-            make.centerX.equalTo(view)
+        resendStackView.snp.makeConstraints {
+            $0.top.equalTo(textFieldsStackView.snp.bottom).offset(16)
+            $0.centerX.equalTo(view)
         }
         
-        nextButton.snp.makeConstraints {make -> Void in
-            make.top.equalTo(resendStackView.snp.bottom).offset(24)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
+        nextButton.snp.makeConstraints {
+            $0.top.equalTo(resendStackView.snp.bottom).offset(24)
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
         }
     }
     
     private func setupProperties() {
         view.backgroundColor = UIColor.Pallette.background
         
-        textFieldsArray.forEach {textField in
-            textField.font = .systemFont(ofSize: 24, weight: .bold)
-            textField.textContentType = .oneTimeCode
+        textFieldsArray.forEach {
+            $0.font = .systemFont(ofSize: 24, weight: .bold)
+            $0.textContentType = .oneTimeCode
         }
         firstTF.becomeFirstResponder()
     }
     
     private func setupTargets() {
-        textFieldsArray.forEach {textField in
-            textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .touchUpInside)
+        textFieldsArray.forEach {
+            $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .touchUpInside)
         }
         
         resendButton.addTarget(self, action: #selector(resendButtonTapped), for: .touchUpInside)
@@ -155,7 +155,6 @@ final class OTPViewController: UIViewController {
         for textField in textFieldsArray {
             otpText += textField.text ?? ""
         }
-        print(otpText)
         view.endEditing(true)
     }
 }

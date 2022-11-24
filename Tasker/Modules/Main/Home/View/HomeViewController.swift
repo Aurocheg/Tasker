@@ -45,28 +45,28 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupLayout() {
-        mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.left.equalTo(24)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+        mainTitleLabel.snp.makeConstraints {
+            $0.left.equalTo(24)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
         
-        titleImageView.snp.makeConstraints {make -> Void in
-            make.left.equalTo(mainTitleLabel.snp.right).offset(11)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(3)
-            make.width.height.equalTo(24)
+        titleImageView.snp.makeConstraints {
+            $0.left.equalTo(mainTitleLabel.snp.right).offset(11)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(3)
+            $0.width.height.equalTo(24)
         }
         
-        plusButton.snp.makeConstraints {make -> Void in
-            make.right.equalTo(view.snp.right).offset(-24)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-5)
-            make.width.height.equalTo(44)
+        plusButton.snp.makeConstraints {
+            $0.right.equalTo(view.snp.right).offset(-24)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-5)
+            $0.width.height.equalTo(44)
         }
         
-        searchTF.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(view)
-            make.top.equalTo(plusButton.snp.bottom).offset(24)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
+        searchTF.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.top.equalTo(plusButton.snp.bottom).offset(24)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
         }
     }
     

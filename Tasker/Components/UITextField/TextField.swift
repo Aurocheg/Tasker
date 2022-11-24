@@ -18,14 +18,12 @@ final class TextField: UITextField {
     }
     
     // MARK: - Properties
-    
     private var textPadding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 24)
     private var isPasswordTF = false
     private var needNumberIcon = true
     private var view: UIView?
 
-    // MARK: - Init Methods
-    
+    // MARK: - Init Method
     init(type: SelfType, placeholder: String = "", alignment: NSTextAlignment = .left, icon: Bool = true, view: UIView) {
         super.init(frame: .zero)
         self.view = view
@@ -33,31 +31,31 @@ final class TextField: UITextField {
         let color = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
         let placeholderColor = UIColor.color(light: UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1),
                                              dark: UIColor(red: 0.937, green: 0.945, blue: 0.953, alpha: 1))
-        self.backgroundColor = UIColor.color(light: .white, dark: .clear)
+        backgroundColor = UIColor.color(light: .white, dark: .clear)
                 
-        self.textColor = color
-        self.textAlignment = alignment
-        self.font = .systemFont(ofSize: 16, weight: .medium)
+        textColor = color
+        textAlignment = alignment
+        font = .systemFont(ofSize: 16, weight: .medium)
         
-        self.attributedPlaceholder = NSAttributedString(
+        attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: placeholderColor]
         )
         
-        self.layer.cornerRadius = 16
-        self.layer.borderColor = UIColor.white.cgColor
-        self.layer.borderWidth = 1
+        layer.cornerRadius = 16
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1
                 
-        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
-        self.layer.shadowRadius = 8
-        self.layer.shadowOpacity = 1
-        self.layer.shadowOffset = CGSize(width: 0, height: 1)
-        self.delegate = self
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
+        layer.shadowRadius = 8
+        layer.shadowOpacity = 1
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        delegate = self
                         
         switch type {
         case .password:
-            self.textContentType = .oneTimeCode
-            self.isSecureTextEntry = true
+            textContentType = .oneTimeCode
+            isSecureTextEntry = true
             isPasswordTF = true
             
             let passwordIcon = UIImage(named: "password")?.withTintColor(color, renderingMode: .alwaysOriginal)
@@ -67,15 +65,15 @@ final class TextField: UITextField {
             setRightIcon(eyesIcon)
             
         case .name:
-            self.textContentType = .name
+            textContentType = .name
             
             let nameIcon = UIImage(named: "user")?.withTintColor(color, renderingMode: .alwaysOriginal)
             
             setLeftIcon(nameIcon)
             
         case .number:
-            self.textContentType = .telephoneNumber
-            self.keyboardType = .numberPad
+            textContentType = .telephoneNumber
+            keyboardType = .numberPad
             
             let phoneIcon = UIImage(named: "phone")?.withTintColor(color, renderingMode: .alwaysOriginal)
             
@@ -86,10 +84,10 @@ final class TextField: UITextField {
             }
             
         case .email:
-            self.textContentType = .emailAddress
-            self.keyboardType = .emailAddress
-            self.autocorrectionType = .no
-            self.autocapitalizationType = .none
+            textContentType = .emailAddress
+            keyboardType = .emailAddress
+            autocorrectionType = .no
+            autocapitalizationType = .none
             
             let mailIcon = UIImage(named: "mail")?.withTintColor(color, renderingMode: .alwaysOriginal)
             
@@ -108,7 +106,6 @@ final class TextField: UITextField {
     }
     
     // MARK: - Rect
-
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         if isPasswordTF {
             textPadding.right = 48
@@ -169,14 +166,12 @@ final class TextField: UITextField {
     }
     
     // MARK: - @objc
-    
     @objc func showPasswordButtonTapped() {
-        self.isSecureTextEntry.toggle()
+        isSecureTextEntry.toggle()
     }
 }
 
 // MARK: - UITextFieldDelegate
-
 extension TextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.Pallette.buttonBackground.cgColor

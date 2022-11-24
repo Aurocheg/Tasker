@@ -60,65 +60,65 @@ final class SignInViewController: UIViewController {
     }
     
     private func setupLayout() {
-        mainTitleLabel.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(view)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(35)
+        mainTitleLabel.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(35)
         }
         
-        titleImageView.snp.makeConstraints {make -> Void in
-            make.right.equalTo(mainTitleLabel).offset(45)
-            make.bottom.equalTo(mainTitleLabel)
-            make.width.height.equalTo(34)
+        titleImageView.snp.makeConstraints {
+            $0.right.equalTo(mainTitleLabel).offset(45)
+            $0.bottom.equalTo(mainTitleLabel)
+            $0.width.height.equalTo(34)
         }
         
-        nameTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
-            make.left.equalTo(view).offset(24)
+        nameTF.snp.makeConstraints {
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(39)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
+            $0.left.equalTo(view).offset(24)
         }
         
-        passwordTF.snp.makeConstraints {make -> Void in
-            make.top.equalTo(nameTF.snp.bottom).offset(16)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
-            make.left.equalTo(view).offset(24)
+        passwordTF.snp.makeConstraints {
+            $0.top.equalTo(nameTF.snp.bottom).offset(16)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
+            $0.left.equalTo(view).offset(24)
         }
         
-        forgotPasswordButton.snp.makeConstraints {make -> Void in
-            make.top.equalTo(passwordTF.snp.bottom).offset(16)
-            make.right.equalTo(view).offset(-24)
-            make.width.equalTo(143)
-            make.height.equalTo(24)
+        forgotPasswordButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTF.snp.bottom).offset(16)
+            $0.right.equalTo(view).offset(-24)
+            $0.width.equalTo(143)
+            $0.height.equalTo(24)
         }
         
-        signInButton.snp.makeConstraints {make -> Void in
-            make.top.equalTo(forgotPasswordButton.snp.bottom).offset(24)
-            make.left.equalTo(view).offset(24)
-            make.width.equalTo(view).offset(-48)
-            make.height.equalTo(48)
+        signInButton.snp.makeConstraints {
+            $0.top.equalTo(forgotPasswordButton.snp.bottom).offset(24)
+            $0.left.equalTo(view).offset(24)
+            $0.width.equalTo(view).offset(-48)
+            $0.height.equalTo(48)
         }
         
-        signInWithLabel.snp.makeConstraints {make -> Void in
-            make.top.equalTo(signInButton.snp.bottom).offset(24)
-            make.centerX.equalTo(view)
+        signInWithLabel.snp.makeConstraints {
+            $0.top.equalTo(signInButton.snp.bottom).offset(24)
+            $0.centerX.equalTo(view)
         }
         
-        socialStackView.snp.makeConstraints {make -> Void in
-            make.top.equalTo(signInWithLabel.snp.bottom).offset(16)
-            make.centerX.equalTo(view)
-            make.height.equalTo(48)
+        socialStackView.snp.makeConstraints {
+            $0.top.equalTo(signInWithLabel.snp.bottom).offset(16)
+            $0.centerX.equalTo(view)
+            $0.height.equalTo(48)
         }
         
         [facebookButton, instagramButton, gmailButton].forEach {button in
-            button.snp.makeConstraints {make -> Void in
-                make.width.height.equalTo(48)
+            button.snp.makeConstraints {
+                $0.width.height.equalTo(48)
             }
         }
         
-        bottomStackView.snp.makeConstraints {make -> Void in
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
-            make.centerX.equalTo(view)
+        bottomStackView.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+            $0.centerX.equalTo(view)
         }
     }
     
@@ -134,7 +134,6 @@ final class SignInViewController: UIViewController {
     }
     
     // MARK: - @objc
-    
     @objc func signInButtonTapped() {
         presenter.signInButtonTapped()
     }

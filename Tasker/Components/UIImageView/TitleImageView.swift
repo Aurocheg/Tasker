@@ -11,8 +11,9 @@ final class TitleImageView: UIImageView {
     override init(image: UIImage?) {
         super.init(frame: .zero)
         guard let image = image else { return }
+        
         self.image = image
-        self.contentMode = .scaleToFill
+        contentMode = .scaleToFill
     }
     
     required init?(coder: NSCoder) {

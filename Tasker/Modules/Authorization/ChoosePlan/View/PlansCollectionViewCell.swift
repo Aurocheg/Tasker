@@ -50,32 +50,32 @@ final class PlansCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupLayout() {
-        emojiAnimationView.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(self)
-            make.top.equalTo(self).offset(32)
-            make.width.height.equalTo(48)
+        emojiAnimationView.snp.makeConstraints {
+            $0.centerX.equalTo(self)
+            $0.top.equalTo(self).offset(32)
+            $0.width.height.equalTo(48)
         }
         
-        titleLabel.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(self)
-            make.top.equalTo(emojiAnimationView.snp.bottom).offset(16)
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalTo(self)
+            $0.top.equalTo(emojiAnimationView.snp.bottom).offset(16)
         }
         
-        textLabel.snp.makeConstraints {make -> Void in
-            make.centerX.equalTo(self)
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.width.equalTo(self).multipliedBy(0.576)
+        textLabel.snp.makeConstraints {
+            $0.centerX.equalTo(self)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(8)
+            $0.width.equalTo(self).multipliedBy(0.576)
         }
         
-        doneCircleView.snp.makeConstraints {make -> Void in
-            make.right.equalTo(self.snp.right).offset(-8)
-            make.top.equalTo(self).offset(8)
-            make.width.height.equalTo(32)
+        doneCircleView.snp.makeConstraints {
+            $0.right.equalTo(self.snp.right).offset(-8)
+            $0.top.equalTo(self).offset(8)
+            $0.width.height.equalTo(32)
         }
         
-        doneCircleImageView.snp.makeConstraints {make -> Void in
-            make.width.height.equalTo(24)
-            make.centerX.centerY.equalTo(doneCircleView)
+        doneCircleImageView.snp.makeConstraints {
+            $0.width.height.equalTo(24)
+            $0.centerX.centerY.equalTo(doneCircleView)
         }
     }
     
