@@ -9,7 +9,7 @@ import UIKit
 
 protocol AssemblyBuilderProtocol {
     // MARK: - Onboarding
-    func createOnboardingModule(router: RouterProtocol) -> UIPageViewController
+//    func createOnboardingModule(router: RouterProtocol) -> UIPageViewController
     
     // MARK: - Authorization
     func createSignUpModule(router: RouterProtocol) -> UIViewController
@@ -30,12 +30,12 @@ protocol AssemblyBuilderProtocol {
 
 final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     // MARK: - Onboarding
-    func createOnboardingModule(router: RouterProtocol) -> UIPageViewController {
-        let view = OnboardingViewController()
-        let presenter = OnboardingPresenter(view: view, router: router)
-        view.presenter = presenter
-        return view
-    }
+//    func createOnboardingModule(router: RouterProtocol) -> UIPageViewController {
+//        let view = OnboardingViewController()
+//        let presenter = OnboardingPresenter(view: view, router: router)
+//        view.presenter = presenter
+//        return view
+//    }
     
     // MARK: - Authorization
     func createSignUpModule(router: RouterProtocol) -> UIViewController {
@@ -95,11 +95,6 @@ final class AssemblyModuleBuilder: AssemblyBuilderProtocol {
         let chatModule = createChatModule(router: router)
         let notificationModule = createNotificationModule(router: router)
         let settingsModule = createSettingsModule(router: router)
-        
-        homeModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "home"), tag: 0)
-        chatModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "chat"), tag: 1)
-        notificationModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "notification"), tag: 2)
-        settingsModule.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "settings"), tag: 3)
         
         tabBarController.viewControllers = [homeModule, chatModule, notificationModule, settingsModule]
                 

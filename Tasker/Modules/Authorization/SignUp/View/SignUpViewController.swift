@@ -11,12 +11,14 @@ final class SignUpViewController: UIViewController {
     public var presenter: SignUpViewPresenterProtocol!
     
     // MARK: - Variables
+    
     private let facebookImage = UIImage(named: "facebook")
     private let instagramImage = UIImage(named: "instagram")
     private let gmailImage = UIImage(named: "gmail")
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
     // MARK: - Init UI Elements
+    
     private lazy var mainTitleLabel = TitleLabel(text: "Sign Up")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
     private lazy var emailTF = TextField(type: .email, placeholder: "Email", view: self.view)
@@ -40,12 +42,15 @@ final class SignUpViewController: UIViewController {
         return button
     }()
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         view.backgroundColor = UIColor.Pallette.background
                 
         // MARK: - Adding Subviews
+        
         [mainTitleLabel, titleImageView, emailTF, passwordTF, confirmPasswordTF, signUpButton, signUpWithLabel, socialStackView, bottomStackView].forEach {view in
             self.view.addSubview(view)
         }
@@ -59,14 +64,16 @@ final class SignUpViewController: UIViewController {
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
         
         // MARK: - Additional UI Improvements
+        
         signUpWithLabel.drawLineOnBothSides(view: self.view)
         
         // MARK: - Targets
-        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         [emailTF, passwordTF].forEach {textField in
             textField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         }
@@ -137,6 +144,7 @@ final class SignUpViewController: UIViewController {
     }
     
     // MARK: - @objc
+    
     @objc func textFieldChanged(_ sender: UITextField) {
         let value = sender.text?.trim()
         switch sender {
@@ -183,6 +191,8 @@ final class SignUpViewController: UIViewController {
         }
     }
 }
+
+// MARK: - SignUpViewProtocol
 
 extension SignUpViewController: SignUpViewProtocol {
     func test() {

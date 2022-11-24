@@ -11,13 +11,15 @@ import SnapKit
 final class SignInViewController: UIViewController {
     public var presenter: SignInViewPresenterProtocol!
     
-    // MARK: - Variables
+    // MARK: - Properties
+    
     private let facebookImage = UIImage(named: "facebook")
     private let instagramImage = UIImage(named: "instagram")
     private let gmailImage = UIImage(named: "gmail")
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
     // MARK: - Init UI Elements
+    
     private lazy var mainTitleLabel = TitleLabel(text: "Sign In")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
     private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: self.view)
@@ -42,12 +44,14 @@ final class SignInViewController: UIViewController {
     }()
         
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
+        
         [mainTitleLabel, titleImageView, nameTF, passwordTF, forgotPasswordButton, signInButton, signInWithLabel, socialStackView, bottomStackView].forEach {view in
             self.view.addSubview(view)
         }
@@ -61,18 +65,22 @@ final class SignInViewController: UIViewController {
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
         
         // MARK: - Additional UI Improvements
+        
         signInWithLabel.drawLineOnBothSides(view: self.view)
         
         // MARK: - Targets
+        
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Methods
+    
     private func setConstraints() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
             make.centerX.equalTo(self.view)
@@ -137,6 +145,7 @@ final class SignInViewController: UIViewController {
     }
     
     // MARK: - @objc
+    
     @objc func signInButtonTapped() {
         presenter.signInButtonTapped()
     }
@@ -150,6 +159,8 @@ final class SignInViewController: UIViewController {
     }
 
 }
+
+// MARK: - SignInViewProtocol
 
 extension SignInViewController: SignInViewProtocol {
     func test() {

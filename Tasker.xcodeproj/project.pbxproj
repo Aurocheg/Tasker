@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE03B5B8292F4F4E00EB9BAF /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = DE03B5B7292F4F4E00EB9BAF /* RxGesture */; };
 		DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272843291C08490032D139 /* ChoosePlanPresenter.swift */; };
 		DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272845291C08730032D139 /* ChoosePlanViewController.swift */; };
 		DE272848291C0A170032D139 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272847291C0A170032D139 /* Plan.swift */; };
@@ -33,7 +34,6 @@
 		DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D3ED42916B6470095AC5B /* SceneDelegate.swift */; };
 		DE6D3EDC2916B6470095AC5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6D3EDB2916B6470095AC5B /* Assets.xcassets */; };
 		DE6D3EDF2916B6470095AC5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6D3EDD2916B6470095AC5B /* LaunchScreen.storyboard */; };
-		DE9C7756292624860065414F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C7755292624860065414F /* TabBar.swift */; };
 		DEA377982917E1210035085C /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA377972917E1210035085C /* TitleLabel.swift */; };
 		DEA3779A2917FD280035085C /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA377992917FD280035085C /* TextLabel.swift */; };
 		DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3779E291811D70035085C /* SecondaryButton.swift */; };
@@ -57,7 +57,7 @@
 		DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */; };
 		DECD7BF3291CDE1900F55CFF /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */; };
 		DECD7BF7291CF93400F55CFF /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF6291CF93400F55CFF /* Board.swift */; };
-		DECD7BFB291D222A00F55CFF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFA291D222A00F55CFF /* TabBarViewController.swift */; };
+		DECD7BFB291D222A00F55CFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFA291D222A00F55CFF /* TabBarController.swift */; };
 		DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFF291D229600F55CFF /* HomePresenter.swift */; };
 		DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C01291D22B700F55CFF /* HomeViewController.swift */; };
 		DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C07291D232A00F55CFF /* ChatPresenter.swift */; };
@@ -66,6 +66,14 @@
 		DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */; };
 		DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C17291D243400F55CFF /* SettingsViewController.swift */; };
 		DECD7C1A291D257800F55CFF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C19291D257800F55CFF /* NotificationViewController.swift */; };
+		DEEE2E45292E287D002A8A9F /* TabItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */; };
+		DEEE2E47292E2A44002A8A9F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E46292E2A44002A8A9F /* TabBarViewController.swift */; };
+		DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E4A292E2D30002A8A9F /* TabBar.swift */; };
+		DEEE2E4E292E325C002A8A9F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE2E4D292E325C002A8A9F /* RxCocoa */; };
+		DEEE2E50292E325C002A8A9F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE2E4F292E325C002A8A9F /* RxSwift */; };
+		DEEE2E53292E35E0002A8A9F /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E52292E35E0002A8A9F /* TabItemView.swift */; };
+		DEEE2E55292E4790002A8A9F /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */; };
+		DEEE2E57292E47CB002A8A9F /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E56292E47CB002A8A9F /* UIStackView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +101,6 @@
 		DE6D3EDB2916B6470095AC5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6D3EDE2916B6470095AC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6D3EE02916B6470095AC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE9C7755292624860065414F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DEA377972917E1210035085C /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		DEA377992917FD280035085C /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		DEA3779E291811D70035085C /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -117,7 +124,7 @@
 		DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		DECD7BF6291CF93400F55CFF /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		DECD7BFA291D222A00F55CFF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DECD7BFA291D222A00F55CFF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DECD7BFF291D229600F55CFF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DECD7C01291D22B700F55CFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DECD7C07291D232A00F55CFF /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
@@ -126,6 +133,12 @@
 		DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		DECD7C17291D243400F55CFF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DECD7C19291D257800F55CFF /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabItem + Extension.swift"; sourceTree = "<group>"; };
+		DEEE2E46292E2A44002A8A9F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DEEE2E4A292E2D30002A8A9F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		DEEE2E52292E35E0002A8A9F /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		DEEE2E56292E47CB002A8A9F /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,16 +146,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEEE2E50292E325C002A8A9F /* RxSwift in Frameworks */,
 				DE60C12B291AE21500D776F4 /* SnapKit in Frameworks */,
 				DEC71B58291BBB4700588D8B /* Lottie in Frameworks */,
+				DEEE2E4E292E325C002A8A9F /* RxCocoa in Frameworks */,
 				DE5509382922A8F30081A68B /* FirebaseAnalytics in Frameworks */,
 				DE55093E2922AD680081A68B /* FirebaseAuth in Frameworks */,
+				DE03B5B8292F4F4E00EB9BAF /* RxGesture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE03B5B9292F813300EB9BAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DE27283E291C08220032D139 /* ChoosePlan */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +240,9 @@
 				DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */,
 				DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */,
 				DE5509402922BF260081A68B /* String + Extension.swift */,
+				DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */,
+				DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */,
+				DEEE2E56292E47CB002A8A9F /* UIStackView + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,7 +250,7 @@
 		DE3F56542917AF8C0036DDC4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				DE9C7754292624770065414F /* TabBar */,
+				DEEE2E51292E35B4002A8A9F /* UIView */,
 				DEC71B62291BC15000588D8B /* UIStackView */,
 				DEC71B5F291BC0C500588D8B /* UIImageView */,
 				DEA3779D2917FF100035085C /* UIButton */,
@@ -348,14 +374,6 @@
 			path = Tasker;
 			sourceTree = "<group>";
 		};
-		DE9C7754292624770065414F /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				DE9C7755292624860065414F /* TabBar.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
 		DEA3779B2917FEF70035085C /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +431,7 @@
 		DEC71B62291BC15000588D8B /* UIStackView */ = {
 			isa = PBXGroup;
 			children = (
+				DEEE2E4A292E2D30002A8A9F /* TabBar.swift */,
 				DEC71B63291BC15A00588D8B /* StackView.swift */,
 			);
 			path = UIStackView;
@@ -444,6 +463,7 @@
 		DEC71B6C291BC55800588D8B /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				DE03B5B9292F813300EB9BAF /* Model */,
 				DEC71B70291BC58B00588D8B /* View */,
 				DEC71B6D291BC56000588D8B /* Presenter */,
 			);
@@ -597,7 +617,8 @@
 				DECD7C03291D22ED00F55CFF /* Chat */,
 				DECD7C0B291D237B00F55CFF /* Notification */,
 				DECD7C11291D23DE00F55CFF /* Settings */,
-				DECD7BFA291D222A00F55CFF /* TabBarViewController.swift */,
+				DECD7BFA291D222A00F55CFF /* TabBarController.swift */,
+				DEEE2E46292E2A44002A8A9F /* TabBarViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -734,6 +755,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DEEE2E51292E35B4002A8A9F /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DEEE2E52292E35E0002A8A9F /* TabItemView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -755,6 +784,9 @@
 				DEC71B57291BBB4700588D8B /* Lottie */,
 				DE5509372922A8F30081A68B /* FirebaseAnalytics */,
 				DE55093D2922AD680081A68B /* FirebaseAuth */,
+				DEEE2E4D292E325C002A8A9F /* RxCocoa */,
+				DEEE2E4F292E325C002A8A9F /* RxSwift */,
+				DE03B5B7292F4F4E00EB9BAF /* RxGesture */,
 			);
 			productName = Tasker;
 			productReference = DEC71B59291BBBED00588D8B /* Tasker.app */;
@@ -788,6 +820,8 @@
 				DE60C129291AE21500D776F4 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				DEC71B56291BBB4700588D8B /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				DE5509362922A8F30081A68B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DEEE2E4C292E325C002A8A9F /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DE03B5B6292F4F4E00EB9BAF /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = DE6D3EC62916B6470095AC5B;
 			projectDirPath = "";
@@ -824,27 +858,29 @@
 				DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */,
 				DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */,
 				DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */,
+				DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */,
 				DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */,
 				DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */,
 				DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */,
 				DE5D24032917BB8400F3ED18 /* Persist.swift in Sources */,
 				DE5D23FF2917BB2B00F3ED18 /* Theme.swift in Sources */,
 				DE5D23FA2917B8BC00F3ED18 /* SignInViewController.swift in Sources */,
-				DECD7BFB291D222A00F55CFF /* TabBarViewController.swift in Sources */,
+				DECD7BFB291D222A00F55CFF /* TabBarController.swift in Sources */,
 				DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */,
 				DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */,
 				DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */,
 				DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */,
 				DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */,
 				DE55093B2922ACFA0081A68B /* FirebaseAuthManager.swift in Sources */,
-				DE9C7756292624860065414F /* TabBar.swift in Sources */,
 				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
 				DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */,
 				DEC71B64291BC15A00588D8B /* StackView.swift in Sources */,
 				DEA377A1291831650035085C /* UILabel + Extension.swift in Sources */,
 				DE6D3ED32916B6470095AC5B /* AppDelegate.swift in Sources */,
+				DEEE2E53292E35E0002A8A9F /* TabItemView.swift in Sources */,
 				DE272848291C0A170032D139 /* Plan.swift in Sources */,
 				DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */,
+				DEEE2E57292E47CB002A8A9F /* UIStackView + Extension.swift in Sources */,
 				DEC71B6F291BC56800588D8B /* ForgotPasswordPresenter.swift in Sources */,
 				DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */,
 				DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */,
@@ -861,7 +897,10 @@
 				DECD7BF7291CF93400F55CFF /* Board.swift in Sources */,
 				DEA377982917E1210035085C /* TitleLabel.swift in Sources */,
 				DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */,
+				DEEE2E55292E4790002A8A9F /* UIView + Extension.swift in Sources */,
 				DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */,
+				DEEE2E47292E2A44002A8A9F /* TabBarViewController.swift in Sources */,
+				DEEE2E45292E287D002A8A9F /* TabItem + Extension.swift in Sources */,
 				DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */,
 				DE5509412922BF260081A68B /* String + Extension.swift in Sources */,
 				DECD7C0A291D234F00F55CFF /* ChatViewController.swift in Sources */,
@@ -1089,6 +1128,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DE03B5B6292F4F4E00EB9BAF /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		DE5509362922A8F30081A68B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1113,9 +1160,22 @@
 				kind = branch;
 			};
 		};
+		DEEE2E4C292E325C002A8A9F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DE03B5B7292F4F4E00EB9BAF /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE03B5B6292F4F4E00EB9BAF /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
 		DE5509372922A8F30081A68B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DE5509362922A8F30081A68B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1135,6 +1195,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEC71B56291BBB4700588D8B /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		DEEE2E4D292E325C002A8A9F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEEE2E4C292E325C002A8A9F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DEEE2E4F292E325C002A8A9F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEEE2E4C292E325C002A8A9F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

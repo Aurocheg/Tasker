@@ -8,27 +8,38 @@
 import UIKit
 
 final class MainButton: UIButton {
+    // MARK: - Enum
+    
     enum SelfType {
         case withoutArrow
         case withLeftArrow
         case withRightArrow
     }
     
+    // MARK: - Init Methods
+    
     init(text: String, type: SelfType) {
         super.init(frame: .zero)
         
-        var arrowIcon: UIImage?
+        // MARK: - Text
         
         self.setTitle(text, for: .normal)
         self.titleLabel?.textColor = .white
         self.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-        self.backgroundColor = UIColor.Pallette.buttonBackground
         
+        // MARK: - Color and Borders
+        
+        self.backgroundColor = UIColor.Pallette.buttonBackground
         self.layer.cornerRadius = 16
-
+        
+        // MARK: - Icon
+        
+        var arrowIcon: UIImage?
         if let icon = UIImage(named: "right") {
             arrowIcon = icon.withTintColor(.white, renderingMode: .alwaysOriginal)
         }
+        
+        // MARK: - Button Type
         
         switch type {
         case .withoutArrow:

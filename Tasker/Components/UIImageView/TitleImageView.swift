@@ -8,6 +8,8 @@
 import UIKit
 
 final class TitleImageView: UIImageView {
+    // MARK: - Init Methods
+    
     override init(image: UIImage?) {
         super.init(frame: .zero)
         guard let image = image else { return }

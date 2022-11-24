@@ -10,9 +10,10 @@ import UIKit
 final class CreateWorkspaceViewController: UIViewController {
     public var presenter: CreateWorkspaceViewPresenterProtocol!
     
-    // MARK: - Variables
+    // MARK: - Properties
     
     // MARK: - Init UI Elements
+    
     private lazy var nameLabel = TitleLabel(text: "Name", size: 16)
     private lazy var nameTF = TextField(type: .name, placeholder: "Enter name of workspace", view: self.view)
     private lazy var numberOfMemberLabel = TitleLabel(text: "Number of Member", size: 16)
@@ -22,24 +23,29 @@ final class CreateWorkspaceViewController: UIViewController {
     private lazy var createButton = MainButton(text: "Create", type: .withoutArrow)
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Create workspace"
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
+        
         [nameLabel, nameTF, numberOfMemberLabel, numberOfMemberTF, emailLabel, emailTF, createButton].forEach {view in
             self.view.addSubview(view)
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
         
         // MARK: - Targets
+        
         createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Methods
+    
     private func setConstraints() {
         [nameLabel, numberOfMemberLabel, emailLabel].forEach {label in
             label.snp.makeConstraints {make -> Void in
@@ -88,11 +94,14 @@ final class CreateWorkspaceViewController: UIViewController {
     }
     
     // MARK: - @objc
+    
     @objc func createButtonTapped() {
         presenter.createButtonTapped()
     }
     
 }
+
+// MARK: - CreateWorkspaceViewProtocol
 
 extension CreateWorkspaceViewController: CreateWorkspaceViewProtocol {
     func test() {

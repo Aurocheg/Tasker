@@ -8,81 +8,40 @@
 import UIKit
 
 final class OnboardingViewController: UIPageViewController {
-    public var presenter: OnboardingViewPresenterProtocol!
+    // MARK: - Properties
     
-    // MARK: - Variables
-    private let testBoard = Board(image: "test", title: "test", text: "test")
-    
-    // MARK: - Init UI Elements
-    private lazy var arrayBoardViewController: [BoardViewController] = {
-        var boardsVC = [BoardViewController]()
-        
-        for board in presenter?.boards ?? [testBoard] {
-            boardsVC.append(BoardViewController(boardWith: board))
-        }
-    
-        return boardsVC
-    }()
+    private var items: [BoardViewController] = []
     
     // MARK: - View Life Cycle
-    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
-        super.init(transitionStyle: .scroll, navigationOrientation: navigationOrientation)
-        self.view.backgroundColor = UIColor.Pallette.background
-        self.dataSource = self
-        self.delegate = self
-        setViewControllers([arrayBoardViewController[0]], direction: .forward, animated: true)
-    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewDidLoad() {
+//        dataSource = self
+        
+        if let firstVC = items.first {
+            setViewControllers([firstVC], direction: .forward, animated: true)
+        }
     }
     
     // MARK: - Methods
     
-    // MARK: - @objc
-    
-}
-
-// MARK: - OnboardingViewProtocol
-extension OnboardingViewController: OnboardingViewProtocol {
-    func test() {
-        print("hello")
+    private func decoratePageControl() {
+        let pc = UIPageControl.appearance(whenContainedInInstancesOf: [OnboardingViewController.self])
+        pc.currentPageIndicatorTintColor = .orange
+        pc.pageIndicatorTintColor = .gray
     }
 }
 
 // MARK: - UIPageViewControllerDelegate
-extension OnboardingViewController: UIPageViewControllerDelegate {
+/*
+extension OnboardingViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewController = viewController as? BoardViewController else { return nil }
-        
-        if let index = arrayBoardViewController.firstIndex(of: viewController) {
-            if index > 0 {
-                return arrayBoardViewController[index - 1]
-            }
-        }
-        
-        return nil
+        <#code#>
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewController = viewController as? BoardViewController else { return nil }
-        if let index = arrayBoardViewController.index(of: viewController) {
-            if index < (presenter.boards?.count ?? [testBoard].count) - 1  {
-                return arrayBoardViewController[index + 1]
-            }
-        }
-        
-        return nil
-    }
-}
-
-// MARK: - UIPageViewControllerDataSource
-extension OnboardingViewController: UIPageViewControllerDataSource {
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        presenter?.boards?.count ?? [testBoard].count
+        <#code#>
     }
     
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        0
-    }
+    
 }
+*/

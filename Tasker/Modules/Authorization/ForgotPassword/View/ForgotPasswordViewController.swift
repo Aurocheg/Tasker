@@ -10,14 +10,17 @@ import UIKit
 final class ForgotPasswordViewController: UIViewController {
     public var presenter: ForgotPasswordViewPresenterProtocol!
     
-    // MARK: - Variables
+    // MARK: - Properties
     
     // MARK: - Init UI Elements
+    
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "forgotPassword"))
     private lazy var mainTitleLabel = TitleLabel(text: "Forgot Password ?")
     private lazy var textLabel = TextLabel(text: "Enter your phone number then we will send you OTP sms to reset new password.")
     private lazy var numberTF = TextField(type: .number, placeholder: "Enter your number", view: self.view)
     private lazy var sendButton = MainButton(text: "Send OTP", type: .withoutArrow)
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +28,22 @@ final class ForgotPasswordViewController: UIViewController {
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
+        
         [titleImageView, mainTitleLabel, textLabel, numberTF, sendButton].forEach {view in
             self.view.addSubview(view)
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
         
         // MARK: - Targets
+        
         sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Methods
+    
     private func setConstraints() {
         titleImageView.snp.makeConstraints {make -> Void in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
@@ -72,11 +79,14 @@ final class ForgotPasswordViewController: UIViewController {
     }
     
     // MARK: - @objc
+    
     @objc func sendButtonTapped() {
         presenter.sendButtonTapped()
     }
     
 }
+
+// MARK: - ForgotPasswordViewProtocol
 
 extension ForgotPasswordViewController: ForgotPasswordViewProtocol {
     func test() {

@@ -10,7 +10,7 @@ import UIKit
 final class OTPViewController: UIViewController {
     public var presenter: OTPViewPresenterProtocol!
     
-    // MARK: - Variables
+    // MARK: - Properties
     var otpText = String()
     
     // MARK: - Init UI Elements
@@ -27,12 +27,15 @@ final class OTPViewController: UIViewController {
     private lazy var resendTextLabel = TextLabel(text: "in 00:30s")
     private lazy var nextButton = MainButton(text: "Next", type: .withRightArrow)
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
+        
         [titleImageView, mainTitleLabel, textLabel, textFieldsStackView, resendStackView, nextButton].forEach {view in
             self.view.addSubview(view)
         }
@@ -50,9 +53,11 @@ final class OTPViewController: UIViewController {
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
                 
         // MARK: - Targets
+        
         firstTF.becomeFirstResponder()
         
         resendButton.addTarget(self, action: #selector(resendButtonTapped), for: .touchUpInside)
@@ -60,6 +65,7 @@ final class OTPViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
     private func setConstraints() {
         titleImageView.snp.makeConstraints {make -> Void in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
@@ -106,6 +112,7 @@ final class OTPViewController: UIViewController {
     }
     
     // MARK: - @objc
+    
     @objc func textFieldDidChange(_ sender: UITextField) {
         let text = sender.text
         
@@ -142,7 +149,8 @@ final class OTPViewController: UIViewController {
     }
     
     // MARK: - Methods
-    func dismissKeyboard() {
+    
+    private func dismissKeyboard() {
         for textField in [firstTF, secondTF, thirdTF, fourthTF] {
             self.otpText += textField.text ?? ""
         }

@@ -8,6 +8,8 @@
 import UIKit
 
 final class StackView: UIStackView {
+    // MARK: - Init Methods
+    
     init(spacing: CGFloat, axis: NSLayoutConstraint.Axis = .horizontal, alignment: UIStackView.Alignment = .center) {
         super.init(frame: .zero)
         

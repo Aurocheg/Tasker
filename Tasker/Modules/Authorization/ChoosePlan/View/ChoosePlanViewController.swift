@@ -11,10 +11,11 @@ import Lottie
 final class ChoosePlanViewController: UIViewController {
     public var presenter: ChoosePlanViewPresenterProtocol!
     
-    // MARK: - Variables
+    // MARK: - Properties
     private let screenWidth = UIScreen.main.bounds.width
         
     // MARK: - Init UI Elements
+    
     private lazy var mainTitleLabel = TitleLabel(text: "Choose plans", size: 18)
     private lazy var textLabel = TextLabel(text: "Unlock all features with premium plan")
     private lazy var plansCollectionView: UICollectionView = {
@@ -34,25 +35,30 @@ final class ChoosePlanViewController: UIViewController {
     private lazy var continueButton = MainButton(text: "Continue", type: .withRightArrow)
 
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Choose plans"
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
+        
         [mainTitleLabel, textLabel, plansCollectionView, continueButton].forEach {view in
             self.view.addSubview(view)
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
         
         // MARK: - Targets
+        
         continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         plansCollectionView.register(PlansCollectionViewCell.self, forCellWithReuseIdentifier: "plansCollectionViewCell")
     }
     
     // MARK: - Methods
+    
     private func setConstraints() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
             make.left.equalTo(self.view).offset(24)
@@ -80,6 +86,7 @@ final class ChoosePlanViewController: UIViewController {
     }
     
     // MARK: - @objc
+    
     @objc func continueButtonTapped() {
         presenter.continueButtonTapped()
     }
@@ -93,6 +100,7 @@ extension ChoosePlanViewController: ChoosePlanViewProtocol {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension ChoosePlanViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PlansCollectionViewCell else { return }
@@ -128,6 +136,7 @@ extension ChoosePlanViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension ChoosePlanViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         presenter.plans?.count ?? 0

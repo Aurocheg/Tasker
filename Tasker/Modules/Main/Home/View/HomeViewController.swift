@@ -10,11 +10,13 @@ import UIKit
 final class HomeViewController: UIViewController {
     public var presenter: HomeViewPresenterProtocol!
     
-    // MARK: - Variables
+    // MARK: - Properties
+    
     private let titleImage = UIImage(named: "dashboard")?.withTintColor(UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white), renderingMode: .alwaysOriginal)
     private let plusImage = UIImage(named: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
     
     // MARK: - Init UI Elements
+    
     private lazy var mainTitleLabel = TitleLabel(text: "Dashboard")
     private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var plusButton: SecondaryButton = {
@@ -27,23 +29,10 @@ final class HomeViewController: UIViewController {
         
         return button
     }()
-    private lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.clipsToBounds = true
-        
-        searchBar.layer.cornerRadius = 16
-        searchBar.layer.borderWidth = 1
-        searchBar.layer.borderColor = UIColor.white.cgColor
-        
-        searchBar.layer.shadowOpacity = 1
-        searchBar.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
-        searchBar.layer.shadowOffset = CGSize(width: 0, height: 1)
-        searchBar.layer.shadowRadius = 8
-        
-        return searchBar
-    }()
+    private lazy var searchTF = TextField(type: .search, placeholder: "Search", view: self.view)
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,17 +41,20 @@ final class HomeViewController: UIViewController {
         view.backgroundColor = UIColor.Pallette.background
         
         // MARK: - Adding Subviews
-        [mainTitleLabel, titleImageView, plusButton, searchBar].forEach {element in
+        
+        [mainTitleLabel, titleImageView, plusButton, searchTF].forEach {element in
             self.view.addSubview(element)
         }
         
         // MARK: - Setting Constraints
+        
         setConstraints()
         
         // MARK: - Targets
     }
     
     // MARK: - Methods
+    
     private func setConstraints() {
         mainTitleLabel.snp.makeConstraints {make -> Void in
             make.left.equalTo(24)
@@ -81,7 +73,7 @@ final class HomeViewController: UIViewController {
             make.width.height.equalTo(44)
         }
         
-        searchBar.snp.makeConstraints {make -> Void in
+        searchTF.snp.makeConstraints {make -> Void in
             make.centerX.equalTo(self.view)
             make.top.equalTo(plusButton.snp.bottom).offset(24)
             make.width.equalTo(self.view).offset(-48)
@@ -92,6 +84,8 @@ final class HomeViewController: UIViewController {
     // MARK: - @objc
     
 }
+
+// MARK: - HomeViewProtocol
 
 extension HomeViewController: HomeViewProtocol {
     func test() {
