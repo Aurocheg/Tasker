@@ -20,6 +20,7 @@ final class TextField: UITextField {
     // MARK: - Properties
     private var textPadding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 24)
     private var isPasswordTF = false
+    private var isSearchTF = false
     private var needNumberIcon = true
     private var view: UIView?
 
@@ -29,18 +30,12 @@ final class TextField: UITextField {
         self.view = view
                 
         let color = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
-        let placeholderColor = UIColor.color(light: UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1),
-                                             dark: UIColor(red: 0.937, green: 0.945, blue: 0.953, alpha: 1))
         backgroundColor = UIColor.color(light: .white, dark: .clear)
                 
         textColor = color
         textAlignment = alignment
         font = .systemFont(ofSize: 16, weight: .medium)
-        
-        attributedPlaceholder = NSAttributedString(
-            string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: placeholderColor]
-        )
+        self.placeholder = placeholder
         
         layer.cornerRadius = 16
         layer.borderColor = UIColor.white.cgColor
@@ -95,7 +90,7 @@ final class TextField: UITextField {
         case .search:
             let searchIcon = UIImage(named: "search")?.withTintColor(color, renderingMode: .alwaysOriginal)
             let filterIcon = UIImage(named: "filter")?.withTintColor(color, renderingMode: .alwaysOriginal)
-            
+            isSearchTF = true
             setLeftIcon(searchIcon)
             setRightIcon(filterIcon)
         }
@@ -107,7 +102,7 @@ final class TextField: UITextField {
     
     // MARK: - Rect
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        if isPasswordTF {
+        if isPasswordTF || isSearchTF {
             textPadding.right = 48
         }
         
@@ -120,7 +115,7 @@ final class TextField: UITextField {
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        if isPasswordTF {
+        if isPasswordTF || isSearchTF {
             textPadding.right = 48
         }
         

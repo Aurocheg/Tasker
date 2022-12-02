@@ -17,21 +17,21 @@ extension UILabel {
         leftLine.backgroundColor = color
         rightLine.backgroundColor = color
         
-        self.addSubview(leftLine)
-        self.addSubview(rightLine)
+        addSubview(leftLine)
+        addSubview(rightLine)
         
-        leftLine.snp.makeConstraints {make -> Void in
-            make.leading.equalTo(view.snp.leading).offset(24)
-            make.trailing.equalTo(self.snp.leading).offset(-16)
-            make.centerY.equalTo(self)
-            make.height.equalTo(2)
+        leftLine.snp.makeConstraints {
+            $0.leading.equalTo(snp.leading).offset(24)
+            $0.trailing.equalTo(snp.leading).offset(-16)
+            $0.centerY.equalTo(self)
+            $0.height.equalTo(2)
         }
         
-        rightLine.snp.makeConstraints {make -> Void in
-            make.leading.equalTo(self.snp.trailing).offset(16)
-            make.trailing.equalTo(view.snp.trailing).offset(-24)
-            make.centerY.equalTo(self)
-            make.height.equalTo(2)
+        rightLine.snp.makeConstraints {
+            $0.leading.equalTo(snp.trailing).offset(16)
+            $0.trailing.equalTo(view.snp.trailing).offset(-24)
+            $0.centerY.equalTo(self)
+            $0.height.equalTo(2)
         }
     }
 }

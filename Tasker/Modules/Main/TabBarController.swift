@@ -47,7 +47,7 @@ final class TabBarController: UITabBarController {
     }
 
     private func selectTabWith(index: Int) {
-        self.selectedIndex = index
+        selectedIndex = index
     }
     
     // MARK: - Bindings

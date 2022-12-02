@@ -17,23 +17,88 @@
 		DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F56552917AFA70036DDC4 /* TextField.swift */; };
 		DE5509352922A7E60081A68B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE5509342922A7E60081A68B /* GoogleService-Info.plist */; };
 		DE5509382922A8F30081A68B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DE5509372922A8F30081A68B /* FirebaseAnalytics */; };
-		DE55093B2922ACFA0081A68B /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55093A2922ACFA0081A68B /* FirebaseAuthManager.swift */; };
 		DE55093E2922AD680081A68B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DE55093D2922AD680081A68B /* FirebaseAuth */; };
 		DE5509412922BF260081A68B /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5509402922BF260081A68B /* String + Extension.swift */; };
 		DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */; };
-		DE5D23F62917B78100F3ED18 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23F52917B78100F3ED18 /* SignInPresenter.swift */; };
 		DE5D23F82917B80000F3ED18 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23F72917B80000F3ED18 /* Router.swift */; };
-		DE5D23FA2917B8BC00F3ED18 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23F92917B8BC00F3ED18 /* SignInViewController.swift */; };
 		DE5D23FF2917BB2B00F3ED18 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23FE2917BB2B00F3ED18 /* Theme.swift */; };
 		DE5D24032917BB8400F3ED18 /* Persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24022917BB8400F3ED18 /* Persist.swift */; };
 		DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */; };
 		DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24062917BC7200F3ED18 /* UIWindow + Extension.swift */; };
 		DE5D24092917BF7200F3ED18 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24082917BF7200F3ED18 /* MainButton.swift */; };
 		DE60C12B291AE21500D776F4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE60C12A291AE21500D776F4 /* SnapKit */; };
+		DE628AA5293A5F540059D207 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AA4293A5F540059D207 /* SignUpConfigurator.swift */; };
+		DE628AA7293A5F5F0059D207 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AA6293A5F5F0059D207 /* SignUpInteractor.swift */; };
+		DE628AA9293A5F780059D207 /* SignUpProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AA8293A5F780059D207 /* SignUpProtocols.swift */; };
+		DE628AAB293A5F870059D207 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AAA293A5F870059D207 /* SignUpRouter.swift */; };
+		DE628AAD293A5F8E0059D207 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AAC293A5F8E0059D207 /* SignUpPresenter.swift */; };
+		DE628AAF293A5FA10059D207 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AAE293A5FA10059D207 /* SignUpViewController.swift */; };
+		DE628AB1293A70AD0059D207 /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AB0293A70AD0059D207 /* SignInProtocols.swift */; };
+		DE628AB3293A70B50059D207 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AB2293A70B50059D207 /* SignInConfigurator.swift */; };
+		DE628AB5293A70BF0059D207 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AB4293A70BF0059D207 /* SignInRouter.swift */; };
+		DE628AB7293A70DD0059D207 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AB6293A70DD0059D207 /* SignInPresenter.swift */; };
+		DE628AB9293A70EB0059D207 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AB8293A70EB0059D207 /* SignInInteractor.swift */; };
+		DE628ABB293A70F80059D207 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ABA293A70F80059D207 /* SignInViewController.swift */; };
+		DE628ABD293A71150059D207 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ABC293A71150059D207 /* ForgotViewController.swift */; };
+		DE628ABF293A711E0059D207 /* ForgotInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ABE293A711E0059D207 /* ForgotInteractor.swift */; };
+		DE628AC1293A71260059D207 /* ForgotPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AC0293A71260059D207 /* ForgotPresenter.swift */; };
+		DE628AC3293A715C0059D207 /* ForgotConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AC2293A715C0059D207 /* ForgotConfigurator.swift */; };
+		DE628AC5293A71630059D207 /* ForgotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AC4293A71630059D207 /* ForgotRouter.swift */; };
+		DE628AC7293A716B0059D207 /* ForgotProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AC6293A716B0059D207 /* ForgotProtocols.swift */; };
+		DE628AC9293A71830059D207 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AC8293A71830059D207 /* OTPViewController.swift */; };
+		DE628ACB293A718B0059D207 /* OTPInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ACA293A718B0059D207 /* OTPInteractor.swift */; };
+		DE628ACD293A71940059D207 /* OTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ACC293A71940059D207 /* OTPPresenter.swift */; };
+		DE628ACF293A719E0059D207 /* OTPConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ACE293A719E0059D207 /* OTPConfigurator.swift */; };
+		DE628AD1293A71A40059D207 /* OTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AD0293A71A40059D207 /* OTPRouter.swift */; };
+		DE628AD3293A71A90059D207 /* OTPProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AD2293A71A80059D207 /* OTPProtocols.swift */; };
+		DE628AD5293A71BD0059D207 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AD4293A71BD0059D207 /* ResetViewController.swift */; };
+		DE628AD7293A71C30059D207 /* ResetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AD6293A71C30059D207 /* ResetInteractor.swift */; };
+		DE628AD9293A71C80059D207 /* ResetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AD8293A71C80059D207 /* ResetPresenter.swift */; };
+		DE628ADB293A71CE0059D207 /* ResetConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ADA293A71CE0059D207 /* ResetConfigurator.swift */; };
+		DE628ADD293A71DB0059D207 /* ResetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ADC293A71DB0059D207 /* ResetRouter.swift */; };
+		DE628ADF293A71E10059D207 /* ResetProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628ADE293A71E10059D207 /* ResetProtocols.swift */; };
+		DE628AE1293A72170059D207 /* WorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AE0293A72170059D207 /* WorkspaceViewController.swift */; };
+		DE628AE3293A721C0059D207 /* WorkspaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AE2293A721C0059D207 /* WorkspaceInteractor.swift */; };
+		DE628AE5293A72220059D207 /* WorkspacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AE4293A72220059D207 /* WorkspacePresenter.swift */; };
+		DE628AE7293A72280059D207 /* WorkspaceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AE6293A72280059D207 /* WorkspaceConfigurator.swift */; };
+		DE628AE9293A722E0059D207 /* WorkspaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AE8293A722E0059D207 /* WorkspaceRouter.swift */; };
+		DE628AEB293A72330059D207 /* WorkspaceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AEA293A72330059D207 /* WorkspaceProtocols.swift */; };
+		DE628AED293A724C0059D207 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AEC293A724C0059D207 /* PlanViewController.swift */; };
+		DE628AEF293A72510059D207 /* PlanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AEE293A72510059D207 /* PlanInteractor.swift */; };
+		DE628AF1293A72580059D207 /* PlanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AF0293A72580059D207 /* PlanPresenter.swift */; };
+		DE628AF3293A725D0059D207 /* PlanConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AF2293A725D0059D207 /* PlanConfigurator.swift */; };
+		DE628AF5293A72620059D207 /* PlanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AF4293A72620059D207 /* PlanRouter.swift */; };
+		DE628AF7293A72660059D207 /* PlanProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AF6293A72660059D207 /* PlanProtocols.swift */; };
+		DE628AF9293A727C0059D207 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AF8293A727C0059D207 /* HomeViewController.swift */; };
+		DE628AFB293A72800059D207 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AFA293A72800059D207 /* HomeInteractor.swift */; };
+		DE628AFD293A72870059D207 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AFC293A72870059D207 /* HomePresenter.swift */; };
+		DE628AFF293A728C0059D207 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AFE293A728C0059D207 /* HomeConfigurator.swift */; };
+		DE628B01293A72910059D207 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B00293A72910059D207 /* HomeRouter.swift */; };
+		DE628B03293A72950059D207 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B02293A72950059D207 /* HomeProtocols.swift */; };
+		DE628B05293A72A30059D207 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B04293A72A30059D207 /* ChatViewController.swift */; };
+		DE628B07293A72A70059D207 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B06293A72A70059D207 /* ChatInteractor.swift */; };
+		DE628B09293A72AB0059D207 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B08293A72AB0059D207 /* ChatPresenter.swift */; };
+		DE628B0B293A72B00059D207 /* ChatConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B0A293A72B00059D207 /* ChatConfigurator.swift */; };
+		DE628B0D293A72B40059D207 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B0C293A72B40059D207 /* ChatRouter.swift */; };
+		DE628B0F293A72B80059D207 /* ChatProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B0E293A72B80059D207 /* ChatProtocols.swift */; };
+		DE628B11293A72C40059D207 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B10293A72C40059D207 /* NotificationViewController.swift */; };
+		DE628B13293A72CA0059D207 /* NotificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B12293A72CA0059D207 /* NotificationInteractor.swift */; };
+		DE628B15293A72D00059D207 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B14293A72D00059D207 /* NotificationPresenter.swift */; };
+		DE628B17293A72D60059D207 /* NotificationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B16293A72D60059D207 /* NotificationConfigurator.swift */; };
+		DE628B19293A72DB0059D207 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B18293A72DB0059D207 /* NotificationRouter.swift */; };
+		DE628B1B293A72E20059D207 /* NotificationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B1A293A72E20059D207 /* NotificationProtocols.swift */; };
+		DE628B1D293A72F10059D207 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B1C293A72F10059D207 /* SettingsViewController.swift */; };
+		DE628B1F293A72F70059D207 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B1E293A72F70059D207 /* SettingsInteractor.swift */; };
+		DE628B21293A72FC0059D207 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B20293A72FC0059D207 /* SettingsPresenter.swift */; };
+		DE628B23293A73020059D207 /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B22293A73020059D207 /* SettingsConfigurator.swift */; };
+		DE628B25293A73060059D207 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B24293A73060059D207 /* SettingsRouter.swift */; };
+		DE628B27293A730C0059D207 /* SettingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B26293A730C0059D207 /* SettingsProtocols.swift */; };
+		DE628B2A293A7B1D0059D207 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628B29293A7B1D0059D207 /* AuthService.swift */; };
 		DE6D3ED32916B6470095AC5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D3ED22916B6470095AC5B /* AppDelegate.swift */; };
 		DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D3ED42916B6470095AC5B /* SceneDelegate.swift */; };
 		DE6D3EDC2916B6470095AC5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6D3EDB2916B6470095AC5B /* Assets.xcassets */; };
 		DE6D3EDF2916B6470095AC5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6D3EDD2916B6470095AC5B /* LaunchScreen.storyboard */; };
+		DE79652C29309C2000F6D24C /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE79652B29309C2000F6D24C /* SegmentedControl.swift */; };
 		DEA377982917E1210035085C /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA377972917E1210035085C /* TitleLabel.swift */; };
 		DEA3779A2917FD280035085C /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA377992917FD280035085C /* TextLabel.swift */; };
 		DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3779E291811D70035085C /* SecondaryButton.swift */; };
@@ -42,12 +107,6 @@
 		DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */; };
 		DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B60291BC0D200588D8B /* TitleImageView.swift */; };
 		DEC71B64291BC15A00588D8B /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B63291BC15A00588D8B /* StackView.swift */; };
-		DEC71B67291BC20700588D8B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B66291BC20700588D8B /* SignUpPresenter.swift */; };
-		DEC71B6A291BC22D00588D8B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B69291BC22D00588D8B /* SignUpViewController.swift */; };
-		DEC71B6F291BC56800588D8B /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B6E291BC56800588D8B /* ForgotPasswordPresenter.swift */; };
-		DEC71B72291BC59300588D8B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B71291BC59300588D8B /* ForgotPasswordViewController.swift */; };
-		DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B75291BCFF900588D8B /* OTPPresenter.swift */; };
-		DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B78291BD02E00588D8B /* OTPViewController.swift */; };
 		DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */; };
 		DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */; };
 		DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */; };
@@ -85,22 +144,87 @@
 		DE27284C291C177B0032D139 /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		DE3F56552917AFA70036DDC4 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DE5509342922A7E60081A68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DE55093A2922ACFA0081A68B /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		DE5509402922BF260081A68B /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
-		DE5D23F52917B78100F3ED18 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		DE5D23F72917B80000F3ED18 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DE5D23F92917B8BC00F3ED18 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DE5D23FE2917BB2B00F3ED18 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DE5D24022917BB8400F3ED18 /* Persist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persist.swift; sourceTree = "<group>"; };
 		DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme + Extension.swift"; sourceTree = "<group>"; };
 		DE5D24062917BC7200F3ED18 /* UIWindow + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow + Extension.swift"; sourceTree = "<group>"; };
 		DE5D24082917BF7200F3ED18 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		DE628AA4293A5F540059D207 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
+		DE628AA6293A5F5F0059D207 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		DE628AA8293A5F780059D207 /* SignUpProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocols.swift; sourceTree = "<group>"; };
+		DE628AAA293A5F870059D207 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		DE628AAC293A5F8E0059D207 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		DE628AAE293A5FA10059D207 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DE628AB0293A70AD0059D207 /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
+		DE628AB2293A70B50059D207 /* SignInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
+		DE628AB4293A70BF0059D207 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		DE628AB6293A70DD0059D207 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		DE628AB8293A70EB0059D207 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		DE628ABA293A70F80059D207 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DE628ABC293A71150059D207 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		DE628ABE293A711E0059D207 /* ForgotInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotInteractor.swift; sourceTree = "<group>"; };
+		DE628AC0293A71260059D207 /* ForgotPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPresenter.swift; sourceTree = "<group>"; };
+		DE628AC2293A715C0059D207 /* ForgotConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotConfigurator.swift; sourceTree = "<group>"; };
+		DE628AC4293A71630059D207 /* ForgotRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRouter.swift; sourceTree = "<group>"; };
+		DE628AC6293A716B0059D207 /* ForgotProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotProtocols.swift; sourceTree = "<group>"; };
+		DE628AC8293A71830059D207 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		DE628ACA293A718B0059D207 /* OTPInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInteractor.swift; sourceTree = "<group>"; };
+		DE628ACC293A71940059D207 /* OTPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPresenter.swift; sourceTree = "<group>"; };
+		DE628ACE293A719E0059D207 /* OTPConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPConfigurator.swift; sourceTree = "<group>"; };
+		DE628AD0293A71A40059D207 /* OTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRouter.swift; sourceTree = "<group>"; };
+		DE628AD2293A71A80059D207 /* OTPProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPProtocols.swift; sourceTree = "<group>"; };
+		DE628AD4293A71BD0059D207 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		DE628AD6293A71C30059D207 /* ResetInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetInteractor.swift; sourceTree = "<group>"; };
+		DE628AD8293A71C80059D207 /* ResetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPresenter.swift; sourceTree = "<group>"; };
+		DE628ADA293A71CE0059D207 /* ResetConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetConfigurator.swift; sourceTree = "<group>"; };
+		DE628ADC293A71DB0059D207 /* ResetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetRouter.swift; sourceTree = "<group>"; };
+		DE628ADE293A71E10059D207 /* ResetProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetProtocols.swift; sourceTree = "<group>"; };
+		DE628AE0293A72170059D207 /* WorkspaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceViewController.swift; sourceTree = "<group>"; };
+		DE628AE2293A721C0059D207 /* WorkspaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceInteractor.swift; sourceTree = "<group>"; };
+		DE628AE4293A72220059D207 /* WorkspacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacePresenter.swift; sourceTree = "<group>"; };
+		DE628AE6293A72280059D207 /* WorkspaceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceConfigurator.swift; sourceTree = "<group>"; };
+		DE628AE8293A722E0059D207 /* WorkspaceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceRouter.swift; sourceTree = "<group>"; };
+		DE628AEA293A72330059D207 /* WorkspaceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceProtocols.swift; sourceTree = "<group>"; };
+		DE628AEC293A724C0059D207 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		DE628AEE293A72510059D207 /* PlanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanInteractor.swift; sourceTree = "<group>"; };
+		DE628AF0293A72580059D207 /* PlanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPresenter.swift; sourceTree = "<group>"; };
+		DE628AF2293A725D0059D207 /* PlanConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanConfigurator.swift; sourceTree = "<group>"; };
+		DE628AF4293A72620059D207 /* PlanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRouter.swift; sourceTree = "<group>"; };
+		DE628AF6293A72660059D207 /* PlanProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanProtocols.swift; sourceTree = "<group>"; };
+		DE628AF8293A727C0059D207 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE628AFA293A72800059D207 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		DE628AFC293A72870059D207 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		DE628AFE293A728C0059D207 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		DE628B00293A72910059D207 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		DE628B02293A72950059D207 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		DE628B04293A72A30059D207 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DE628B06293A72A70059D207 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		DE628B08293A72AB0059D207 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		DE628B0A293A72B00059D207 /* ChatConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatConfigurator.swift; sourceTree = "<group>"; };
+		DE628B0C293A72B40059D207 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		DE628B0E293A72B80059D207 /* ChatProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProtocols.swift; sourceTree = "<group>"; };
+		DE628B10293A72C40059D207 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		DE628B12293A72CA0059D207 /* NotificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInteractor.swift; sourceTree = "<group>"; };
+		DE628B14293A72D00059D207 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
+		DE628B16293A72D60059D207 /* NotificationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConfigurator.swift; sourceTree = "<group>"; };
+		DE628B18293A72DB0059D207 /* NotificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRouter.swift; sourceTree = "<group>"; };
+		DE628B1A293A72E20059D207 /* NotificationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProtocols.swift; sourceTree = "<group>"; };
+		DE628B1C293A72F10059D207 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DE628B1E293A72F70059D207 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		DE628B20293A72FC0059D207 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		DE628B22293A73020059D207 /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
+		DE628B24293A73060059D207 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		DE628B26293A730C0059D207 /* SettingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocols.swift; sourceTree = "<group>"; };
+		DE628B29293A7B1D0059D207 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DE6D3ED22916B6470095AC5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE6D3ED42916B6470095AC5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE6D3EDB2916B6470095AC5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6D3EDE2916B6470095AC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6D3EE02916B6470095AC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE79652B29309C2000F6D24C /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		DEA377972917E1210035085C /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		DEA377992917FD280035085C /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		DEA3779E291811D70035085C /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -109,12 +233,6 @@
 		DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		DEC71B60291BC0D200588D8B /* TitleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleImageView.swift; sourceTree = "<group>"; };
 		DEC71B63291BC15A00588D8B /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
-		DEC71B66291BC20700588D8B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		DEC71B69291BC22D00588D8B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		DEC71B6E291BC56800588D8B /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
-		DEC71B71291BC59300588D8B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		DEC71B75291BCFF900588D8B /* OTPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPresenter.swift; sourceTree = "<group>"; };
-		DEC71B78291BD02E00588D8B /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
 		DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspacePresenter.swift; sourceTree = "<group>"; };
@@ -159,21 +277,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE03B5B9292F813300EB9BAF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DE27283E291C08220032D139 /* ChoosePlan */ = {
+		DE27283E291C08220032D139 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
 				DE272841291C08390032D139 /* Model */,
 				DE272840291C08360032D139 /* View */,
 				DE27283F291C08320032D139 /* Presenter */,
+				DE628AEC293A724C0059D207 /* PlanViewController.swift */,
+				DE628AEE293A72510059D207 /* PlanInteractor.swift */,
+				DE628AF0293A72580059D207 /* PlanPresenter.swift */,
+				DE628AF2293A725D0059D207 /* PlanConfigurator.swift */,
+				DE628AF4293A72620059D207 /* PlanRouter.swift */,
+				DE628AF6293A72660059D207 /* PlanProtocols.swift */,
 			);
-			path = ChoosePlan;
+			path = Plan;
 			sourceTree = "<group>";
 		};
 		DE27283F291C08320032D139 /* Presenter */ = {
@@ -260,14 +377,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		DE5509392922ACED0081A68B /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				DE55093A2922ACFA0081A68B /* FirebaseAuthManager.swift */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
 		DE55093C2922AD680081A68B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,11 +389,11 @@
 			children = (
 				DEC71B5E291BC01B00588D8B /* SignUp */,
 				DE5D23F12917B75600F3ED18 /* SignIn */,
-				DEC71B6C291BC55800588D8B /* ForgotPassword */,
+				DEC71B6C291BC55800588D8B /* Forgot */,
 				DEC71B73291BCFE800588D8B /* OTP */,
-				DEC71B7C291BDBA600588D8B /* ResetPassword */,
-				DEC71B85291BE0D300588D8B /* CreateWorkspace */,
-				DE27283E291C08220032D139 /* ChoosePlan */,
+				DEC71B7C291BDBA600588D8B /* Reset */,
+				DEC71B85291BE0D300588D8B /* Workspace */,
+				DE27283E291C08220032D139 /* Plan */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -292,34 +401,14 @@
 		DE5D23F12917B75600F3ED18 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				DE5D23F42917B76E00F3ED18 /* Model */,
-				DE5D23F32917B76A00F3ED18 /* View */,
-				DE5D23F22917B76500F3ED18 /* Presenter */,
+				DE628ABA293A70F80059D207 /* SignInViewController.swift */,
+				DE628AB8293A70EB0059D207 /* SignInInteractor.swift */,
+				DE628AB6293A70DD0059D207 /* SignInPresenter.swift */,
+				DE628AB2293A70B50059D207 /* SignInConfigurator.swift */,
+				DE628AB4293A70BF0059D207 /* SignInRouter.swift */,
+				DE628AB0293A70AD0059D207 /* SignInProtocols.swift */,
 			);
 			path = SignIn;
-			sourceTree = "<group>";
-		};
-		DE5D23F22917B76500F3ED18 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DE5D23F52917B78100F3ED18 /* SignInPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DE5D23F32917B76A00F3ED18 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DE5D23F92917B8BC00F3ED18 /* SignInViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DE5D23F42917B76E00F3ED18 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DE5D23FD2917BB1A00F3ED18 /* Theme */ = {
@@ -346,6 +435,14 @@
 			path = Generics;
 			sourceTree = "<group>";
 		};
+		DE628B28293A7B0C0059D207 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DE628B29293A7B1D0059D207 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DE6D3EC62916B6470095AC5B = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +455,7 @@
 		DE6D3ED12916B6470095AC5B /* Tasker */ = {
 			isa = PBXGroup;
 			children = (
-				DE5509392922ACED0081A68B /* Firebase */,
+				DE628B28293A7B0C0059D207 /* Services */,
 				DE3F56542917AF8C0036DDC4 /* Components */,
 				DE3F56532917AF800036DDC4 /* Extensions */,
 				DE5D23FD2917BB1A00F3ED18 /* Theme */,
@@ -413,9 +510,12 @@
 		DEC71B5E291BC01B00588D8B /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B6B291BC25B00588D8B /* Model */,
-				DEC71B68291BC22400588D8B /* View */,
-				DEC71B65291BC1FD00588D8B /* Presenter */,
+				DE628AAE293A5FA10059D207 /* SignUpViewController.swift */,
+				DE628AA6293A5F5F0059D207 /* SignUpInteractor.swift */,
+				DE628AAC293A5F8E0059D207 /* SignUpPresenter.swift */,
+				DE628AAA293A5F870059D207 /* SignUpRouter.swift */,
+				DE628AA4293A5F540059D207 /* SignUpConfigurator.swift */,
+				DE628AA8293A5F780059D207 /* SignUpProtocols.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -437,96 +537,45 @@
 			path = UIStackView;
 			sourceTree = "<group>";
 		};
-		DEC71B65291BC1FD00588D8B /* Presenter */ = {
+		DEC71B6C291BC55800588D8B /* Forgot */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B66291BC20700588D8B /* SignUpPresenter.swift */,
+				DE628ABC293A71150059D207 /* ForgotViewController.swift */,
+				DE628ABE293A711E0059D207 /* ForgotInteractor.swift */,
+				DE628AC0293A71260059D207 /* ForgotPresenter.swift */,
+				DE628AC2293A715C0059D207 /* ForgotConfigurator.swift */,
+				DE628AC4293A71630059D207 /* ForgotRouter.swift */,
+				DE628AC6293A716B0059D207 /* ForgotProtocols.swift */,
 			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DEC71B68291BC22400588D8B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B69291BC22D00588D8B /* SignUpViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DEC71B6B291BC25B00588D8B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DEC71B6C291BC55800588D8B /* ForgotPassword */ = {
-			isa = PBXGroup;
-			children = (
-				DE03B5B9292F813300EB9BAF /* Model */,
-				DEC71B70291BC58B00588D8B /* View */,
-				DEC71B6D291BC56000588D8B /* Presenter */,
-			);
-			path = ForgotPassword;
-			sourceTree = "<group>";
-		};
-		DEC71B6D291BC56000588D8B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B6E291BC56800588D8B /* ForgotPasswordPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DEC71B70291BC58B00588D8B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B71291BC59300588D8B /* ForgotPasswordViewController.swift */,
-			);
-			path = View;
+			path = Forgot;
 			sourceTree = "<group>";
 		};
 		DEC71B73291BCFE800588D8B /* OTP */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B7A291BD04D00588D8B /* Model */,
-				DEC71B77291BD02500588D8B /* View */,
-				DEC71B74291BCFEB00588D8B /* Presenter */,
+				DE628AC8293A71830059D207 /* OTPViewController.swift */,
+				DE628ACA293A718B0059D207 /* OTPInteractor.swift */,
+				DE628ACC293A71940059D207 /* OTPPresenter.swift */,
+				DE628ACE293A719E0059D207 /* OTPConfigurator.swift */,
+				DE628AD0293A71A40059D207 /* OTPRouter.swift */,
+				DE628AD2293A71A80059D207 /* OTPProtocols.swift */,
 			);
 			path = OTP;
 			sourceTree = "<group>";
 		};
-		DEC71B74291BCFEB00588D8B /* Presenter */ = {
+		DEC71B7C291BDBA600588D8B /* Reset */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B75291BCFF900588D8B /* OTPPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DEC71B77291BD02500588D8B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B78291BD02E00588D8B /* OTPViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DEC71B7A291BD04D00588D8B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DEC71B7C291BDBA600588D8B /* ResetPassword */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B7F291BDBB900588D8B /* Model */,
 				DEC71B7E291BDBB700588D8B /* View */,
 				DEC71B7D291BDBB200588D8B /* Presenter */,
+				DE628AD4293A71BD0059D207 /* ResetViewController.swift */,
+				DE628AD6293A71C30059D207 /* ResetInteractor.swift */,
+				DE628AD8293A71C80059D207 /* ResetPresenter.swift */,
+				DE628ADA293A71CE0059D207 /* ResetConfigurator.swift */,
+				DE628ADC293A71DB0059D207 /* ResetRouter.swift */,
+				DE628ADE293A71E10059D207 /* ResetProtocols.swift */,
 			);
-			path = ResetPassword;
+			path = Reset;
 			sourceTree = "<group>";
 		};
 		DEC71B7D291BDBB200588D8B /* Presenter */ = {
@@ -545,21 +594,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DEC71B7F291BDBB900588D8B /* Model */ = {
+		DEC71B85291BE0D300588D8B /* Workspace */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DEC71B85291BE0D300588D8B /* CreateWorkspace */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B88291BE0E800588D8B /* Model */,
 				DEC71B87291BE0E500588D8B /* View */,
 				DEC71B86291BE0DD00588D8B /* Presenter */,
+				DE628AE0293A72170059D207 /* WorkspaceViewController.swift */,
+				DE628AE2293A721C0059D207 /* WorkspaceInteractor.swift */,
+				DE628AE4293A72220059D207 /* WorkspacePresenter.swift */,
+				DE628AE6293A72280059D207 /* WorkspaceConfigurator.swift */,
+				DE628AE8293A722E0059D207 /* WorkspaceRouter.swift */,
+				DE628AEA293A72330059D207 /* WorkspaceProtocols.swift */,
 			);
-			path = CreateWorkspace;
+			path = Workspace;
 			sourceTree = "<group>";
 		};
 		DEC71B86291BE0DD00588D8B /* Presenter */ = {
@@ -576,13 +623,6 @@
 				DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DEC71B88291BE0E800588D8B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DECD7BEB291CDD8000F55CFF /* Presenter */ = {
@@ -629,6 +669,12 @@
 				DECD7BFE291D228900F55CFF /* Model */,
 				DECD7BFD291D228500F55CFF /* View */,
 				DECD7BFC291D228000F55CFF /* Presenter */,
+				DE628AF8293A727C0059D207 /* HomeViewController.swift */,
+				DE628AFA293A72800059D207 /* HomeInteractor.swift */,
+				DE628AFC293A72870059D207 /* HomePresenter.swift */,
+				DE628AFE293A728C0059D207 /* HomeConfigurator.swift */,
+				DE628B00293A72910059D207 /* HomeRouter.swift */,
+				DE628B02293A72950059D207 /* HomeProtocols.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -662,6 +708,12 @@
 				DECD7C06291D231200F55CFF /* Model */,
 				DECD7C05291D230F00F55CFF /* View */,
 				DECD7C04291D230B00F55CFF /* Presenter */,
+				DE628B04293A72A30059D207 /* ChatViewController.swift */,
+				DE628B06293A72A70059D207 /* ChatInteractor.swift */,
+				DE628B08293A72AB0059D207 /* ChatPresenter.swift */,
+				DE628B0A293A72B00059D207 /* ChatConfigurator.swift */,
+				DE628B0C293A72B40059D207 /* ChatRouter.swift */,
+				DE628B0E293A72B80059D207 /* ChatProtocols.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -695,6 +747,12 @@
 				DECD7C0E291D238C00F55CFF /* Model */,
 				DECD7C0D291D238900F55CFF /* View */,
 				DECD7C0C291D238500F55CFF /* Presenter */,
+				DE628B10293A72C40059D207 /* NotificationViewController.swift */,
+				DE628B12293A72CA0059D207 /* NotificationInteractor.swift */,
+				DE628B14293A72D00059D207 /* NotificationPresenter.swift */,
+				DE628B16293A72D60059D207 /* NotificationConfigurator.swift */,
+				DE628B18293A72DB0059D207 /* NotificationRouter.swift */,
+				DE628B1A293A72E20059D207 /* NotificationProtocols.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -728,6 +786,12 @@
 				DECD7C14291D23ED00F55CFF /* Model */,
 				DECD7C13291D23E900F55CFF /* View */,
 				DECD7C12291D23E400F55CFF /* Presenter */,
+				DE628B1C293A72F10059D207 /* SettingsViewController.swift */,
+				DE628B1E293A72F70059D207 /* SettingsInteractor.swift */,
+				DE628B20293A72FC0059D207 /* SettingsPresenter.swift */,
+				DE628B22293A73020059D207 /* SettingsConfigurator.swift */,
+				DE628B24293A73060059D207 /* SettingsRouter.swift */,
+				DE628B26293A730C0059D207 /* SettingsProtocols.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -759,6 +823,7 @@
 			isa = PBXGroup;
 			children = (
 				DEEE2E52292E35E0002A8A9F /* TabItemView.swift */,
+				DE79652B29309C2000F6D24C /* SegmentedControl.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -853,60 +918,119 @@
 			buildActionMask = 2147483647;
 			files = (
 				DECD7C1A291D257800F55CFF /* NotificationViewController.swift in Sources */,
+				DE628ABF293A711E0059D207 /* ForgotInteractor.swift in Sources */,
+				DE628ADF293A71E10059D207 /* ResetProtocols.swift in Sources */,
 				DEA3779A2917FD280035085C /* TextLabel.swift in Sources */,
-				DEC71B72291BC59300588D8B /* ForgotPasswordViewController.swift in Sources */,
+				DE628ACB293A718B0059D207 /* OTPInteractor.swift in Sources */,
 				DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */,
 				DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */,
+				DE628B17293A72D60059D207 /* NotificationConfigurator.swift in Sources */,
+				DE628B25293A73060059D207 /* SettingsRouter.swift in Sources */,
+				DE628AF7293A72660059D207 /* PlanProtocols.swift in Sources */,
 				DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */,
+				DE628ACD293A71940059D207 /* OTPPresenter.swift in Sources */,
+				DE628AC7293A716B0059D207 /* ForgotProtocols.swift in Sources */,
 				DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */,
+				DE628AFF293A728C0059D207 /* HomeConfigurator.swift in Sources */,
+				DE628AA9293A5F780059D207 /* SignUpProtocols.swift in Sources */,
+				DE628ABB293A70F80059D207 /* SignInViewController.swift in Sources */,
 				DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */,
 				DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */,
 				DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */,
+				DE628AD9293A71C80059D207 /* ResetPresenter.swift in Sources */,
+				DE628AA5293A5F540059D207 /* SignUpConfigurator.swift in Sources */,
+				DE628B15293A72D00059D207 /* NotificationPresenter.swift in Sources */,
+				DE628B1D293A72F10059D207 /* SettingsViewController.swift in Sources */,
 				DE5D24032917BB8400F3ED18 /* Persist.swift in Sources */,
+				DE628AEB293A72330059D207 /* WorkspaceProtocols.swift in Sources */,
+				DE628B1F293A72F70059D207 /* SettingsInteractor.swift in Sources */,
+				DE628AC9293A71830059D207 /* OTPViewController.swift in Sources */,
 				DE5D23FF2917BB2B00F3ED18 /* Theme.swift in Sources */,
-				DE5D23FA2917B8BC00F3ED18 /* SignInViewController.swift in Sources */,
+				DE628B01293A72910059D207 /* HomeRouter.swift in Sources */,
+				DE628B07293A72A70059D207 /* ChatInteractor.swift in Sources */,
+				DE628AAF293A5FA10059D207 /* SignUpViewController.swift in Sources */,
 				DECD7BFB291D222A00F55CFF /* TabBarController.swift in Sources */,
 				DEA3779F291811D70035085C /* SecondaryButton.swift in Sources */,
+				DE628B13293A72CA0059D207 /* NotificationInteractor.swift in Sources */,
 				DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */,
+				DE628B27293A730C0059D207 /* SettingsProtocols.swift in Sources */,
 				DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */,
+				DE628B2A293A7B1D0059D207 /* AuthService.swift in Sources */,
+				DE628AD7293A71C30059D207 /* ResetInteractor.swift in Sources */,
+				DE628AEF293A72510059D207 /* PlanInteractor.swift in Sources */,
+				DE628AB9293A70EB0059D207 /* SignInInteractor.swift in Sources */,
+				DE628B19293A72DB0059D207 /* NotificationRouter.swift in Sources */,
+				DE628B0D293A72B40059D207 /* ChatRouter.swift in Sources */,
+				DE628AB3293A70B50059D207 /* SignInConfigurator.swift in Sources */,
 				DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */,
-				DEC71B76291BCFF900588D8B /* OTPPresenter.swift in Sources */,
-				DE55093B2922ACFA0081A68B /* FirebaseAuthManager.swift in Sources */,
+				DE628AE1293A72170059D207 /* WorkspaceViewController.swift in Sources */,
+				DE628AC3293A715C0059D207 /* ForgotConfigurator.swift in Sources */,
 				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
-				DEC71B79291BD02E00588D8B /* OTPViewController.swift in Sources */,
+				DE628ABD293A71150059D207 /* ForgotViewController.swift in Sources */,
+				DE628AC5293A71630059D207 /* ForgotRouter.swift in Sources */,
+				DE628AA7293A5F5F0059D207 /* SignUpInteractor.swift in Sources */,
+				DE628B0B293A72B00059D207 /* ChatConfigurator.swift in Sources */,
 				DEC71B64291BC15A00588D8B /* StackView.swift in Sources */,
 				DEA377A1291831650035085C /* UILabel + Extension.swift in Sources */,
 				DE6D3ED32916B6470095AC5B /* AppDelegate.swift in Sources */,
+				DE628AE7293A72280059D207 /* WorkspaceConfigurator.swift in Sources */,
 				DEEE2E53292E35E0002A8A9F /* TabItemView.swift in Sources */,
 				DE272848291C0A170032D139 /* Plan.swift in Sources */,
 				DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */,
+				DE628AAD293A5F8E0059D207 /* SignUpPresenter.swift in Sources */,
 				DEEE2E57292E47CB002A8A9F /* UIStackView + Extension.swift in Sources */,
-				DEC71B6F291BC56800588D8B /* ForgotPasswordPresenter.swift in Sources */,
+				DE628B1B293A72E20059D207 /* NotificationProtocols.swift in Sources */,
+				DE79652C29309C2000F6D24C /* SegmentedControl.swift in Sources */,
+				DE628B23293A73020059D207 /* SettingsConfigurator.swift in Sources */,
 				DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */,
+				DE628B0F293A72B80059D207 /* ChatProtocols.swift in Sources */,
+				DE628AAB293A5F870059D207 /* SignUpRouter.swift in Sources */,
 				DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */,
 				DECD7C10291D239400F55CFF /* NotificationPresenter.swift in Sources */,
 				DECD7BF3291CDE1900F55CFF /* BoardViewController.swift in Sources */,
 				DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */,
 				DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */,
+				DE628ADD293A71DB0059D207 /* ResetRouter.swift in Sources */,
+				DE628AFD293A72870059D207 /* HomePresenter.swift in Sources */,
+				DE628AD5293A71BD0059D207 /* ResetViewController.swift in Sources */,
+				DE628AB7293A70DD0059D207 /* SignInPresenter.swift in Sources */,
+				DE628B21293A72FC0059D207 /* SettingsPresenter.swift in Sources */,
+				DE628B03293A72950059D207 /* HomeProtocols.swift in Sources */,
 				DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */,
 				DE5D23F82917B80000F3ED18 /* Router.swift in Sources */,
-				DEC71B6A291BC22D00588D8B /* SignUpViewController.swift in Sources */,
+				DE628AED293A724C0059D207 /* PlanViewController.swift in Sources */,
+				DE628AB1293A70AD0059D207 /* SignInProtocols.swift in Sources */,
 				DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */,
+				DE628B05293A72A30059D207 /* ChatViewController.swift in Sources */,
 				DE5D24092917BF7200F3ED18 /* MainButton.swift in Sources */,
 				DECD7BEA291CDC0000F55CFF /* UIBarButtonItem + Extension.swift in Sources */,
+				DE628AF1293A72580059D207 /* PlanPresenter.swift in Sources */,
+				DE628AF3293A725D0059D207 /* PlanConfigurator.swift in Sources */,
 				DECD7BF7291CF93400F55CFF /* Board.swift in Sources */,
+				DE628AD1293A71A40059D207 /* OTPRouter.swift in Sources */,
+				DE628B09293A72AB0059D207 /* ChatPresenter.swift in Sources */,
+				DE628AE9293A722E0059D207 /* WorkspaceRouter.swift in Sources */,
 				DEA377982917E1210035085C /* TitleLabel.swift in Sources */,
+				DE628AFB293A72800059D207 /* HomeInteractor.swift in Sources */,
 				DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */,
 				DEEE2E55292E4790002A8A9F /* UIView + Extension.swift in Sources */,
+				DE628AD3293A71A90059D207 /* OTPProtocols.swift in Sources */,
+				DE628AB5293A70BF0059D207 /* SignInRouter.swift in Sources */,
 				DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */,
 				DEEE2E47292E2A44002A8A9F /* TabBarViewController.swift in Sources */,
 				DEEE2E45292E287D002A8A9F /* TabItem + Extension.swift in Sources */,
 				DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */,
 				DE5509412922BF260081A68B /* String + Extension.swift in Sources */,
+				DE628ADB293A71CE0059D207 /* ResetConfigurator.swift in Sources */,
+				DE628AF5293A72620059D207 /* PlanRouter.swift in Sources */,
+				DE628B11293A72C40059D207 /* NotificationViewController.swift in Sources */,
+				DE628AF9293A727C0059D207 /* HomeViewController.swift in Sources */,
 				DECD7C0A291D234F00F55CFF /* ChatViewController.swift in Sources */,
+				DE628ACF293A719E0059D207 /* OTPConfigurator.swift in Sources */,
+				DE628AE5293A72220059D207 /* WorkspacePresenter.swift in Sources */,
+				DE628AC1293A71260059D207 /* ForgotPresenter.swift in Sources */,
 				DECD7BEF291CDD9500F55CFF /* OnboardingViewController.swift in Sources */,
-				DEC71B67291BC20700588D8B /* SignUpPresenter.swift in Sources */,
-				DE5D23F62917B78100F3ED18 /* SignInPresenter.swift in Sources */,
+				DE628AE3293A721C0059D207 /* WorkspaceInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,8 @@ final class HomeViewController: UIViewController {
     private let titleImage = UIImage(named: "dashboard")?.withTintColor(UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white), renderingMode: .alwaysOriginal)
     private let plusImage = UIImage(named: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
     
+    private let buttonTitles = ["Overview", "Analytics"]
+    
     // MARK: - Init UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Dashboard")
     private lazy var titleImageView = TitleImageView(image: titleImage)
@@ -27,7 +29,17 @@ final class HomeViewController: UIViewController {
         
         return button
     }()
-    private lazy var searchTF = TextField(type: .search, placeholder: "Search", view: view)
+    private lazy var searchTF: TextField = {
+        let textField = TextField(type: .search, view: view)
+        let placeholderColor = UIColor.color(light: UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1),
+                                             dark: UIColor(red: 0.937, green: 0.945, blue: 0.953, alpha: 1))
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Search",
+            attributes: [NSAttributedString.Key.foregroundColor: placeholderColor]
+        )
+        return textField
+    }()
+    private lazy var segmentedControl = SegmentedControl(buttonTitles: buttonTitles)
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -41,7 +53,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Methods
     private func setupHierarchy() {
-        view.addSubviews(mainTitleLabel, titleImageView, plusButton, searchTF)
+        view.addSubviews(mainTitleLabel, titleImageView, plusButton, searchTF, segmentedControl)
     }
     
     private func setupLayout() {
@@ -68,10 +80,18 @@ final class HomeViewController: UIViewController {
             $0.width.equalTo(view).offset(-48)
             $0.height.equalTo(48)
         }
+        
+        segmentedControl.snp.makeConstraints {
+            $0.top.equalTo(searchTF.snp.bottom).offset(24)
+            $0.left.equalToSuperview().inset(24)
+            $0.height.equalTo(40)
+            $0.width.equalTo(view).multipliedBy(0.608)
+        }
     }
     
     private func setupProperties() {
         view.backgroundColor = UIColor.Pallette.background
+        segmentedControl.backgroundColor = .clear
     }
     
     private func setupTargets() {

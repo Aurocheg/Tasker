@@ -13,7 +13,7 @@ final class SecondaryButton: UIButton {
         case withoutBackground
     }
     
-    init(text: String = "", type: SelfType = .withoutBackground, image: UIImage? = nil, radius: CGFloat = 8, textColor: UIColor? = nil) {
+    init(text: String = "", type: SelfType = .withoutBackground, radius: CGFloat = 8, textColor: UIColor? = nil) {
         super.init(frame: .zero)
                         
         setTitle(text, for: .normal)
@@ -21,15 +21,12 @@ final class SecondaryButton: UIButton {
         if let color = textColor {
             setTitleColor(color, for: .normal)
         } else {
-            setTitleColor(.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white), for: .normal)
+            let color: UIColor = .color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
+            setTitleColor(color, for: .normal)
         }
         
         titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-                
-        if let image = image {
-            setImage(image, for: .normal)
-        }
-                
+                   
         switch type {
         case .withBackground:
             let color = UIColor(red: 0.937, green: 0.945, blue: 0.953, alpha: 1)

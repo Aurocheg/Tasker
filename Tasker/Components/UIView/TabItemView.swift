@@ -76,22 +76,10 @@ final class TabItemView: UIView {
     }
     
     // MARK: - Animations
-    
     private func animateItems() {
-        UIView.animate(withDuration: 0.4) {[unowned self] in
-            
-            if isSelected {
-                circleView.alpha = 1
-                iconImageView.transform = CGAffineTransform(translationX: 0, y: -10)
-            } else {
-                circleView.alpha = 0
-                iconImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-            }
-            
-        }
         UIView.transition(with: iconImageView,
                           duration: 0.4,
-                          options: .transitionCrossDissolve) { [unowned self] in
+                          options: .transitionCrossDissolve) {[unowned self] in
             iconImageView.image = isSelected ? item.selectedIcon : item.icon
         }
     }
