@@ -28,13 +28,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let navigationController = UINavigationController()
+        let rootVC = SignInViewController()
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        
         let darkColor = UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1)
         navigationController.navigationBar.tintColor = UIColor.color(light: darkColor, dark: .white)
-        
-        let assemblyBuilder = AssemblyModuleBuilder()
-        let router = Router(navigationController: navigationController, assemblyBuilder: assemblyBuilder)
-        router.initialViewController()
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

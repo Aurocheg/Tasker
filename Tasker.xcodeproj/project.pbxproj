@@ -8,24 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		DE03B5B8292F4F4E00EB9BAF /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = DE03B5B7292F4F4E00EB9BAF /* RxGesture */; };
-		DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272843291C08490032D139 /* ChoosePlanPresenter.swift */; };
-		DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272845291C08730032D139 /* ChoosePlanViewController.swift */; };
-		DE272848291C0A170032D139 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272847291C0A170032D139 /* Plan.swift */; };
-		DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272849291C0A270032D139 /* PlansCollectionViewCell.swift */; };
+		DE27284A291C0A270032D139 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272849291C0A270032D139 /* PlanCollectionViewCell.swift */; };
 		DE27284D291C177B0032D139 /* premium.json in Resources */ = {isa = PBXBuildFile; fileRef = DE27284B291C177B0032D139 /* premium.json */; };
 		DE27284E291C177B0032D139 /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = DE27284C291C177B0032D139 /* party.json */; };
 		DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F56552917AFA70036DDC4 /* TextField.swift */; };
+		DE470ADF293B2DCA004ED2FE /* PlansService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE470ADE293B2DCA004ED2FE /* PlansService.swift */; };
+		DE470AE2293B2E7A004ED2FE /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE470AE1293B2E7A004ED2FE /* Plan.swift */; };
+		DE470AE4293B8C9C004ED2FE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE470AE3293B8C9C004ED2FE /* TabBarViewController.swift */; };
 		DE5509352922A7E60081A68B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE5509342922A7E60081A68B /* GoogleService-Info.plist */; };
 		DE5509382922A8F30081A68B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DE5509372922A8F30081A68B /* FirebaseAnalytics */; };
 		DE55093E2922AD680081A68B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DE55093D2922AD680081A68B /* FirebaseAuth */; };
 		DE5509412922BF260081A68B /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5509402922BF260081A68B /* String + Extension.swift */; };
-		DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */; };
-		DE5D23F82917B80000F3ED18 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23F72917B80000F3ED18 /* Router.swift */; };
 		DE5D23FF2917BB2B00F3ED18 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D23FE2917BB2B00F3ED18 /* Theme.swift */; };
 		DE5D24032917BB8400F3ED18 /* Persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24022917BB8400F3ED18 /* Persist.swift */; };
 		DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */; };
 		DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24062917BC7200F3ED18 /* UIWindow + Extension.swift */; };
-		DE5D24092917BF7200F3ED18 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24082917BF7200F3ED18 /* MainButton.swift */; };
+		DE5D24092917BF7200F3ED18 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D24082917BF7200F3ED18 /* LargeButton.swift */; };
 		DE60C12B291AE21500D776F4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE60C12A291AE21500D776F4 /* SnapKit */; };
 		DE628AA5293A5F540059D207 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AA4293A5F540059D207 /* SignUpConfigurator.swift */; };
 		DE628AA7293A5F5F0059D207 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628AA6293A5F5F0059D207 /* SignUpInteractor.swift */; };
@@ -107,26 +105,9 @@
 		DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */; };
 		DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B60291BC0D200588D8B /* TitleImageView.swift */; };
 		DEC71B64291BC15A00588D8B /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B63291BC15A00588D8B /* StackView.swift */; };
-		DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */; };
-		DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */; };
-		DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */; };
-		DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */; };
 		DECD7BEA291CDC0000F55CFF /* UIBarButtonItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */; };
-		DECD7BEF291CDD9500F55CFF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BEE291CDD9500F55CFF /* OnboardingViewController.swift */; };
-		DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */; };
-		DECD7BF3291CDE1900F55CFF /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */; };
-		DECD7BF7291CF93400F55CFF /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BF6291CF93400F55CFF /* Board.swift */; };
 		DECD7BFB291D222A00F55CFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFA291D222A00F55CFF /* TabBarController.swift */; };
-		DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFF291D229600F55CFF /* HomePresenter.swift */; };
-		DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C01291D22B700F55CFF /* HomeViewController.swift */; };
-		DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C07291D232A00F55CFF /* ChatPresenter.swift */; };
-		DECD7C0A291D234F00F55CFF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C09291D234F00F55CFF /* ChatViewController.swift */; };
-		DECD7C10291D239400F55CFF /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C0F291D239400F55CFF /* NotificationPresenter.swift */; };
-		DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */; };
-		DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C17291D243400F55CFF /* SettingsViewController.swift */; };
-		DECD7C1A291D257800F55CFF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7C19291D257800F55CFF /* NotificationViewController.swift */; };
 		DEEE2E45292E287D002A8A9F /* TabItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */; };
-		DEEE2E47292E2A44002A8A9F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E46292E2A44002A8A9F /* TabBarViewController.swift */; };
 		DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E4A292E2D30002A8A9F /* TabBar.swift */; };
 		DEEE2E4E292E325C002A8A9F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE2E4D292E325C002A8A9F /* RxCocoa */; };
 		DEEE2E50292E325C002A8A9F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE2E4F292E325C002A8A9F /* RxSwift */; };
@@ -136,22 +117,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DE272843291C08490032D139 /* ChoosePlanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanPresenter.swift; sourceTree = "<group>"; };
-		DE272845291C08730032D139 /* ChoosePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanViewController.swift; sourceTree = "<group>"; };
-		DE272847291C0A170032D139 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
-		DE272849291C0A270032D139 /* PlansCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE272849291C0A270032D139 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE27284B291C177B0032D139 /* premium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = premium.json; sourceTree = "<group>"; };
 		DE27284C291C177B0032D139 /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		DE3F56552917AFA70036DDC4 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		DE470ADE293B2DCA004ED2FE /* PlansService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansService.swift; sourceTree = "<group>"; };
+		DE470AE1293B2E7A004ED2FE /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		DE470AE3293B8C9C004ED2FE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DE5509342922A7E60081A68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE5509402922BF260081A68B /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
-		DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
-		DE5D23F72917B80000F3ED18 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DE5D23FE2917BB2B00F3ED18 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DE5D24022917BB8400F3ED18 /* Persist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persist.swift; sourceTree = "<group>"; };
 		DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme + Extension.swift"; sourceTree = "<group>"; };
 		DE5D24062917BC7200F3ED18 /* UIWindow + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow + Extension.swift"; sourceTree = "<group>"; };
-		DE5D24082917BF7200F3ED18 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		DE5D24082917BF7200F3ED18 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		DE628AA4293A5F540059D207 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		DE628AA6293A5F5F0059D207 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		DE628AA8293A5F780059D207 /* SignUpProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocols.swift; sourceTree = "<group>"; };
@@ -233,26 +212,9 @@
 		DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		DEC71B60291BC0D200588D8B /* TitleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleImageView.swift; sourceTree = "<group>"; };
 		DEC71B63291BC15A00588D8B /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
-		DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
-		DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspacePresenter.swift; sourceTree = "<group>"; };
-		DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkspaceViewController.swift; sourceTree = "<group>"; };
 		DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + Extension.swift"; sourceTree = "<group>"; };
-		DECD7BEE291CDD9500F55CFF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
-		DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
-		DECD7BF6291CF93400F55CFF /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		DECD7BFA291D222A00F55CFF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		DECD7BFF291D229600F55CFF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		DECD7C01291D22B700F55CFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DECD7C07291D232A00F55CFF /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
-		DECD7C09291D234F00F55CFF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		DECD7C0F291D239400F55CFF /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
-		DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
-		DECD7C17291D243400F55CFF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		DECD7C19291D257800F55CFF /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabItem + Extension.swift"; sourceTree = "<group>"; };
-		DEEE2E46292E2A44002A8A9F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DEEE2E4A292E2D30002A8A9F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DEEE2E52292E35E0002A8A9F /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
@@ -280,10 +242,8 @@
 		DE27283E291C08220032D139 /* Plan */ = {
 			isa = PBXGroup;
 			children = (
-				DE272841291C08390032D139 /* Model */,
-				DE272840291C08360032D139 /* View */,
-				DE27283F291C08320032D139 /* Presenter */,
 				DE628AEC293A724C0059D207 /* PlanViewController.swift */,
+				DE272849291C0A270032D139 /* PlanCollectionViewCell.swift */,
 				DE628AEE293A72510059D207 /* PlanInteractor.swift */,
 				DE628AF0293A72580059D207 /* PlanPresenter.swift */,
 				DE628AF2293A725D0059D207 /* PlanConfigurator.swift */,
@@ -291,31 +251,6 @@
 				DE628AF6293A72660059D207 /* PlanProtocols.swift */,
 			);
 			path = Plan;
-			sourceTree = "<group>";
-		};
-		DE27283F291C08320032D139 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DE272843291C08490032D139 /* ChoosePlanPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DE272840291C08360032D139 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DE272845291C08730032D139 /* ChoosePlanViewController.swift */,
-				DE272849291C0A270032D139 /* PlansCollectionViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DE272841291C08390032D139 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DE272847291C0A170032D139 /* Plan.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DE27284F291C18550032D139 /* Lottie */ = {
@@ -341,7 +276,6 @@
 		DE3F56522917AF7A0036DDC4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B5D291BC01600588D8B /* Onboarding */,
 				DE5D23F02917B74C00F3ED18 /* Authorization */,
 				DECD7BF8291D220000F55CFF /* Main */,
 			);
@@ -375,6 +309,14 @@
 				DEA3779B2917FEF70035085C /* UILabel */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DE470AE0293B2E74004ED2FE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DE470AE1293B2E7A004ED2FE /* Plan.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		DE55093C2922AD680081A68B /* Frameworks */ = {
@@ -439,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				DE628B29293A7B1D0059D207 /* AuthService.swift */,
+				DE470ADE293B2DCA004ED2FE /* PlansService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -455,17 +398,16 @@
 		DE6D3ED12916B6470095AC5B /* Tasker */ = {
 			isa = PBXGroup;
 			children = (
-				DE628B28293A7B0C0059D207 /* Services */,
-				DE3F56542917AF8C0036DDC4 /* Components */,
 				DE3F56532917AF800036DDC4 /* Extensions */,
+				DE3F56542917AF8C0036DDC4 /* Components */,
 				DE5D23FD2917BB1A00F3ED18 /* Theme */,
 				DE5D24002917BB7A00F3ED18 /* Utils */,
 				DE3F56522917AF7A0036DDC4 /* Modules */,
+				DE470AE0293B2E74004ED2FE /* Entities */,
+				DE628B28293A7B0C0059D207 /* Services */,
 				DE3F56512917AF670036DDC4 /* Resources */,
 				DE6D3ED22916B6470095AC5B /* AppDelegate.swift */,
 				DE6D3ED42916B6470095AC5B /* SceneDelegate.swift */,
-				DE5D23EE2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift */,
-				DE5D23F72917B80000F3ED18 /* Router.swift */,
 				DE6D3EE02916B6470095AC5B /* Info.plist */,
 			);
 			path = Tasker;
@@ -491,20 +433,10 @@
 		DEA3779D2917FF100035085C /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				DE5D24082917BF7200F3ED18 /* MainButton.swift */,
+				DE5D24082917BF7200F3ED18 /* LargeButton.swift */,
 				DEA3779E291811D70035085C /* SecondaryButton.swift */,
 			);
 			path = UIButton;
-			sourceTree = "<group>";
-		};
-		DEC71B5D291BC01600588D8B /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7BED291CDD8800F55CFF /* Model */,
-				DECD7BEC291CDD8600F55CFF /* View */,
-				DECD7BEB291CDD8000F55CFF /* Presenter */,
-			);
-			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		DEC71B5E291BC01B00588D8B /* SignUp */ = {
@@ -566,8 +498,6 @@
 		DEC71B7C291BDBA600588D8B /* Reset */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B7E291BDBB700588D8B /* View */,
-				DEC71B7D291BDBB200588D8B /* Presenter */,
 				DE628AD4293A71BD0059D207 /* ResetViewController.swift */,
 				DE628AD6293A71C30059D207 /* ResetInteractor.swift */,
 				DE628AD8293A71C80059D207 /* ResetPresenter.swift */,
@@ -578,27 +508,9 @@
 			path = Reset;
 			sourceTree = "<group>";
 		};
-		DEC71B7D291BDBB200588D8B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B81291BDBD200588D8B /* ResetPasswordPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DEC71B7E291BDBB700588D8B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B83291BDBFE00588D8B /* ResetPasswordViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		DEC71B85291BE0D300588D8B /* Workspace */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B87291BE0E500588D8B /* View */,
-				DEC71B86291BE0DD00588D8B /* Presenter */,
 				DE628AE0293A72170059D207 /* WorkspaceViewController.swift */,
 				DE628AE2293A721C0059D207 /* WorkspaceInteractor.swift */,
 				DE628AE4293A72220059D207 /* WorkspacePresenter.swift */,
@@ -609,47 +521,6 @@
 			path = Workspace;
 			sourceTree = "<group>";
 		};
-		DEC71B86291BE0DD00588D8B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B89291BE0F700588D8B /* CreateWorkspacePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DEC71B87291BE0E500588D8B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEC71B8B291BE13100588D8B /* CreateWorkspaceViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DECD7BEB291CDD8000F55CFF /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7BF0291CDDA900F55CFF /* OnboardingPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DECD7BEC291CDD8600F55CFF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7BEE291CDD9500F55CFF /* OnboardingViewController.swift */,
-				DECD7BF2291CDE1900F55CFF /* BoardViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DECD7BED291CDD8800F55CFF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7BF6291CF93400F55CFF /* Board.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DECD7BF8291D220000F55CFF /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,7 +529,7 @@
 				DECD7C0B291D237B00F55CFF /* Notification */,
 				DECD7C11291D23DE00F55CFF /* Settings */,
 				DECD7BFA291D222A00F55CFF /* TabBarController.swift */,
-				DEEE2E46292E2A44002A8A9F /* TabBarViewController.swift */,
+				DE470AE3293B8C9C004ED2FE /* TabBarViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -666,9 +537,6 @@
 		DECD7BF9291D220900F55CFF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DECD7BFE291D228900F55CFF /* Model */,
-				DECD7BFD291D228500F55CFF /* View */,
-				DECD7BFC291D228000F55CFF /* Presenter */,
 				DE628AF8293A727C0059D207 /* HomeViewController.swift */,
 				DE628AFA293A72800059D207 /* HomeInteractor.swift */,
 				DE628AFC293A72870059D207 /* HomePresenter.swift */,
@@ -679,35 +547,9 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		DECD7BFC291D228000F55CFF /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7BFF291D229600F55CFF /* HomePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DECD7BFD291D228500F55CFF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C01291D22B700F55CFF /* HomeViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DECD7BFE291D228900F55CFF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DECD7C03291D22ED00F55CFF /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				DECD7C06291D231200F55CFF /* Model */,
-				DECD7C05291D230F00F55CFF /* View */,
-				DECD7C04291D230B00F55CFF /* Presenter */,
 				DE628B04293A72A30059D207 /* ChatViewController.swift */,
 				DE628B06293A72A70059D207 /* ChatInteractor.swift */,
 				DE628B08293A72AB0059D207 /* ChatPresenter.swift */,
@@ -718,35 +560,9 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
-		DECD7C04291D230B00F55CFF /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C07291D232A00F55CFF /* ChatPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DECD7C05291D230F00F55CFF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C09291D234F00F55CFF /* ChatViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DECD7C06291D231200F55CFF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DECD7C0B291D237B00F55CFF /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				DECD7C0E291D238C00F55CFF /* Model */,
-				DECD7C0D291D238900F55CFF /* View */,
-				DECD7C0C291D238500F55CFF /* Presenter */,
 				DE628B10293A72C40059D207 /* NotificationViewController.swift */,
 				DE628B12293A72CA0059D207 /* NotificationInteractor.swift */,
 				DE628B14293A72D00059D207 /* NotificationPresenter.swift */,
@@ -757,35 +573,9 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
-		DECD7C0C291D238500F55CFF /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C0F291D239400F55CFF /* NotificationPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DECD7C0D291D238900F55CFF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C19291D257800F55CFF /* NotificationViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DECD7C0E291D238C00F55CFF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DECD7C11291D23DE00F55CFF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				DECD7C14291D23ED00F55CFF /* Model */,
-				DECD7C13291D23E900F55CFF /* View */,
-				DECD7C12291D23E400F55CFF /* Presenter */,
 				DE628B1C293A72F10059D207 /* SettingsViewController.swift */,
 				DE628B1E293A72F70059D207 /* SettingsInteractor.swift */,
 				DE628B20293A72FC0059D207 /* SettingsPresenter.swift */,
@@ -794,29 +584,6 @@
 				DE628B26293A730C0059D207 /* SettingsProtocols.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		DECD7C12291D23E400F55CFF /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C15291D23F700F55CFF /* SettingsPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DECD7C13291D23E900F55CFF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DECD7C17291D243400F55CFF /* SettingsViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DECD7C14291D23ED00F55CFF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DEEE2E51292E35B4002A8A9F /* UIView */ = {
@@ -917,26 +684,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DECD7C1A291D257800F55CFF /* NotificationViewController.swift in Sources */,
 				DE628ABF293A711E0059D207 /* ForgotInteractor.swift in Sources */,
 				DE628ADF293A71E10059D207 /* ResetProtocols.swift in Sources */,
 				DEA3779A2917FD280035085C /* TextLabel.swift in Sources */,
 				DE628ACB293A718B0059D207 /* OTPInteractor.swift in Sources */,
 				DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */,
-				DECD7BF1291CDDA900F55CFF /* OnboardingPresenter.swift in Sources */,
 				DE628B17293A72D60059D207 /* NotificationConfigurator.swift in Sources */,
 				DE628B25293A73060059D207 /* SettingsRouter.swift in Sources */,
 				DE628AF7293A72660059D207 /* PlanProtocols.swift in Sources */,
-				DEC71B8C291BE13100588D8B /* CreateWorkspaceViewController.swift in Sources */,
 				DE628ACD293A71940059D207 /* OTPPresenter.swift in Sources */,
 				DE628AC7293A716B0059D207 /* ForgotProtocols.swift in Sources */,
 				DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */,
 				DE628AFF293A728C0059D207 /* HomeConfigurator.swift in Sources */,
 				DE628AA9293A5F780059D207 /* SignUpProtocols.swift in Sources */,
+				DE470AE4293B8C9C004ED2FE /* TabBarViewController.swift in Sources */,
 				DE628ABB293A70F80059D207 /* SignInViewController.swift in Sources */,
-				DEC71B82291BDBD200588D8B /* ResetPasswordPresenter.swift in Sources */,
-				DECD7C08291D232A00F55CFF /* ChatPresenter.swift in Sources */,
-				DE27284A291C0A270032D139 /* PlansCollectionViewCell.swift in Sources */,
+				DE470AE2293B2E7A004ED2FE /* Plan.swift in Sources */,
+				DE27284A291C0A270032D139 /* PlanCollectionViewCell.swift in Sources */,
 				DE628AD9293A71C80059D207 /* ResetPresenter.swift in Sources */,
 				DE628AA5293A5F540059D207 /* SignUpConfigurator.swift in Sources */,
 				DE628B15293A72D00059D207 /* NotificationPresenter.swift in Sources */,
@@ -954,7 +718,6 @@
 				DE628B13293A72CA0059D207 /* NotificationInteractor.swift in Sources */,
 				DE5D24072917BC7200F3ED18 /* UIWindow + Extension.swift in Sources */,
 				DE628B27293A730C0059D207 /* SettingsProtocols.swift in Sources */,
-				DECD7C16291D23F700F55CFF /* SettingsPresenter.swift in Sources */,
 				DE628B2A293A7B1D0059D207 /* AuthService.swift in Sources */,
 				DE628AD7293A71C30059D207 /* ResetInteractor.swift in Sources */,
 				DE628AEF293A72510059D207 /* PlanInteractor.swift in Sources */,
@@ -962,7 +725,6 @@
 				DE628B19293A72DB0059D207 /* NotificationRouter.swift in Sources */,
 				DE628B0D293A72B40059D207 /* ChatRouter.swift in Sources */,
 				DE628AB3293A70B50059D207 /* SignInConfigurator.swift in Sources */,
-				DECD7C18291D243400F55CFF /* SettingsViewController.swift in Sources */,
 				DE628AE1293A72170059D207 /* WorkspaceViewController.swift in Sources */,
 				DE628AC3293A715C0059D207 /* ForgotConfigurator.swift in Sources */,
 				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
@@ -975,7 +737,6 @@
 				DE6D3ED32916B6470095AC5B /* AppDelegate.swift in Sources */,
 				DE628AE7293A72280059D207 /* WorkspaceConfigurator.swift in Sources */,
 				DEEE2E53292E35E0002A8A9F /* TabItemView.swift in Sources */,
-				DE272848291C0A170032D139 /* Plan.swift in Sources */,
 				DE6D3ED52916B6470095AC5B /* SceneDelegate.swift in Sources */,
 				DE628AAD293A5F8E0059D207 /* SignUpPresenter.swift in Sources */,
 				DEEE2E57292E47CB002A8A9F /* UIStackView + Extension.swift in Sources */,
@@ -985,28 +746,19 @@
 				DE5D24052917BBEC00F3ED18 /* Theme + Extension.swift in Sources */,
 				DE628B0F293A72B80059D207 /* ChatProtocols.swift in Sources */,
 				DE628AAB293A5F870059D207 /* SignUpRouter.swift in Sources */,
-				DECD7C00291D229600F55CFF /* HomePresenter.swift in Sources */,
-				DECD7C10291D239400F55CFF /* NotificationPresenter.swift in Sources */,
-				DECD7BF3291CDE1900F55CFF /* BoardViewController.swift in Sources */,
-				DEC71B84291BDBFE00588D8B /* ResetPasswordViewController.swift in Sources */,
-				DE5D23EF2917B6DF00F3ED18 /* AssemblyModuleBuilder.swift in Sources */,
 				DE628ADD293A71DB0059D207 /* ResetRouter.swift in Sources */,
 				DE628AFD293A72870059D207 /* HomePresenter.swift in Sources */,
 				DE628AD5293A71BD0059D207 /* ResetViewController.swift in Sources */,
 				DE628AB7293A70DD0059D207 /* SignInPresenter.swift in Sources */,
 				DE628B21293A72FC0059D207 /* SettingsPresenter.swift in Sources */,
 				DE628B03293A72950059D207 /* HomeProtocols.swift in Sources */,
-				DEC71B8A291BE0F700588D8B /* CreateWorkspacePresenter.swift in Sources */,
-				DE5D23F82917B80000F3ED18 /* Router.swift in Sources */,
 				DE628AED293A724C0059D207 /* PlanViewController.swift in Sources */,
 				DE628AB1293A70AD0059D207 /* SignInProtocols.swift in Sources */,
-				DE272844291C08490032D139 /* ChoosePlanPresenter.swift in Sources */,
 				DE628B05293A72A30059D207 /* ChatViewController.swift in Sources */,
-				DE5D24092917BF7200F3ED18 /* MainButton.swift in Sources */,
+				DE5D24092917BF7200F3ED18 /* LargeButton.swift in Sources */,
 				DECD7BEA291CDC0000F55CFF /* UIBarButtonItem + Extension.swift in Sources */,
 				DE628AF1293A72580059D207 /* PlanPresenter.swift in Sources */,
 				DE628AF3293A725D0059D207 /* PlanConfigurator.swift in Sources */,
-				DECD7BF7291CF93400F55CFF /* Board.swift in Sources */,
 				DE628AD1293A71A40059D207 /* OTPRouter.swift in Sources */,
 				DE628B09293A72AB0059D207 /* ChatPresenter.swift in Sources */,
 				DE628AE9293A722E0059D207 /* WorkspaceRouter.swift in Sources */,
@@ -1016,20 +768,16 @@
 				DEEE2E55292E4790002A8A9F /* UIView + Extension.swift in Sources */,
 				DE628AD3293A71A90059D207 /* OTPProtocols.swift in Sources */,
 				DE628AB5293A70BF0059D207 /* SignInRouter.swift in Sources */,
-				DECD7C02291D22B700F55CFF /* HomeViewController.swift in Sources */,
-				DEEE2E47292E2A44002A8A9F /* TabBarViewController.swift in Sources */,
 				DEEE2E45292E287D002A8A9F /* TabItem + Extension.swift in Sources */,
-				DE272846291C08730032D139 /* ChoosePlanViewController.swift in Sources */,
 				DE5509412922BF260081A68B /* String + Extension.swift in Sources */,
+				DE470ADF293B2DCA004ED2FE /* PlansService.swift in Sources */,
 				DE628ADB293A71CE0059D207 /* ResetConfigurator.swift in Sources */,
 				DE628AF5293A72620059D207 /* PlanRouter.swift in Sources */,
 				DE628B11293A72C40059D207 /* NotificationViewController.swift in Sources */,
 				DE628AF9293A727C0059D207 /* HomeViewController.swift in Sources */,
-				DECD7C0A291D234F00F55CFF /* ChatViewController.swift in Sources */,
 				DE628ACF293A719E0059D207 /* OTPConfigurator.swift in Sources */,
 				DE628AE5293A72220059D207 /* WorkspacePresenter.swift in Sources */,
 				DE628AC1293A71260059D207 /* ForgotPresenter.swift in Sources */,
-				DECD7BEF291CDD9500F55CFF /* OnboardingViewController.swift in Sources */,
 				DE628AE3293A721C0059D207 /* WorkspaceInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

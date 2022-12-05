@@ -30,12 +30,12 @@ final class SignUpPresenter: SignUpPresenterProtocol {
         interactor.createUser(email: email, password: password, alert: alert)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.router.showCreateWorkspace()
+            self.router.showWorkspace()
         }
     }
     
     func signInButtonTapped() {
-
+        router.showSignIn()
     }
     
 }

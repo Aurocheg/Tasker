@@ -6,3 +6,28 @@
 //
 
 import Foundation
+
+protocol WorkspaceViewProtocol: AnyObject {
+    func setupHierarchy()
+    func setupLayout()
+    func setupProperties()
+    func setupTargets()
+}
+
+protocol WorkspacePresenterProtocol: AnyObject {
+    var router: WorkspaceRouterProtocol! { get set }
+    func configureView()
+    func createButtonTapped()
+}
+
+protocol WorkspaceInteractorProtocol: AnyObject {
+    
+}
+
+protocol WorkspaceRouterProtocol: AnyObject {
+    func showPlan()
+}
+
+protocol WorkspaceConfiguratorProtocol: AnyObject {
+    func configure(with viewController: WorkspaceViewController)
+}

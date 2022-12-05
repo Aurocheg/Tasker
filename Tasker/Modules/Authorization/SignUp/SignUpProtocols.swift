@@ -29,7 +29,7 @@ protocol SignUpInteractorProtocol: AnyObject {
 }
 
 protocol SignUpRouterProtocol: AnyObject {
-    func showCreateWorkspace()
+    func showWorkspace()
     func showSignIn()
 }
 

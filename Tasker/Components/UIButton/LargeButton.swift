@@ -1,5 +1,5 @@
 //
-//  Button.swift
+//  LargeButton.swift
 //  Tasker
 //
 //  Created by Aurocheg on 6.11.22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainButton: UIButton {
+final class LargeButton: UIButton {
     enum SelfType {
         case withoutArrow
         case withLeftArrow

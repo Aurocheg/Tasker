@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-final class PlansCollectionViewCell: UICollectionViewCell {
+final class PlanCollectionViewCell: UICollectionViewCell {
     // MARK: - UI Elements
     public lazy var emojiAnimationView: LottieAnimationView = {
         let animationView = LottieAnimationView()

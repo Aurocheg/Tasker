@@ -21,6 +21,13 @@ final class TabBarController: UITabBarController {
         setupProperties()
         bind()
         view.layoutIfNeeded()
+        
+        viewControllers = [
+            UINavigationController(rootViewController: HomeViewController()),
+            UINavigationController(rootViewController: ChatViewController()),
+            UINavigationController(rootViewController: NotificationViewController()),
+            UINavigationController(rootViewController: SettingsViewController()),
+        ]
     }
     
     private func setupHierarchy() {

@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+final class OTPInteractor: OTPInteractorProtocol {
+    weak var presenter: OTPPresenterProtocol!
+    
+    // MARK: - Services
+    
+    required init(presenter: OTPPresenterProtocol) {
+        self.presenter = presenter
+    }
+    
+    // MARK: - OTPInteractorProtocol Properties
+    
+    // MARK: - OTPInteractorProtocol Methods
+}

@@ -15,21 +15,24 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
     private let facebookImage = UIImage(named: "facebook")
     private let instagramImage = UIImage(named: "instagram")
     private let gmailImage = UIImage(named: "gmail")
+    private let titleImage = UIImage(named: "signInAndUp")
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
     // MARK: - UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Sign Up")
-    private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
+    private lazy var titleImageView = TitleImageView(image: titleImage)
+    
     private lazy var emailTF = TextField(type: .email, placeholder: "Email", view: view)
     private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: view)
     private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password", view: view)
-    private lazy var signUpButton = MainButton(text: "Sign Up", type: .withoutArrow)
-    private lazy var signUpWithLabel = TextLabel(text: "Or sign up with", size: 16)
+    private lazy var signUpButton = LargeButton(text: "Sign Up", type: .withoutArrow)
     
+    private lazy var signUpWithLabel = TextLabel(text: "Or sign up with", size: 16)
     private lazy var socialStackView = StackView(spacing: 16)
     private lazy var facebookButton = SecondaryButton(type: .withBackground)
     private lazy var instagramButton = SecondaryButton(type: .withBackground)
     private lazy var gmailButton = SecondaryButton(type: .withBackground)
+    
     private lazy var bottomStackView = StackView(spacing: 8)
     private lazy var accountLabel = TextLabel(text: "Already have an account?", size: 16)
     private lazy var signInButton: UIButton = {
@@ -126,13 +129,20 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
     func setupProperties() {
         view.backgroundColor = UIColor.Pallette.background
         signUpWithLabel.drawLineOnBothSides(view: view)
+        
+        [gmailButton, instagramButton, facebookButton].forEach {
+            for image in [gmailImage, instagramImage, facebookImage] {
+                $0.setImage(image)
+            }
+        }
     }
     
     func setupTargets() {
-        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        [emailTF, passwordTF].forEach {textField in
-            textField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        [emailTF, passwordTF].forEach {
+            $0.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         }
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
     }
     
     func applyValidation(with value: String, type: TextFieldType) {
@@ -175,5 +185,9 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
             alertController.addAction(action)
             self.present(alertController, animated: true)
         }
+    }
+    
+    @objc func signInButtonTapped() {
+        presenter.signInButtonTapped()
     }
 }

@@ -17,6 +17,7 @@ protocol ResetViewProtocol: AnyObject {
 protocol ResetPresenterProtocol: AnyObject {
     var router: ResetRouterProtocol! { get set }
     func configureView()
+    func saveButtonTapped()
 }
 
 protocol ResetInteractorProtocol: AnyObject {
@@ -24,7 +25,7 @@ protocol ResetInteractorProtocol: AnyObject {
 }
 
 protocol ResetRouterProtocol: AnyObject {
-    
+    func showWorkspace()
 }
 
 protocol ResetConfiguratorProtocol: AnyObject {

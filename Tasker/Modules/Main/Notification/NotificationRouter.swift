@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+import UIKit
+
+final class NotificationRouter: NotificationRouterProtocol {
+    weak var viewController: NotificationViewController!
+    
+    init(viewController: NotificationViewController) {
+        self.viewController = viewController
+    }
+}

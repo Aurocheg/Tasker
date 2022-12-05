@@ -11,12 +11,14 @@ final class ForgotViewController: UIViewController, ForgotViewProtocol {
     var presenter: ForgotPresenterProtocol!
     var configurator: ForgotConfiguratorProtocol = ForgotConfigurator()
     
+    private let titleImage = UIImage(named: "forgotPassword")
+    
     // MARK: - UI Elements
-    private lazy var titleImageView = TitleImageView(image: UIImage(named: "forgotPassword"))
+    private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var mainTitleLabel = TitleLabel(text: "Forgot Password ?")
     private lazy var textLabel = TextLabel(text: "Enter your phone number then we will send you OTP sms to reset new password.")
     private lazy var numberTF = TextField(type: .number, placeholder: "Enter your number", view: self.view)
-    private lazy var sendButton = MainButton(text: "Send OTP", type: .withoutArrow)
+    private lazy var sendButton = LargeButton(text: "Send OTP", type: .withoutArrow)
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {

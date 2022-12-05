@@ -11,22 +11,25 @@ final class OTPViewController: UIViewController, OTPViewProtocol {
     var presenter: OTPPresenterProtocol!
     var configurator: OTPConfiguratorProtocol = OTPConfigurator()
     
+    private let titleImage = UIImage(named: "OTP")
     private var otpText = String()
     private var textFieldsArray = [TextField]()
     
     // MARK: - UI Elements
-    private lazy var titleImageView = TitleImageView(image: UIImage(named: "OTP"))
+    private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var mainTitleLabel = TitleLabel(text: "Enter OTP")
     private lazy var textLabel = TextLabel(text: "Enter the OTP we just sent to your phone then start reset your new password.")
+    
     private lazy var textFieldsStackView = StackView(spacing: 16)
     private lazy var firstTF = TextField(type: .number, alignment: .center, icon: false, view: view)
     private lazy var secondTF = TextField(type: .number, alignment: .center, icon: false, view: view)
     private lazy var thirdTF = TextField(type: .number, alignment: .center, icon: false, view: view)
     private lazy var fourthTF = TextField(type: .number, alignment: .center, icon: false, view: view)
+    
     private lazy var resendStackView = StackView(spacing: 7)
     private lazy var resendButton = SecondaryButton(text: "Resend OTP")
     private lazy var resendTextLabel = TextLabel(text: "in 00:30s")
-    private lazy var nextButton = MainButton(text: "Next", type: .withRightArrow)
+    private lazy var nextButton = LargeButton(text: "Next", type: .withRightArrow)
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {

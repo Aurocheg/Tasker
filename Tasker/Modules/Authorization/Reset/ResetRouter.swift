@@ -9,8 +9,14 @@ import UIKit
 
 final class ResetRouter: ResetRouterProtocol {
     weak var viewController: ResetViewController!
+    private lazy var navigationController = viewController.navigationController!
     
     init(viewController: ResetViewController) {
         self.viewController = viewController
+    }
+    
+    func showWorkspace() {
+        let workspaceVC = WorkspaceViewController()
+        navigationController.pushViewController(workspaceVC, animated: true)
     }
 }

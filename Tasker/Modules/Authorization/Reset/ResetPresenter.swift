@@ -18,8 +18,12 @@ final class ResetPresenter: ResetPresenterProtocol {
         self.view = view
     }
     
-        // MARK: - ResetPresenter Methods
+    // MARK: - ResetPresenter Methods
     func configureView() {
         
+    }
+    
+    func saveButtonTapped() {
+        router.showWorkspace()
     }
 }

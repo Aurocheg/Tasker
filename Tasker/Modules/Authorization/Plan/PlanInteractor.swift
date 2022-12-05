@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+final class PlanInteractor: PlanInteractorProtocol {
+    weak var presenter: PlanPresenterProtocol!
+
+    var plans: [Plan]?
+    
+    // MARK: - Services
+    var plansService: PlanServiceProtocol = PlanService()
+    
+    required init(presenter: PlanPresenterProtocol) {
+        self.presenter = presenter
+    }
+        
+    // MARK: - PlanInteractorProtocol Methods
+    func getAllPlans() {
+        plans = plansService.plans
+    }
+}

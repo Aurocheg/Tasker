@@ -20,15 +20,18 @@ final class SignInViewController: UIViewController, SignInViewProtocol {
     // MARK: - UI Elements
     private lazy var mainTitleLabel = TitleLabel(text: "Sign In")
     private lazy var titleImageView = TitleImageView(image: UIImage(named: "signInAndUp"))
-    private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: self.view)
-    private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: self.view)
+    
+    private lazy var nameTF = TextField(type: .name, placeholder: "Name", view: view)
+    private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: view)
     private lazy var forgotButton = SecondaryButton(text: "Forgot password ?")
-    private lazy var signInButton = MainButton(text: "Sign In", type: .withoutArrow)
+    private lazy var signInButton = LargeButton(text: "Sign In", type: .withoutArrow)
+    
     private lazy var signInWithLabel = TextLabel(text: "Or sign in with", size: 16)
     private lazy var socialStackView = StackView(spacing: 16)
     private lazy var facebookButton = SecondaryButton(type: .withBackground)
     private lazy var instagramButton = SecondaryButton(type: .withBackground)
     private lazy var gmailButton = SecondaryButton(type: .withBackground)
+    
     private lazy var bottomStackView = StackView(spacing: 8)
     private lazy var accountLabel = TextLabel(text: "Don't have an account?", size: 16)
     private lazy var signUpButton: UIButton = {
@@ -126,6 +129,12 @@ final class SignInViewController: UIViewController, SignInViewProtocol {
     func setupProperties() {
         view.backgroundColor = UIColor.Pallette.background
         signInWithLabel.drawLineOnBothSides(view: view)
+        
+        [facebookButton, instagramButton, gmailButton].forEach {
+            for image in [facebookImage, instagramImage, gmailImage] {
+                $0.setImage(image)
+            }
+        }
     }
     
     func setupTargets() {
