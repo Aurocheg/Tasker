@@ -21,7 +21,7 @@ extension UILabel {
         addSubview(rightLine)
         
         leftLine.snp.makeConstraints {
-            $0.leading.equalTo(snp.leading).offset(24)
+            $0.leading.equalTo(view.snp.leading).offset(24)
             $0.trailing.equalTo(snp.leading).offset(-16)
             $0.centerY.equalTo(self)
             $0.height.equalTo(2)

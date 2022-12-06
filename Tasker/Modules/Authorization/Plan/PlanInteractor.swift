@@ -9,8 +9,6 @@ import Foundation
 
 final class PlanInteractor: PlanInteractorProtocol {
     weak var presenter: PlanPresenterProtocol!
-
-    var plans: [Plan]?
     
     // MARK: - Services
     var plansService: PlanServiceProtocol = PlanService()
@@ -20,7 +18,7 @@ final class PlanInteractor: PlanInteractorProtocol {
     }
         
     // MARK: - PlanInteractorProtocol Methods
-    func getAllPlans() {
-        plans = plansService.plans
+    func getAllPlans() -> [Plan] {
+        return plansService.getPlans()
     }
 }

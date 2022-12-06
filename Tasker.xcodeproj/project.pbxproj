@@ -11,7 +11,7 @@
 		DE27284A291C0A270032D139 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE272849291C0A270032D139 /* PlanCollectionViewCell.swift */; };
 		DE27284D291C177B0032D139 /* premium.json in Resources */ = {isa = PBXBuildFile; fileRef = DE27284B291C177B0032D139 /* premium.json */; };
 		DE27284E291C177B0032D139 /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = DE27284C291C177B0032D139 /* party.json */; };
-		DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F56552917AFA70036DDC4 /* TextField.swift */; };
+		DE3F56562917AFA70036DDC4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F56552917AFA70036DDC4 /* CustomTextField.swift */; };
 		DE470ADF293B2DCA004ED2FE /* PlansService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE470ADE293B2DCA004ED2FE /* PlansService.swift */; };
 		DE470AE2293B2E7A004ED2FE /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE470AE1293B2E7A004ED2FE /* Plan.swift */; };
 		DE470AE4293B8C9C004ED2FE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE470AE3293B8C9C004ED2FE /* TabBarViewController.swift */; };
@@ -104,23 +104,24 @@
 		DEC71B58291BBB4700588D8B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEC71B57291BBB4700588D8B /* Lottie */; };
 		DEC71B5B291BBC6F00588D8B /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */; };
 		DEC71B61291BC0D200588D8B /* TitleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B60291BC0D200588D8B /* TitleImageView.swift */; };
-		DEC71B64291BC15A00588D8B /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B63291BC15A00588D8B /* StackView.swift */; };
+		DEC71B64291BC15A00588D8B /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B63291BC15A00588D8B /* CustomStackView.swift */; };
 		DECD7BEA291CDC0000F55CFF /* UIBarButtonItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */; };
 		DECD7BFB291D222A00F55CFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD7BFA291D222A00F55CFF /* TabBarController.swift */; };
 		DEEE2E45292E287D002A8A9F /* TabItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */; };
-		DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E4A292E2D30002A8A9F /* TabBar.swift */; };
+		DEEE2E4B292E2D30002A8A9F /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E4A292E2D30002A8A9F /* CustomTabBar.swift */; };
 		DEEE2E4E292E325C002A8A9F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE2E4D292E325C002A8A9F /* RxCocoa */; };
 		DEEE2E50292E325C002A8A9F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE2E4F292E325C002A8A9F /* RxSwift */; };
 		DEEE2E53292E35E0002A8A9F /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E52292E35E0002A8A9F /* TabItemView.swift */; };
 		DEEE2E55292E4790002A8A9F /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */; };
 		DEEE2E57292E47CB002A8A9F /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE2E56292E47CB002A8A9F /* UIStackView + Extension.swift */; };
+		DEFF6F23293F5885004E00C9 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6F22293F5885004E00C9 /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE272849291C0A270032D139 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE27284B291C177B0032D139 /* premium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = premium.json; sourceTree = "<group>"; };
 		DE27284C291C177B0032D139 /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
-		DE3F56552917AFA70036DDC4 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		DE3F56552917AFA70036DDC4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		DE470ADE293B2DCA004ED2FE /* PlansService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansService.swift; sourceTree = "<group>"; };
 		DE470AE1293B2E7A004ED2FE /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		DE470AE3293B8C9C004ED2FE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -211,14 +212,15 @@
 		DEC71B59291BBBED00588D8B /* Tasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		DEC71B60291BC0D200588D8B /* TitleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleImageView.swift; sourceTree = "<group>"; };
-		DEC71B63291BC15A00588D8B /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		DEC71B63291BC15A00588D8B /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + Extension.swift"; sourceTree = "<group>"; };
 		DECD7BFA291D222A00F55CFF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabItem + Extension.swift"; sourceTree = "<group>"; };
-		DEEE2E4A292E2D30002A8A9F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		DEEE2E4A292E2D30002A8A9F /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		DEEE2E52292E35E0002A8A9F /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		DEEE2E56292E47CB002A8A9F /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		DEFF6F22293F5885004E00C9 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,15 +287,15 @@
 		DE3F56532917AF800036DDC4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DE5D24062917BC7200F3ED18 /* UIWindow + Extension.swift */,
-				DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */,
 				DEA377A0291831650035085C /* UILabel + Extension.swift */,
-				DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */,
 				DECD7BE9291CDC0000F55CFF /* UIBarButtonItem + Extension.swift */,
-				DE5509402922BF260081A68B /* String + Extension.swift */,
+				DE5D24062917BC7200F3ED18 /* UIWindow + Extension.swift */,
 				DEEE2E44292E287D002A8A9F /* TabItem + Extension.swift */,
 				DEEE2E54292E4790002A8A9F /* UIView + Extension.swift */,
 				DEEE2E56292E47CB002A8A9F /* UIStackView + Extension.swift */,
+				DEC71B5A291BBC6F00588D8B /* UIColor + Extension.swift */,
+				DE5D24042917BBEC00F3ED18 /* Theme + Extension.swift */,
+				DE5509402922BF260081A68B /* String + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +303,7 @@
 		DE3F56542917AF8C0036DDC4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DEFF6F21293F587A004E00C9 /* UINavigationController */,
 				DEEE2E51292E35B4002A8A9F /* UIView */,
 				DEC71B62291BC15000588D8B /* UIStackView */,
 				DEC71B5F291BC0C500588D8B /* UIImageView */,
@@ -425,7 +428,7 @@
 		DEA3779C2917FF000035085C /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
-				DE3F56552917AFA70036DDC4 /* TextField.swift */,
+				DE3F56552917AFA70036DDC4 /* CustomTextField.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -463,8 +466,8 @@
 		DEC71B62291BC15000588D8B /* UIStackView */ = {
 			isa = PBXGroup;
 			children = (
-				DEEE2E4A292E2D30002A8A9F /* TabBar.swift */,
-				DEC71B63291BC15A00588D8B /* StackView.swift */,
+				DEEE2E4A292E2D30002A8A9F /* CustomTabBar.swift */,
+				DEC71B63291BC15A00588D8B /* CustomStackView.swift */,
 			);
 			path = UIStackView;
 			sourceTree = "<group>";
@@ -595,6 +598,14 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		DEFF6F21293F587A004E00C9 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF6F22293F5885004E00C9 /* CustomNavigationController.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -693,8 +704,9 @@
 				DE628B25293A73060059D207 /* SettingsRouter.swift in Sources */,
 				DE628AF7293A72660059D207 /* PlanProtocols.swift in Sources */,
 				DE628ACD293A71940059D207 /* OTPPresenter.swift in Sources */,
+				DEFF6F23293F5885004E00C9 /* CustomNavigationController.swift in Sources */,
 				DE628AC7293A716B0059D207 /* ForgotProtocols.swift in Sources */,
-				DEEE2E4B292E2D30002A8A9F /* TabBar.swift in Sources */,
+				DEEE2E4B292E2D30002A8A9F /* CustomTabBar.swift in Sources */,
 				DE628AFF293A728C0059D207 /* HomeConfigurator.swift in Sources */,
 				DE628AA9293A5F780059D207 /* SignUpProtocols.swift in Sources */,
 				DE470AE4293B8C9C004ED2FE /* TabBarViewController.swift in Sources */,
@@ -727,12 +739,12 @@
 				DE628AB3293A70B50059D207 /* SignInConfigurator.swift in Sources */,
 				DE628AE1293A72170059D207 /* WorkspaceViewController.swift in Sources */,
 				DE628AC3293A715C0059D207 /* ForgotConfigurator.swift in Sources */,
-				DE3F56562917AFA70036DDC4 /* TextField.swift in Sources */,
+				DE3F56562917AFA70036DDC4 /* CustomTextField.swift in Sources */,
 				DE628ABD293A71150059D207 /* ForgotViewController.swift in Sources */,
 				DE628AC5293A71630059D207 /* ForgotRouter.swift in Sources */,
 				DE628AA7293A5F5F0059D207 /* SignUpInteractor.swift in Sources */,
 				DE628B0B293A72B00059D207 /* ChatConfigurator.swift in Sources */,
-				DEC71B64291BC15A00588D8B /* StackView.swift in Sources */,
+				DEC71B64291BC15A00588D8B /* CustomStackView.swift in Sources */,
 				DEA377A1291831650035085C /* UILabel + Extension.swift in Sources */,
 				DE6D3ED32916B6470095AC5B /* AppDelegate.swift in Sources */,
 				DE628AE7293A72280059D207 /* WorkspaceConfigurator.swift in Sources */,

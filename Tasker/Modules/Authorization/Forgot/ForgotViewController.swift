@@ -17,7 +17,7 @@ final class ForgotViewController: UIViewController, ForgotViewProtocol {
     private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var mainTitleLabel = TitleLabel(text: "Forgot Password ?")
     private lazy var textLabel = TextLabel(text: "Enter your phone number then we will send you OTP sms to reset new password.")
-    private lazy var numberTF = TextField(type: .number, placeholder: "Enter your number", view: self.view)
+    private lazy var numberTF = CustomTextField(type: .number, placeholder: "Enter your number", view: self.view)
     private lazy var sendButton = LargeButton(text: "Send OTP", type: .withoutArrow)
     
     // MARK: - Lifecycle Methods

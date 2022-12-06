@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-final class TabBar: UIStackView {
+final class CustomTabBar: UIStackView {
     // MARK: - Properties
     public var itemTapped: Observable<Int> {
         itemTappedSubject.asObservable()

@@ -18,13 +18,12 @@ protocol PlanPresenterProtocol: AnyObject {
     var router: PlanRouterProtocol! { get set }
     var plans: [Plan]? { get set }
     func configureView()
-    func continueButtonTapped()
     func getPlans()
+    func continueButtonTapped()
 }
 
 protocol PlanInteractorProtocol: AnyObject {
-    var plans: [Plan]? { get set }
-    func getAllPlans()
+    func getAllPlans() -> [Plan]
 }
 
 protocol PlanRouterProtocol: AnyObject {

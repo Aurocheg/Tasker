@@ -13,20 +13,20 @@ final class OTPViewController: UIViewController, OTPViewProtocol {
     
     private let titleImage = UIImage(named: "OTP")
     private var otpText = String()
-    private var textFieldsArray = [TextField]()
+    private var textFieldsArray = [CustomTextField]()
     
     // MARK: - UI Elements
     private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var mainTitleLabel = TitleLabel(text: "Enter OTP")
     private lazy var textLabel = TextLabel(text: "Enter the OTP we just sent to your phone then start reset your new password.")
     
-    private lazy var textFieldsStackView = StackView(spacing: 16)
-    private lazy var firstTF = TextField(type: .number, alignment: .center, icon: false, view: view)
-    private lazy var secondTF = TextField(type: .number, alignment: .center, icon: false, view: view)
-    private lazy var thirdTF = TextField(type: .number, alignment: .center, icon: false, view: view)
-    private lazy var fourthTF = TextField(type: .number, alignment: .center, icon: false, view: view)
+    private lazy var textFieldsStackView = CustomStackView(spacing: 16)
+    private lazy var firstTF = CustomTextField(type: .number, alignment: .center, icon: false, view: view)
+    private lazy var secondTF = CustomTextField(type: .number, alignment: .center, icon: false, view: view)
+    private lazy var thirdTF = CustomTextField(type: .number, alignment: .center, icon: false, view: view)
+    private lazy var fourthTF = CustomTextField(type: .number, alignment: .center, icon: false, view: view)
     
-    private lazy var resendStackView = StackView(spacing: 7)
+    private lazy var resendStackView = CustomStackView(spacing: 7)
     private lazy var resendButton = SecondaryButton(text: "Resend OTP")
     private lazy var resendTextLabel = TextLabel(text: "in 00:30s")
     private lazy var nextButton = LargeButton(text: "Next", type: .withRightArrow)

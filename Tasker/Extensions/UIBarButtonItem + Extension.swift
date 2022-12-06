@@ -8,13 +8,12 @@
 import UIKit
 
 extension UIBarButtonItem {
-    func addBackArrowButton(navigationController: UINavigationController, navigationItem: UINavigationItem) {
-        if let icon = UIImage(named: "backward") {
-            let backBarButton = UIBarButtonItem(image: icon,
-                                                style: .plain,
-                                                target: navigationController,
-                                                action: #selector(UINavigationController.popViewController(animated:)))
-            navigationItem.leftBarButtonItem = backBarButton
-        }
+    static func addBackArrowButton(navigationController: CustomNavigationController, navigationItem: UINavigationItem) {
+        guard let icon = UIImage(named: "backward") else { return }
+        let backBarButton = UIBarButtonItem(image: icon,
+                                            style: .plain,
+                                            target: navigationController,
+                                            action: #selector(UINavigationController.popViewController(animated:)))
+        navigationItem.leftBarButtonItem = backBarButton
     }
 }

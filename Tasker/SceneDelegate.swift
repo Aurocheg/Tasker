@@ -29,10 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         let rootVC = SignInViewController()
-        let navigationController = UINavigationController(rootViewController: rootVC)
-        
-        let darkColor = UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1)
-        navigationController.navigationBar.tintColor = UIColor.color(light: darkColor, dark: .white)
+        let navigationController = CustomNavigationController(rootViewController: rootVC)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

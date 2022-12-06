@@ -16,8 +16,8 @@ final class ResetViewController: UIViewController, ResetViewProtocol {
     // MARK: - UI Elements
     private lazy var titleImageView = TitleImageView(image: titleImage)
     private lazy var mainTitleLabel = TitleLabel(text: "Reset new password")
-    private lazy var passwordTF = TextField(type: .password, placeholder: "Enter new password", view: view)
-    private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password", view: view)
+    private lazy var passwordTF = CustomTextField(type: .password, placeholder: "Enter new password", view: view)
+    private lazy var confirmPasswordTF = CustomTextField(type: .password, placeholder: "Confirm password", view: view)
     private lazy var saveButton = LargeButton(text: "Save changes", type: .withoutArrow)
     
     // MARK: - Lifecycle Methods

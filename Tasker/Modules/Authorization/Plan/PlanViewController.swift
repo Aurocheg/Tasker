@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 
 final class PlanViewController: UIViewController, PlanViewProtocol {
+    // MARK: - Properties
     var presenter: PlanPresenterProtocol!
     var configurator: PlanConfiguratorProtocol = PlanConfigurator()
     
@@ -37,7 +38,7 @@ final class PlanViewController: UIViewController, PlanViewProtocol {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         setupHierarchy()
         setupLayout()
         setupProperties()

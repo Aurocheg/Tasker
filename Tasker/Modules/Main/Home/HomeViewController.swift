@@ -25,11 +25,12 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
         
         button.backgroundColor = UIColor.color(light: lightColor, dark: darkColor)
         button.layer.borderWidth = 0
+        button.setImage(plusImage, for: .normal)
         
         return button
     }()
-    private lazy var searchTF: TextField = {
-        let textField = TextField(type: .search, view: view)
+    private lazy var searchTF: CustomTextField = {
+        let textField = CustomTextField(type: .search, view: view)
         let placeholderColor = UIColor.color(light: UIColor(red: 0.635, green: 0.62, blue: 0.714, alpha: 1),
                                              dark: UIColor(red: 0.937, green: 0.945, blue: 0.953, alpha: 1))
         textField.attributedPlaceholder = NSAttributedString(
@@ -43,7 +44,7 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         setupHierarchy()
         setupLayout()
         setupProperties()
@@ -66,7 +67,7 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
         
         titleImageView.snp.makeConstraints {
             $0.left.equalTo(mainTitleLabel.snp.right).offset(11)
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(3)
+            $0.top.equalTo(mainTitleLabel.snp.top).offset(3)
             $0.width.height.equalTo(24)
         }
         
@@ -92,6 +93,7 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
     }
     
     func setupProperties() {
+        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = UIColor.Pallette.background
         segmentedControl.backgroundColor = .clear
     }

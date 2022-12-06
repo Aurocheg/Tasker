@@ -10,7 +10,7 @@ import RxSwift
 import SnapKit
 
 final class TabBarController: UITabBarController {
-    private let customTabBar = TabBar()
+    private let customTabBar = CustomTabBar()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -23,10 +23,10 @@ final class TabBarController: UITabBarController {
         view.layoutIfNeeded()
         
         viewControllers = [
-            UINavigationController(rootViewController: HomeViewController()),
-            UINavigationController(rootViewController: ChatViewController()),
-            UINavigationController(rootViewController: NotificationViewController()),
-            UINavigationController(rootViewController: SettingsViewController()),
+            CustomNavigationController(rootViewController: HomeViewController()),
+            CustomNavigationController(rootViewController: ChatViewController()),
+            CustomNavigationController(rootViewController: NotificationViewController()),
+            CustomNavigationController(rootViewController: SettingsViewController()),
         ]
     }
     

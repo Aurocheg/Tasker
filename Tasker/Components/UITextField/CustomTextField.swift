@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class TextField: UITextField {
+final class CustomTextField: UITextField {
     enum SelfType {
         case password
         case name
@@ -167,7 +167,7 @@ final class TextField: UITextField {
 }
 
 // MARK: - UITextFieldDelegate
-extension TextField: UITextFieldDelegate {
+extension CustomTextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.Pallette.buttonBackground.cgColor
     }

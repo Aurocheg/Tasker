@@ -12,9 +12,12 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
     var configurator: SignUpConfiguratorProtocol = SignUpConfigurator()
     
     // MARK: - Properties
-    private let facebookImage = UIImage(named: "facebook")
-    private let instagramImage = UIImage(named: "instagram")
-    private let gmailImage = UIImage(named: "gmail")
+    private let socialImages = [
+        UIImage(named: "facebook"),
+        UIImage(named: "instagram"),
+        UIImage(named: "gmail")
+    ]
+    private var socialButtons = [SecondaryButton]()
     private let titleImage = UIImage(named: "signInAndUp")
     private let socialImageTintColor = UIColor.color(light: UIColor(red: 0.11, green: 0.071, blue: 0.263, alpha: 1), dark: .white)
     
@@ -22,18 +25,18 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
     private lazy var mainTitleLabel = TitleLabel(text: "Sign Up")
     private lazy var titleImageView = TitleImageView(image: titleImage)
     
-    private lazy var emailTF = TextField(type: .email, placeholder: "Email", view: view)
-    private lazy var passwordTF = TextField(type: .password, placeholder: "Password", view: view)
-    private lazy var confirmPasswordTF = TextField(type: .password, placeholder: "Confirm password", view: view)
+    private lazy var emailTF = CustomTextField(type: .email, placeholder: "Email", view: view)
+    private lazy var passwordTF = CustomTextField(type: .password, placeholder: "Password", view: view)
+    private lazy var confirmPasswordTF = CustomTextField(type: .password, placeholder: "Confirm password", view: view)
     private lazy var signUpButton = LargeButton(text: "Sign Up", type: .withoutArrow)
     
     private lazy var signUpWithLabel = TextLabel(text: "Or sign up with", size: 16)
-    private lazy var socialStackView = StackView(spacing: 16)
+    private lazy var socialStackView = CustomStackView(spacing: 16)
     private lazy var facebookButton = SecondaryButton(type: .withBackground)
     private lazy var instagramButton = SecondaryButton(type: .withBackground)
     private lazy var gmailButton = SecondaryButton(type: .withBackground)
     
-    private lazy var bottomStackView = StackView(spacing: 8)
+    private lazy var bottomStackView = CustomStackView(spacing: 8)
     private lazy var accountLabel = TextLabel(text: "Already have an account?", size: 16)
     private lazy var signInButton: UIButton = {
         let textColor = UIColor(red: 1, green: 0.541, blue: 0, alpha: 1)
@@ -59,7 +62,11 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
     func setupHierarchy() {
         view.addSubviews(mainTitleLabel, titleImageView, emailTF, passwordTF, confirmPasswordTF, signUpButton, signUpWithLabel, socialStackView, bottomStackView)
         
-        socialStackView.addArrangedSubviews([facebookButton, instagramButton, gmailButton])
+        for button in [facebookButton, instagramButton, gmailButton] {
+            socialButtons.append(button)
+        }
+        
+        socialStackView.addArrangedSubviews(socialButtons)
         bottomStackView.addArrangedSubviews([accountLabel, signInButton])
     }
     
@@ -114,7 +121,7 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
             $0.height.equalTo(48)
         }
         
-        [facebookButton, instagramButton, gmailButton].forEach {button in
+        socialButtons.forEach {button in
             button.snp.makeConstraints {
                 $0.width.height.equalTo(48)
             }
@@ -130,9 +137,10 @@ final class SignUpViewController: UIViewController, SignUpViewProtocol {
         view.backgroundColor = UIColor.Pallette.background
         signUpWithLabel.drawLineOnBothSides(view: view)
         
-        [gmailButton, instagramButton, facebookButton].forEach {
-            for image in [gmailImage, instagramImage, facebookImage] {
-                $0.setImage(image)
+        for (i, _) in socialButtons.enumerated() {
+            for _ in socialImages {
+                let modifiedImage = socialImages[i]?.withTintColor(socialImageTintColor, renderingMode: .alwaysOriginal)
+                socialButtons[i].setImage(modifiedImage, for: .normal)
             }
         }
     }

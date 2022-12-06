@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StackView: UIStackView {    
+final class CustomStackView: UIStackView {    
     init(spacing: CGFloat, axis: NSLayoutConstraint.Axis = .horizontal, alignment: UIStackView.Alignment = .center) {
         super.init(frame: .zero)
         

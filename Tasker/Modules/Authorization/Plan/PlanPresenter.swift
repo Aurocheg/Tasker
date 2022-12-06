@@ -20,12 +20,12 @@ final class PlanPresenter: PlanPresenterProtocol {
     }
     
     // MARK: - PlanPresenter Methods
-    func getPlans() {
-        plans = interactor.plans
+    func configureView() {
+        getPlans()
     }
     
-    func configureView() {
-        
+    func getPlans() {
+        plans = interactor.getAllPlans()
     }
     
     func continueButtonTapped() {
